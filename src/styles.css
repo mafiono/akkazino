@@ -1,1 +1,9528 @@
 /* You can add global styles to this file, and also import other style files */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block
+}
+
+ol, ul {
+  list-style: none
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+html {
+  -webkit-text-size-adjust: 100%
+}
+
+html.overflowHidden {
+  height: 100%
+}
+
+html.overflowHidden body {
+  height: 100%;
+  overflow: hidden
+}
+
+body {
+  line-height: 20px;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  direction: ltr
+}
+
+img {
+  max-width: 100%
+}
+
+* {
+  box-sizing: border-box
+}
+
+a {
+  font-size: 12px;
+  text-decoration: none
+}
+
+a.decoration-link {
+  text-decoration: underline
+}
+
+p {
+  font-weight: 400;
+  line-height: 20px
+}
+
+.userWrap:hover .mobSecondBtnWrap, .userWrap:hover .rotateBlockArrow {
+  opacity: .8
+}
+
+.loginBtn:active, .betButtons button:active, button.mainBtn:active, a.mainBtn:active, button.smallBtn:active {
+  transform: translateY(1px)
+}
+
+::-webkit-scrollbar {
+  width: 8px
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 18px
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 18px
+}
+
+.customFileInput, textarea, input[type=text]:not(.mx-input), input[type=email], input[type=tel], input[type=password], input[type=number] {
+  height: 40px;
+  width: 100%;
+  max-width: 320px;
+  margin-top: 8px;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 12px;
+  outline: none;
+  font-family: Arial, sans-serif
+}
+
+form .error.danger-color {
+  position: relative;
+  font-size: 10px;
+  bottom: 10px
+}
+
+.pageWrap form .error.danger-color {
+  margin-top: 0
+}
+
+.loginForm .error.danger-color, .formFullWrap .error.danger-color {
+  position: absolute;
+  bottom: -5px;
+  right: 0
+}
+
+.loginForm .error.danger-color.passValidation, .formFullWrap .error.danger-color.passValidation {
+  line-height: 9px;
+  text-align: right
+}
+
+.ticketPage .error.danger-color {
+  bottom: 0
+}
+
+.ticketPage textarea + .error.danger-color {
+  bottom: 5px
+}
+
+form label.inputError + .error.danger-color {
+  bottom: -15px
+}
+
+.pageWrap {
+  min-height: 300px
+}
+
+.pageWrap .mx-input {
+  background-color: transparent;
+  border: none;
+  font-size: 12px;
+  height: 25px;
+  padding: 0 5px;
+  box-shadow: none
+}
+
+.pageWrap .datePickerWrap input {
+  height: 34px;
+  margin-top: 0
+}
+
+.pageWrap .historyFilters .mx-datepicker-range {
+  width: 100%
+}
+
+.pageWrap .historyFilters .dataRangeWrap {
+  min-width: 200px
+}
+
+.pageWrap .historyFilters .v-select.customSelect {
+  padding-right: 0;
+  padding-left: 0
+}
+
+.pageWrap.ticketPage .preloader {
+  background: none;
+  min-height: 300px;
+  margin-top: 20px
+}
+
+.pageWrap .blockHead .mx-datepicker {
+  width: 110px
+}
+
+.pageWrap .mx-input {
+  font-weight: bold
+}
+
+.pageWrap .mx-icon-calendar, .pageWrap .mx-icon-clear {
+  top: 52%
+}
+
+.mx-btn-icon-right, .mx-btn-icon-left {
+  padding: 0;
+  width: 19px;
+  height: 19px;
+  position: relative;
+  top: 0px;
+  transform: rotate(-90deg);
+  border-radius: 50%;
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: 50% 58%;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAzNyAzNyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwKSI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMC4xNzI4NTIgMTEuODYzM0w0LjczMDQyIDcuMjc0OUwxOC4xNzI5IDIwLjgwODJMMzEuNjE1MyA3LjI3NDlMMzYuMTcyOSAxMS44NjMzTDE4LjE3MjkgMjkuOTg1TDAuMTcyODUyIDExLjg2MzNaIiBmaWxsPSIjZmZmIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDAiPgo8cmVjdCB4PSIwLjE3Mjg1MiIgeT0iMC42Mjk4ODMiIHdpZHRoPSIzNiIgaGVpZ2h0PSIzNiIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo=)
+}
+
+.mx-btn-icon-right i, .mx-btn-icon-left i {
+  display: none
+}
+
+.mx-btn-icon-left {
+  transform: rotate(90deg)
+}
+
+input[type=file], input[type=radio], input[type=checkbox] {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none
+}
+
+.baseCheckStyle + label {
+  position: relative;
+  padding-left: 25px
+}
+
+.baseCheckStyle + label:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -2px;
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  transition: .2s;
+  cursor: pointer;
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%
+}
+
+.baseCheckStyle:checked + label:before {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzciIGhlaWdodD0iMzciIHZpZXdCb3g9IjAgMCAzNyAzNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwKSI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMzEuNzM4MyA1LjkzNzVMMTUuMjIzNiAyMi40NTIxTDQuNjA3NDUgMTEuODM2TDAuMTcyODUyIDE2LjI3MDVMMTUuMjIzNiAzMS4zMjE1TDE5LjY1ODIgMjYuODg2N0wzNi4xNzI5IDEwLjM3MjFMMzEuNzM4MyA1LjkzNzVaIiBmaWxsPSJibGFjayIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwIj4KPHJlY3QgeD0iMC4xNzI4NTIiIHk9IjAuNjI5ODgzIiB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==)
+}
+
+.poiEventsNone {
+  pointer-events: none
+}
+
+.curPointer {
+  cursor: pointer
+}
+
+.customCheckWrap {
+  display: block
+}
+
+.customCheckWrap.themeSwicther {
+  position: relative
+}
+
+.customCheckWrap.themeSwicther svg {
+  position: absolute;
+  z-index: 2;
+  top: 7px;
+  pointer-events: none;
+  transition: .4s
+}
+
+.customCheckWrap.themeSwicther .moon {
+  left: 9px
+}
+
+.customCheckWrap.themeSwicther .sun {
+  right: 9px
+}
+
+.customCheckWrap.themeSwicther label {
+  display: block;
+  width: 50px;
+  height: 26px;
+  margin-top: 0
+}
+
+.customCheckWrap.themeSwicther label:after {
+  height: 20px;
+  width: 20px
+}
+
+.customCheckWrap input[type=checkbox]:checked + label:after {
+  left: 25px
+}
+
+.customCheckWrap label {
+  display: inline-block;
+  position: relative;
+  width: 44px;
+  height: 20px;
+  border-radius: 18px;
+  margin-top: 10px;
+  transition: .4s;
+  cursor: pointer
+}
+
+.customCheckWrap label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  left: 5px;
+  top: 3px;
+  transition: .4s
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1
+  }
+  50% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+.blink-enter-active, .blink-enter-to {
+  animation: blink .7s ease 4;
+  transition: 2s
+}
+
+.hidden {
+  display: none
+}
+
+.capitalize {
+  text-transform: capitalize
+}
+
+.appWrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 60px
+}
+
+.appWrap .vs__selected {
+  color: inherit
+}
+
+.headerWrap {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 60px;
+  transition: background-color .2s;
+  z-index: 1000
+}
+
+.headerWrap .headerItemWrap {
+  align-items: center;
+  justify-content: space-between;
+  position: relative
+}
+
+.headerWrap .logoWrap {
+  display: flex;
+  align-items: center;
+  max-width: 200px;
+  padding-right: 15px
+}
+
+.headerWrap .logoWrap img {
+  display: block;
+  max-height: 40px
+}
+
+.headerWrap .secondMobBtn {
+  display: none
+}
+
+.headerWrap .headerMain {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: space-between;
+  min-height: 60px
+}
+
+.headerWrap .filterBtnsWrap {
+  padding: 0 5px
+}
+
+.headerWrap .casBtn {
+  margin: 0 5px
+}
+
+.headerWrap .customSelectWrap {
+  margin: 0 5px
+}
+
+.headerWrap .mainBtn {
+  margin-top: 0
+}
+
+.headerWrap .langFlagsWrap .langFlag {
+  margin-right: 10px
+}
+
+.headerWrap .messageLink {
+  position: relative
+}
+
+.headerWrap .messageLink.hasNewData:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -3px;
+  right: -5px;
+  border-radius: 50%;
+  background-color: #d80f0f
+}
+
+.headerWrap .langFlag {
+  width: 19px;
+  height: 19px
+}
+
+.headerWrap .userBalance {
+  padding: 7px 10px 7px 10px;
+  border-radius: 5px
+}
+
+.headerWrap .customSelect_search {
+  min-width: 160px;
+  width: 100%
+}
+
+.headerWrap .customSelect {
+  border-radius: 12px
+}
+
+.headerWrap .customSelect .vs__dropdown-menu .center {
+  display: flex;
+  align-items: center;
+  white-space: normal
+}
+
+.headerWrap .small {
+  padding-left: 5px
+}
+
+.headerWrap .settingsWrap {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 10px
+}
+
+.headerWrap .settingsWrap .timeBlock, .headerWrap .settingsWrap .oddSelected {
+  min-width: 90px
+}
+
+.headerWrap .searchIcon {
+  height: 20px
+}
+
+.headerWrap .seacrhWrap {
+  flex-grow: 2;
+  padding: 0 15px
+}
+
+.headerWrap .seacrhWrap .customSelect_search {
+  position: static
+}
+
+.headerWrap .seacrhWrap .customSelect_search .vs__dropdown-menu {
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 750px
+}
+
+.headerWrap .seacrhWrap .customSelect_search .vs__dropdown-menu li {
+  padding: 0 0
+}
+
+.headerWrap .seacrhWrap .customSelect_search .vs__dropdown-menu li .optionWrapper {
+  padding: 10px 15px
+}
+
+.headerWrap .seacrhWrap .customSelect_search .vs__dropdown-menu li .optionWrapper.optionWrapperTitle {
+  cursor: default;
+  padding: 5px 15px;
+  font-size: 14px
+}
+
+.headerWrap .seacrhWrap .customSelect_search .vs__dropdown-menu .searchRow {
+  display: flex;
+  position: relative
+}
+
+.headerWrap .seacrhWrap .customSelect_search .vs__dropdown-menu .searchRow .searchItem:first-child {
+  min-width: 60px
+}
+
+.headerWrap .seacrhWrap .customSelect_search .vs__dropdown-menu .searchRow .searchArrow {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: rotate(-90deg) translateX(35%) scale(0.7)
+}
+
+.headerWrap .headerItem .loginWrap {
+  margin-right: 0
+}
+
+.headerWrap .headerItem .loginWrap.logined .mainBtn {
+  margin-left: 5px
+}
+
+.headerWrap .headerItem {
+  height: 100%;
+  min-height: 60px;
+  display: flex;
+  align-items: center
+}
+
+.headerWrap .userBtns .langWrap {
+  width: 48px
+}
+
+.headerWrap .userBtns .langWrap .vs__actions {
+  padding-left: 0
+}
+
+.headerWrap .userBtns .langWrap .vs__selected {
+  margin-right: 0
+}
+
+.headerWrap .userBtns .langWrap .vs__dropdown-menu li {
+  padding: 5px 10px
+}
+
+.headerWrap .userBtns {
+  position: relative;
+  padding-left: 5px
+}
+
+.headerWrap .userBtns > div {
+  margin: 0 5px
+}
+
+.headerWrap .userBtns .userWrap {
+  display: flex;
+  align-items: center;
+  height: 26px;
+  padding: 0 5px;
+  border-radius: 12px
+}
+
+.headerWrap .userBtns .userWrap .mobSecondBtnWrap > svg {
+  display: block;
+  margin-right: 8px
+}
+
+.headerWrap .userBtns .loginBtn {
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 8px
+}
+
+.newTimer {
+  font-size: 12px
+}
+
+.vs__dropdown-toggle .vs__spinner {
+  margin-left: 5px;
+  opacity: .3
+}
+
+.vs--searchable .vs__open-indicator {
+  display: none
+}
+
+.vs__dropdown-toggle .vs__clear {
+  margin-right: 0
+}
+
+.vs__selected-options .vs__search, .vs__selected-options .vs__search:focus {
+  font-size: 1em
+}
+
+.customSelect.vs--unsearchable .vs__search {
+  padding: 0;
+  margin: 0;
+  cursor: pointer
+}
+
+.vs__dropdown-option div {
+  width: auto !important
+}
+
+.vs--searchable .vs__dropdown-menu li {
+  padding: 10px 15px
+}
+
+.selected.center {
+  position: absolute;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  top: 0;
+  width: 95%
+}
+
+.v-select.customSelect {
+  padding-right: 6px;
+  padding-left: 3px
+}
+
+.customSelect .vs__selected-options {
+  white-space: nowrap;
+  flex-wrap: nowrap
+}
+
+.customSelect .vs__dropdown-option, .casinoPage .vs--searchable .vs__dropdown-option {
+  padding: 3px 12px
+}
+
+.customSelect .vs__search::placeholder, .customSelect .vs__dropdown-toggle, .customSelect .vs__dropdown-menu {
+  border: none
+}
+
+.customSelect .vs__dropdown-toggle {
+  height: 26px;
+  background-color: transparent
+}
+
+.customSelect .vs__dropdown-menu {
+  min-width: auto
+}
+
+.customSelect.langSelect .vs__dropdown-menu {
+  min-width: 120px !important
+}
+
+.vs--single.vs--open, .vs__selected {
+  width: 100%;
+  white-space: nowrap
+}
+
+.vs--single.vs--open:not(.customSelect_search), .vs__selected:not(.customSelect_search) {
+  position: relative !important
+}
+
+.customSelect .vs__dropdown-option, .customSelect .vs__selected, .customSelect_search .center {
+  transition: color .2s;
+  text-transform: capitalize
+}
+
+.customSelect .vs__dropdown-option--highlight {
+  background-color: transparent
+}
+
+.appWrap .pageContainer .vs__open-indicator, .appWrap .vs__actions .vs__open-indicator, .appWrap .betSlipBody .vs__open-indicator {
+  transform: none;
+  transition: none;
+  transform: scale(0.6)
+}
+
+.appWrap .slick-arrow .vs__open-indicator, .appWrap .catAbout .vs__open-indicator, .betSlipWrap .vs__open-indicator {
+  transform: scale(0.8)
+}
+
+.userNav .userName {
+  max-width: 250px
+}
+
+.userName {
+  max-width: 75px;
+  margin-right: 5px
+}
+
+.ellipsis {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+
+.customSelect .vs__actions {
+  padding: 0;
+  height: 26px;
+  transition: .2s
+}
+
+.v-select.customSelect.langSelect {
+  padding-left: 0px
+}
+
+.v-select.customSelect.langSelect .langFlagsWrap {
+  justify-content: flex-start
+}
+
+.v-select.customSelect.langSelect .vs__selected-options {
+  flex-basis: auto;
+  flex-grow: 0;
+  padding-right: 0
+}
+
+.v-select.customSelect.langSelect .vs__selected {
+  margin-left: 0
+}
+
+.newMark {
+  position: relative;
+  left: 10px;
+  padding: 0px 4px;
+  font-size: 11px;
+  border-radius: 3px
+}
+
+.gameBlock .markWrap {
+  position: absolute;
+  width: 100%;
+  top: 5px;
+  left: 5px;
+  display: flex;
+  align-items: flex-start
+}
+
+.gameBlock .newMark {
+  position: static;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  text-align: center
+}
+
+.gameBlock .newMark.newTable {
+  left: 5px;
+  right: auto;
+  top: 60px
+}
+
+.gameBlock .recMark {
+  background-color: #ff6728
+}
+
+.gameBlock .infoBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5px;
+  padding: 2px;
+  border-radius: 50%
+}
+
+.mx-datepicker-main.mx-datepicker-popup.customDataPopup {
+  transform: none
+}
+
+.mx-datepicker-main.mx-datepicker-popup {
+  display: flex;
+  flex-wrap: wrap;
+  border: none;
+  font: inherit;
+  color: inherit;
+  transform: translateX(60px);
+  z-index: 9999
+}
+
+.mx-datepicker-main.mx-datepicker-popup .mx-table td {
+  padding: 5px
+}
+
+.mx-datepicker-main.mx-datepicker-popup .mx-table td div {
+  height: 25px;
+  width: 25px;
+  line-height: 25px
+}
+
+.mx-datepicker-main.mx-datepicker-popup .mx-datepicker-sidebar {
+  width: auto
+}
+
+.mx-datepicker-main.mx-datepicker-popup .mx-datepicker-sidebar + .mx-datepicker-content {
+  margin-left: 0
+}
+
+.mx-datepicker-main.mx-datepicker-popup .mx-datepicker-sidebar .mx-btn {
+  font-size: 12px
+}
+
+.mx-datepicker-main.mx-datepicker-popup .mx-datepicker-footer {
+  border: none;
+  padding: 10px
+}
+
+.mx-datepicker-main.mx-datepicker-popup .mx-datepicker-footer .mx-btn {
+  font-size: 12px
+}
+
+.mx-datepicker-main.mx-datepicker-popup .mx-calendar-header, .mx-datepicker-main.mx-datepicker-popup .mx-time-header {
+  height: auto;
+  padding: 5px 30px
+}
+
+.mx-datepicker-main.mx-datepicker-popup .mx-datepicker-btn-confirm {
+  border-radius: 20px;
+  border: none
+}
+
+.mx-datepicker-main.mx-datepicker-popup .mx-calendar-content {
+  height: 232px
+}
+
+.mx-datepicker-main.mx-datepicker-popup .mx-btn, .mx-datepicker-main.mx-datepicker-popup .cell.in-range {
+  color: inherit
+}
+
+.mx-datepicker-main.mx-datepicker-popup .mx-calendar {
+  padding: 0
+}
+
+.mx-datepicker-main.mx-datepicker-popup .mx-btn:hover {
+  color: inherit
+}
+
+.mx-datepicker-main.mx-datepicker-popup .mx-calendar-content .cell {
+  background-color: transparent
+}
+
+.mx-datepicker-main.mx-datepicker-popup .mx-table-date td, .mx-datepicker-main.mx-datepicker-popup .mx-table-date th {
+  height: auto;
+  vertical-align: middle
+}
+
+.mx-datepicker-main.mx-datepicker-popup .mx-table-month td, .mx-datepicker-main.mx-datepicker-popup .mx-table-year td {
+  vertical-align: middle
+}
+
+.mx-datepicker-main.mx-datepicker-popup .mx-table-month td div, .mx-datepicker-main.mx-datepicker-popup .mx-table-year td div {
+  width: 60%;
+  margin: auto;
+  border-radius: 5px
+}
+
+.mx-datepicker-main.mx-datepicker-popup .mx-table-date td:not(.disabled) div {
+  border-radius: 50%
+}
+
+.mx-datepicker-main.mx-datepicker-popup .mx-calendar-content .cell:not(.disabled):hover {
+  color: inherit
+}
+
+.mx-datepicker-main.mx-datepicker-popup .mx-calendar-content .cell.active div {
+  background-color: #d8d8d8;
+  color: #000
+}
+
+.mx-datepicker-main.mx-datepicker-popup .mx-calendar-content .cell.active div:hover div {
+  color: #000
+}
+
+.mx-datepicker-main.mx-datepicker-popup .mx-btn-icon-double-left, .mx-datepicker-main.mx-datepicker-popup .mx-btn-icon-double-right {
+  display: none
+}
+
+.mx-datepicker-main.mx-datepicker-popup .mx-btn-icon-right, .mx-datepicker-main.mx-datepicker-popup .mx-btn-icon-left {
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  top: 7px;
+  border-radius: 50%
+}
+
+.mx-datepicker-popup.birthPopup .mx-btn-icon-double-left, .mx-datepicker-popup.birthPopup .mx-btn-icon-double-right {
+  display: block
+}
+
+.mx-datepicker-main.mx-datepicker-popup.depositManualBankAccount {
+  transform: translateX(0px)
+}
+
+.isAgentChild {
+  width: 100%;
+  text-align: center
+}
+
+.depWrap {
+  display: flex;
+  justify-content: space-between
+}
+
+.depWrap .mx-datepicker {
+  width: 100%
+}
+
+.depWrap .mx-input {
+  font-size: 12px;
+  height: 40px;
+  width: 100%
+}
+
+.depWrap .amountWrapRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between
+}
+
+.depWrap .amountWrapRow .amountWrapInput {
+  width: 60%
+}
+
+.depWrap .amountWrapRow .proFilePage {
+  width: 35%
+}
+
+.depWrap .generateInput {
+  position: relative
+}
+
+.depWrap .generateInput input {
+  padding-right: 45px
+}
+
+.depWrap .generateInput .btn {
+  position: absolute;
+  right: 5px;
+  top: 50%
+}
+
+.depWrap.withdrawWrap .customFileInput {
+  justify-content: flex-start
+}
+
+.depWrap.withdrawWrap .available {
+  margin-left: 10px
+}
+
+.depWrap.withdrawWrap .amountWrap {
+  position: relative
+}
+
+.depWrap.withdrawWrap .amountWrap .currSymbol {
+  position: absolute;
+  right: 0;
+  bottom: 10px
+}
+
+.depWrap.withdrawWrap .error_msg.amountErr {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin-bottom: 0;
+  padding: 10px 0;
+  margin-top: 15px
+}
+
+.depWrap.withdrawWrap .error_msg.amountErr svg {
+  flex-basis: 5%;
+  margin: 0 10px
+}
+
+.depWrap.withdrawWrap .currSymbol {
+  display: block;
+  margin-left: auto;
+  margin-right: 10px
+}
+
+.depWrap.withdrawWrap .availableWrap {
+  margin-bottom: 15px
+}
+
+.depWrap.withdrawWrap .availableWrap .customFileInput {
+  margin-top: 0
+}
+
+.depWrap .depMethod {
+  margin-bottom: 10px
+}
+
+.depWrap .depMethodWrap, .depWrap .depSelectedWrap {
+  flex-basis: 49%
+}
+
+.depWrap .depMethodWrap h3, .depWrap .depSelectedWrap h3 {
+  margin-bottom: 5px;
+  text-transform: capitalize
+}
+
+.depWrap .depMethodWrap .formWrap, .depWrap .depSelectedWrap .formWrap {
+  width: 100%
+}
+
+.depWrap .depMethodItem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, .1)
+}
+
+.depWrap .depMethodItem + .depMethodItem {
+  margin-top: 10px
+}
+
+.depWrap .depMethodItem .imgWrap {
+  width: 50px;
+  height: 35px;
+  border-radius: 3px;
+  margin-right: 10px;
+  background-image: linear-gradient(to top, #dadada 0%, #ffffff 100%)
+}
+
+.depWrap .depMethodItem .imgWrap img {
+  width: 35px
+}
+
+.depWrap .depMethodItem .depName {
+  line-height: 16px
+}
+
+.depWrap .depMethodItem .depName .bold {
+  text-transform: capitalize
+}
+
+.depWrap .depMethodItem .depName .depNameImg {
+  display: inline-block;
+  margin: 0 2px
+}
+
+.depWrap .depMethodItem .depName .depNameImg:first-child {
+  margin-left: 0
+}
+
+.depWrap .depMethodItem .depName .depNameImg:last-child {
+  margin-right: 0
+}
+
+.depWrap .depMethodItem .selected {
+  margin-left: auto
+}
+
+.depWrap .depMethodItem .selected .iconWrap {
+  display: flex
+}
+
+.depWrap .depMethodItem .selected .iconArrow {
+  transform: rotate(-90deg)
+}
+
+.depWrap .btnCancel {
+  margin-left: 10px
+}
+
+.depWrap .imgSelectWrap {
+  min-height: 165px
+}
+
+.depWrap .depNotification {
+  background: #252729;
+  border-radius: 5px;
+  border-left: 5px solid #eb4846;
+  padding: 12px 24px;
+  margin-bottom: 21px
+}
+
+.depWrap .depNotification .title {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: #eb4846
+}
+
+.depWrap .depNotification p {
+  font-size: 13px;
+  line-height: 15px;
+  color: #fff;
+  margin-top: 6px
+}
+
+.customSelect.vs--unsearchable.vs--open .vs__actions {
+  transform: rotate(180deg)
+}
+
+section .vs--disabled .vs__dropdown-toggle, section .vs--disabled .vs__search, section .vs--disabled .vs__open-indicator {
+  background-color: transparent;
+  border-color: transparent;
+  cursor: default !important
+}
+
+section .vs--disabled .vs__open-indicator {
+  opacity: 0
+}
+
+.rotateBlockArrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .1s;
+  height: 100%;
+  cursor: pointer;
+  transform: rotate(0)
+}
+
+.rotateBlockArrow.rotate {
+  transform: rotate(180deg)
+}
+
+.pageContainer {
+  display: flex;
+  flex: 1;
+  max-width: 1235px;
+  width: 100%;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px
+}
+
+.pageContainer .pageWrap, .pageContainer .homeWrap {
+  max-width: 940px;
+  width: calc(100% - 265px)
+}
+
+.pageContainer .pageWrap.fullPage, .pageContainer .homeWrap.fullPage {
+  width: 100%;
+  max-width: 100%
+}
+
+.pageContainer .blockHeadName {
+  padding-right: 15px
+}
+
+.pageContainer .liveblock a.blockHead {
+  display: block
+}
+
+.pageContainer a.blockHead {
+  display: flex;
+  padding: 10px 15px
+}
+
+.pageContainer a.blockHead svg {
+  margin-right: 15px
+}
+
+.pageContainer header.blockHead.buttonTypeWrap {
+  height: auto;
+  min-height: 40px;
+  flex-wrap: wrap
+}
+
+.pageContainer header.blockHead.buttonTypeWrap .smallBtn {
+  margin: 5px
+}
+
+.pageContainer .blockHead {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 14px;
+  padding: 0 15px;
+  height: 40px;
+  border-radius: 5px 5px 0 0
+}
+
+.pageContainer .blockHead.countrySliderWrap {
+  justify-content: space-between
+}
+
+.pageContainer .blockHead .rotateBlockArrow {
+  position: absolute;
+  right: 3px;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  cursor: pointer
+}
+
+.pageContainer .hasNewData {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #d80f0f;
+  margin-left: 10px
+}
+
+.pageContainer .sliderWrapBig {
+  position: relative
+}
+
+.pageContainer .sliderWrapBig .slick-slide > div {
+  display: flex;
+  height: 100%
+}
+
+.pageContainer .sliderWrapBig .slick-slide > div:hover {
+  opacity: 1
+}
+
+.pageContainer .sliderWrapBig .slick-dots {
+  bottom: 0
+}
+
+.pageContainer .sliderWrapBig .sliderWrap {
+  margin-bottom: 0
+}
+
+.pageContainer .sliderWrapBig.sectionContent {
+  background: none;
+  padding: 0
+}
+
+.pageContainer .sliderWrapBig.sliderWrapBig {
+  margin-bottom: 0px
+}
+
+.pageContainer .sliderWrapBig .slick-slider .slick-slide {
+  margin-right: 0
+}
+
+.pageContainer .sliderWrapBig .slick-slide + .slick-slide {
+  margin-left: 0
+}
+
+.pageContainer .sliderWrapBig .slick-arrow {
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%) rotate(90deg)
+}
+
+.pageContainer .sliderWrapBig .slick-arrow.slick-prev svg {
+  position: relative;
+  left: -1px
+}
+
+.pageContainer .sliderWrapBig .slick-arrow.slick-next {
+  left: auto;
+  right: 15px;
+  transform: translateY(-50%) rotate(-90deg)
+}
+
+.pageContainer .sliderWrapBig img {
+  display: block;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 460px
+}
+
+.pageContainer .sidebarMain {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  width: 265px;
+  padding-top: 20px;
+  padding-right: 15px
+}
+
+.pageContainer .sidebarMain .vs__open-indicator {
+  pointer-events: none
+}
+
+.pageContainer .sidebarMain .resetSideBar {
+  cursor: pointer
+}
+
+.pageContainer .sidebarMain .resetSideBar svg {
+  margin-right: 10px
+}
+
+.pageContainer .sidebarMain .buttonAllWrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+  height: 90px;
+  width: 100%
+}
+
+.pageContainer .sidebarMain .liveMark.bigMark {
+  top: -16px
+}
+
+.pageContainer .sidebarMain .sideBarBlock {
+  position: relative;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  font-weight: bold
+}
+
+.pageContainer .sidebarMain .sideBarBlock.marginTop {
+  margin-top: 20px
+}
+
+.pageContainer .sidebarMain .sideBarBlock .blockHead {
+  border-radius: 5px
+}
+
+.pageContainer .sidebarMain .sideBarList-enter-active, .pageContainer .sidebarMain .sideBarList-leave-active {
+  transition: all 1s
+}
+
+.pageContainer .sidebarMain .sideBarList-enter, .pageContainer .sidebarMain .sideBarList-leave-to {
+  opacity: 0
+}
+
+.pageContainer .sidebarMain .liveblock .blockHead {
+  padding-left: 8px
+}
+
+.pageContainer .sidebarMain .sportItemWrap {
+  display: flex;
+  align-items: center;
+  padding: 0 15px
+}
+
+.pageContainer .sidebarMain .sportItemWrap .eventsCount {
+  margin-left: auto
+}
+
+.pageContainer .sidebarMain .sportItemWrap .icon {
+  margin-right: 15px
+}
+
+.pageContainer .sidebarMain .sportsBlock {
+  cursor: pointer;
+  max-height: 40px;
+  overflow: hidden
+}
+
+.pageContainer .sidebarMain .sportsBlock.showFull {
+  max-height: 15000px
+}
+
+.pageContainer .sidebarMain .sportsWrap {
+  padding-top: 15px
+}
+
+.pageContainer .sidebarMain .sportsWrap .sportName {
+  font-weight: bold
+}
+
+.pageContainer .sidebarMain .sportsWrap .eventsCount {
+  padding: 0 5px;
+  margin-right: 10px;
+  border-radius: 3px
+}
+
+.pageContainer .sidebarMain .sportsWrap .baseCheckStyle + label {
+  padding-left: 33px
+}
+
+.pageContainer .sidebarMain .sportsWrap .baseCheckStyle + label:before {
+  left: 1.5px;
+  top: -9px
+}
+
+.pageContainer .sidebarMain .sportsWrap .sportName, .pageContainer .sidebarMain .sportsWrap .countryName {
+  max-height: 20px;
+  overflow: hidden
+}
+
+.pageContainer .sidebarMain .sportsWrap .sportItemWrap, .pageContainer .sidebarMain .sportsWrap .countryName {
+  cursor: pointer
+}
+
+.pageContainer .sidebarMain .sportsWrap .sportName {
+  position: relative;
+  margin-bottom: 15px
+}
+
+.pageContainer .sidebarMain .sportsWrap .countryName, .pageContainer .sidebarMain .sportsWrap .leagueName {
+  margin-top: 10px
+}
+
+.pageContainer .sidebarMain .sportsWrap .allCountries {
+  position: absolute;
+  top: 28px
+}
+
+.pageContainer .sidebarMain .sportsWrap .countryList {
+  padding-top: 32px;
+  padding-bottom: 10px
+}
+
+.pageContainer .sidebarMain .sportsWrap .countryName.showList {
+  margin: 15px;
+  padding: 15px 0
+}
+
+.pageContainer .sidebarMain .sportsWrap .countryName.showList ul {
+  padding-left: 10px
+}
+
+.pageContainer .sidebarMain .sportsWrap .leagueName {
+  font-weight: 400
+}
+
+.pageContainer .sidebarMain .sportsWrap .leagueName label {
+  pointer-events: none
+}
+
+.pageContainer .sidebarMain .sportsWrap .leagueName label + span {
+  max-width: 215px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden
+}
+
+.pageContainer .sidebarMain .sportsWrap .showList {
+  max-height: 15000px
+}
+
+.pageContainer .pagination {
+  margin-top: 15px
+}
+
+.pageContainer .pagination .btnCancel {
+  border-radius: 5px
+}
+
+.pageContainer .pagination a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 35px;
+  height: 35px;
+  margin: 0 2px
+}
+
+.pageContainer .pagination a.mainBtn {
+  padding: 10px 10px
+}
+
+.pageContainer .pagination a .vs__open-indicator {
+  transform: scale(0.8)
+}
+
+.pageContainer .pagination .leftArrow {
+  transform: rotate(90deg)
+}
+
+.pageContainer .pagination .rightArrow {
+  transform: rotate(-90deg)
+}
+
+.pageContainer .curDefault {
+  cursor: default
+}
+
+.sidebarItemsDevider {
+  width: 100%;
+  height: 1px;
+  margin: 5px 0px 15px 0px;
+  transition: background-color .4s
+}
+
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.alignCenter {
+  text-align: center
+}
+
+.flexColumn {
+  flex-direction: column
+}
+
+.inputCodeNumbers {
+  display: flex;
+  justify-content: center
+}
+
+.inputCodeNumbers input {
+  width: 35px;
+  height: 35px;
+  margin: 0 5px;
+  text-align: center;
+  padding: 0 10px
+}
+
+.inputCodeNumbers input::-webkit-outer-spin-button, .inputCodeNumbers input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0
+}
+
+.navDelimeter {
+  padding: 0 5px
+}
+
+.breadcrumbs.pageContainer {
+  align-items: center;
+  justify-content: flex-start;
+  flex: unset;
+  margin-top: 20px
+}
+
+.breadcrumbs.pageContainer a {
+  unicode-bidi: embed
+}
+
+.breadcrumbs.pageContainer .allBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 10px;
+  flex-shrink: 0;
+  transform: rotate(90deg)
+}
+
+.breadcrumbs.pageContainer .allBtn svg {
+  position: relative;
+  top: 1px;
+  transform: scale(0.8)
+}
+
+.small {
+  font-size: 11px
+}
+
+section {
+  margin: 20px 0;
+  border-radius: 5px;
+  overflow: hidden
+}
+
+section .openAllButtonWrap {
+  text-align: center
+}
+
+section.overflowVisible {
+  overflow: visible
+}
+
+.overflowHidden {
+  overflow: hidden
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-weight: 700
+}
+
+button.btn-transparent {
+  background: transparent
+}
+
+.mainBtn {
+  display: inline-block;
+  padding: 10px 24px;
+  margin: 0;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 12px;
+  line-height: 14px;
+  cursor: pointer;
+  outline: none
+}
+
+.mainBtn.casBtn {
+  padding: 10px 13px
+}
+
+.mainBtn:disabled {
+  opacity: .5
+}
+
+.mainBtn.medBtn {
+  width: 40px;
+  height: 40px;
+  padding: 10px 11px
+}
+
+.smallBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 10px;
+  margin-top: 10px;
+  line-height: 24px;
+  border: none;
+  border-radius: 9px;
+  font-weight: bold
+}
+
+.smallBtn.allBtn {
+  height: 25px;
+  margin-top: 0;
+  font-size: 12px;
+  border-radius: 20px
+}
+
+.smallBtn.allBtn svg {
+  margin-left: 4px
+}
+
+.closeBtn {
+  position: absolute;
+  padding: 0;
+  height: 12px;
+  background: none;
+  border: none;
+  top: 5px;
+  right: 2px;
+  z-index: 3
+}
+
+.betItem .closeBtn {
+  width: 20px;
+  height: 20px;
+  top: 0;
+  right: -5px
+}
+
+.tooltip {
+  display: block;
+  max-width: 100%;
+  z-index: 10000;
+  position: fixed;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+  border-radius: 16px;
+  font-size: 12px;
+  padding: 5px 10px 4px
+}
+
+.ellipsisMulty {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+.underline {
+  text-decoration: underline
+}
+
+.dashed {
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  background-color: transparent
+}
+
+.bold {
+  font-weight: 700
+}
+
+.tableEvents .leagueName, .tableEvents .leagWrap {
+  display: flex;
+  align-items: center;
+  cursor: default
+}
+
+.tableEvents .leagWrap {
+  margin-left: 5px
+}
+
+.tableEvents .rotateBlockArrow {
+  padding: 0 5px
+}
+
+.sliderWrap .slick-dots {
+  text-align: center
+}
+
+.sliderWrap .slick-dots li {
+  display: inline-block;
+  padding: 5px;
+  margin: 8px 5px
+}
+
+.sliderWrap .slick-dots li button {
+  width: 6px;
+  padding: 5px;
+  height: 6px;
+  border-radius: 50%;
+  font-size: 0;
+  box-shadow: 0 2px 6px 0 #000
+}
+
+.sliderWrap .slick-dots li.slick-active button {
+  padding: 7px;
+  width: 12px;
+  height: 12px
+}
+
+.slick-list > div {
+  display: flex
+}
+
+.slick-slider {
+  position: relative;
+  width: 100%
+}
+
+.slick-slider .slick-slide + .slick-slide {
+  margin-left: 7px
+}
+
+.slick-slider .slick-slide > div > div:focus {
+  outline: none
+}
+
+.slick-slider .slick-dots {
+  position: absolute;
+  width: 100%
+}
+
+.slick-slider .slick-arrow {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity .4s;
+  width: 35px;
+  height: 35px;
+  top: 0;
+  z-index: 1;
+  cursor: pointer;
+  border-radius: 50%;
+  transform: rotate(90deg)
+}
+
+.slick-slider .slick-arrow:focus {
+  outline: none
+}
+
+.slick-slider .slick-arrow.slick-next {
+  transform: rotate(-90deg);
+  left: auto;
+  right: -1px
+}
+
+.slick-slider .slick-arrow.slick-disabled {
+  opacity: 0;
+  pointer-events: none;
+  cursor: default
+}
+
+.appWrap > .routerWrap {
+  min-height: 600px
+}
+
+.appWrap .sectionContent {
+  position: relative;
+  padding: 15px
+}
+
+.appWrap .sectionContent.fullWithMargin {
+  width: 100%;
+  margin: 20px 0
+}
+
+.appWrap .sectionContent.noShowContent {
+  max-height: 0px;
+  overflow: hidden;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: .2s ease
+}
+
+.appWrap .sectionContent.showContent {
+  opacity: 1;
+  transition: .2s ease-out;
+  max-height: 3000px;
+  min-height: 125px
+}
+
+.appWrap .sectionContent.showContentBig {
+  opacity: 1;
+  transition: .2s ease-out;
+  max-height: 300000px;
+  min-height: 180px
+}
+
+.appWrap .sectionContent .preloader {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  min-height: 125px;
+  height: calc(100% - 55px);
+  opacity: .8;
+  z-index: 999
+}
+
+.appWrap .sectionContent .preloader.fullLoader {
+  height: 100%
+}
+
+.favoriteSection .sliderWrap_favorite {
+  display: flex
+}
+
+.favoriteSection .sliderWrap_favorite button {
+  padding: 0 15px;
+  margin-right: 10px;
+  margin-top: 0
+}
+
+.favoriteSection .blockHead {
+  min-height: 40px;
+  height: initial;
+  padding: 7px 15px
+}
+
+.favoriteSection .blockHead .sliderWrap {
+  margin: 0
+}
+
+.liveSection .slideItemWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 35px;
+  padding: 0 8px;
+  font-size: 12px;
+  font-weight: 400;
+  border-radius: 5px;
+  transition: .4s;
+  cursor: pointer
+}
+
+.liveSection .slideItemWrap .sportName {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  padding: 0 8px;
+  overflow: hidden
+}
+
+.liveSection .slideItemWrap .sportCount {
+  top: 5px;
+  right: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px;
+  min-width: 22px;
+  text-align: center;
+  border-radius: 10px;
+  line-height: 14px;
+  transition: .4s
+}
+
+.footerMain {
+  padding-top: 10px;
+  text-align: center
+}
+
+.footerMain h4 {
+  font-weight: bold;
+  margin-bottom: 10px
+}
+
+.footerMain a {
+  margin-bottom: 5px
+}
+
+.footerMain .footerTop {
+  display: grid;
+  grid-template-columns:1.2fr 1fr 1fr .8fr;
+  padding: 10px
+}
+
+.footerMain .footerTop .logoWrap {
+  max-width: 130px
+}
+
+.footerMain .footerTop .powered {
+  margin-top: 20px;
+  margin-bottom: 5px
+}
+
+.footerMain .footerTop .footerBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding-right: 10px;
+  margin: 10px 0
+}
+
+.footerMain .footerTop .footerBlock.about p {
+  max-width: 250px
+}
+
+.footerMain .footerTop .footerBlock .socialLinks {
+  display: flex;
+  margin-top: 10px
+}
+
+.footerMain .footerTop .footerBlock .socialLinks .socialLinksItem {
+  margin: 0 5px
+}
+
+.footerMain .footerTop .footerBlock .socialLinks .socialLinksItem:first-child {
+  margin-left: 0
+}
+
+.footerMain .footerTop .footerBlock .socialLinks .socialLinksItem:last-child {
+  margin-right: 0
+}
+
+.footerMain .footerTop .footerBlock .socialLinks svg {
+  width: 30px;
+  height: 30px;
+  fill: #8c9cb6
+}
+
+.footerMain .footerTop .footerBlock .socialLinks svg path {
+  fill: #8c9cb6
+}
+
+.footerMain .footerTop .footerBlock .paymentMethods {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap
+}
+
+.footerMain .footerTop .footerBlock .paymentMethods img {
+  width: 40px;
+  margin: 3px;
+  height: fit-content
+}
+
+.footerMain .footerBotom {
+  font-size: 11px;
+  padding: 10px 0
+}
+
+.footerMain .footerBotom a {
+  text-decoration: underline;
+  font-size: 11px
+}
+
+.footerMain .footerBotom .footerLinks {
+  display: inline-block
+}
+
+.footerMain .footerBotom .footerLinks i {
+  position: relative;
+  bottom: 1px;
+  font-size: 8px
+}
+
+.footerMain .licWrap {
+  width: 100px;
+  margin-top: auto
+}
+
+.leagueEventsTable {
+  margin-bottom: 10px
+}
+
+.leagueEventsTable .sportItemWrap {
+  line-height: 12px
+}
+
+.sliderWrap {
+  margin-bottom: 25px;
+  direction: ltr
+}
+
+.sliderWrap .slick-list, .blockHead .slick-list {
+  overflow: hidden
+}
+
+.pageWrap .sliderWrap.countrySliderWrap {
+  margin-bottom: 10px
+}
+
+.countrySliderWrap .slick-slider .slick-arrow.slick-next {
+  right: -15px
+}
+
+.countrySliderWrap .slick-slider .slick-arrow.slick-prev {
+  left: -15px
+}
+
+.pageWrap .countrySlider {
+  justify-content: flex-start;
+  border-radius: 20px;
+  padding: 0 10px
+}
+
+.pageWrap .countrySlider .sportItemWrap {
+  height: 20px;
+  margin-right: 5px
+}
+
+.sportNameInTable {
+  margin-bottom: 15px;
+  position: relative
+}
+
+.sportNameInTable div {
+  margin: 5px 10px;
+  position: relative;
+  z-index: 100;
+  height: 20px
+}
+
+.sportNameInTable div:first-child {
+  margin-right: 0
+}
+
+.sportNameInTable:before, .sportNameInTable:after {
+  content: "";
+  flex: 1 1;
+  margin: auto
+}
+
+.leagueNameWithFilter {
+  display: grid;
+  grid-template-columns:8.3fr 3fr 3fr 1fr;
+  align-items: center;
+  margin-bottom: 5px
+}
+
+.leagueNameWithFilter .leagueName {
+  line-height: 20px;
+  min-height: 32px
+}
+
+.filterNameWrapper {
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  border-radius: 5px;
+  max-height: 30px;
+  padding: 1px
+}
+
+.filterNameWrapper:empty {
+  border: none;
+  padding: 0
+}
+
+.betType > .filterNameWrapper {
+  line-height: 15px;
+  padding-left: 15px;
+  border: none;
+  background: none
+}
+
+.tableEventsLive {
+  overflow: initial
+}
+
+.tableEventsLive .tableHead, .tableEventsLive .tableBody {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns:.5fr minmax(200px, 5fr) 2fr 2fr .7fr
+}
+
+.tableEventsLive .tableHead .filterOptions, .tableEventsLive .tableBody .filterOptions {
+  display: flex;
+  justify-content: space-between;
+  height: 100%
+}
+
+.tableEventsLive .tableHead .filterOptions div, .tableEventsLive .tableBody .filterOptions div {
+  width: 100%;
+  text-align: center
+}
+
+.tableEventsLive .tableHead div {
+  height: 25px;
+  line-height: 25px
+}
+
+.tableEventsLive .tableHead .removeFromFav::before {
+  color: #fff
+}
+
+.tableEventsLive .tableHead .leagWrap {
+  margin-left: 0;
+  width: 100%
+}
+
+.tableEventsLive .tableHead .leagWrap span:first-child {
+  white-space: nowrap;
+  max-width: calc(100% - 20px);
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+.tableEventsLive .tableBody {
+  border-radius: initial;
+  transition: background-color .4s
+}
+
+.tableEventsLive .tableBody .filterOptions > div {
+  min-width: 40px
+}
+
+.tableEventsLive .tableBody .timingWrap {
+  display: flex;
+  align-items: center
+}
+
+.tableEventsLive .tableBody .timingWrap .liveMark {
+  padding: 0 10px 0 10px;
+  margin-right: 5px
+}
+
+.tableEventsLive .eventItemWrap:last-child .tableBody {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px
+}
+
+.tableEventsLive .leftSpace {
+  padding: 0 8px;
+  align-self: center
+}
+
+.tableEventsLive .leftSpace.moreEvensWrap {
+  align-self: center;
+  padding: 0 0
+}
+
+.tableEventsLive .leftSpace .betMore {
+  text-align: center
+}
+
+.tableEventsLive .leftSpace.center {
+  text-align: center
+}
+
+.tableEventsLive .liveTime .betMore {
+  color: #80858c;
+  margin-left: auto;
+  font-weight: 400;
+  display: flex;
+  align-items: center
+}
+
+.tableEventsLive .liveTime .betMore svg {
+  transform: scale(0.7) rotate(-90deg);
+  margin-left: 5px;
+  fill: #80858c
+}
+
+.tableEventsLive .liveTime .dateTime {
+  margin-right: 5px
+}
+
+.tableEventsLive .liveTime .timeSet {
+  color: #80858c
+}
+
+.tableEventsLive .iconField {
+  display: flex;
+  align-items: center;
+  margin-left: 5px
+}
+
+.tableEventsLive .iconField svg {
+  width: 23px
+}
+
+.tableEventsLive .teamsWrap .homeTeam, .tableEventsLive .scoreWrap > div:first-child, .tableEventsLive .setsScoreTable > div > div:first-child {
+  margin-bottom: 5px
+}
+
+.tableEventsLive .scoreWrap {
+  margin-left: 4px
+}
+
+.tableEventsLive .scoreWrap > div {
+  height: 100%;
+  text-align: center
+}
+
+.tableEventsLive .scoreWrap.isBg > div {
+  width: 30px;
+  text-align: center
+}
+
+.tableEventsLive .scoreWrap .score, .tableEventsLive .scoreWrap .fullScoreBg {
+  display: inline-block;
+  min-width: 100%;
+  padding: 0;
+  height: initial;
+  line-height: 20px
+}
+
+.tableEventsLive .teamsWrap {
+  flex: 3
+}
+
+.tableEventsLive .teamsWrap .homeTeam, .tableEventsLive .teamsWrap .awayTeam {
+  position: relative
+}
+
+.tableEventsLive .teamsWrap .homeTeam a, .tableEventsLive .teamsWrap .awayTeam a {
+  position: relative;
+  margin-right: 5px
+}
+
+.tableEventsLive .teamsWrap .homeTeam .card, .tableEventsLive .teamsWrap .awayTeam .card {
+  position: absolute;
+  height: 14px;
+  width: 10px
+}
+
+.tableEventsLive .setsScoreTable {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end
+}
+
+.tableEventsLive .setsScoreTable > div {
+  margin: 0 4px;
+  text-align: right
+}
+
+.buttonAllWrapper {
+  text-align: center;
+  position: relative;
+  margin-top: -65px;
+  margin-bottom: 20px;
+  pointer-events: none;
+  padding: 25px 0 10px 0
+}
+
+.buttonAllWrapper button {
+  pointer-events: initial
+}
+
+.tableEvents {
+  width: 100%
+}
+
+.tableEvents .timingCol {
+  width: 120px
+}
+
+.tableEvents .eventCol {
+  width: 30%
+}
+
+.tableEvents .moreCol {
+  width: 80px
+}
+
+.tableEvents .tableHead {
+  height: 25px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #000
+}
+
+.tableEvents .tableHead td {
+  height: 25px
+}
+
+.tableEvents td {
+  text-align: center;
+  vertical-align: middle
+}
+
+.tableEvents td table {
+  width: 100%
+}
+
+.tableEvents .betMore, .tableEvents .teamsWrap {
+  font-weight: bold
+}
+
+.tableEvents .customSelectWrap .vs__selected {
+  text-align: left;
+  white-space: nowrap
+}
+
+.tableEvents .customSelectWrap .vs__dropdown-toggle {
+  height: 26px
+}
+
+.tableEvents .alignLeft {
+  text-align: left;
+  padding-left: 15px
+}
+
+.tableEvents .tableBody .dateTime {
+  white-space: nowrap
+}
+
+.tableEvents .tableBody td {
+  height: 70px;
+  padding-left: 1px
+}
+
+.tableEvents .tableBody .alignLeft {
+  padding-left: 15px
+}
+
+.tableEvents .tableBody .eventWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 8px 0 0
+}
+
+.tableEvents .tableBody .liveTime {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-bottom: 8px
+}
+
+.tableEvents .tableBody .numbersWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  min-height: 30px;
+  min-width: 50px;
+  cursor: pointer;
+  transition: background-color .4s, opacity .4s;
+  text-align: center;
+  margin-bottom: 0
+}
+
+.tableEvents .tableBody .numbersWrap.hasParams {
+  min-height: 40px
+}
+
+.tableEvents .tableBody .lockedEvent span {
+  display: none
+}
+
+.tableEvents .tableBody .lockedEvent.numbersWrap {
+  background-color: transparent
+}
+
+.lockedEvent {
+  display: block;
+  cursor: default;
+  min-height: 30px;
+  min-width: 50px;
+  border-radius: 5px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 16px;
+  transition: background-color .4s, opacity .4s;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAxMyAxNyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwKSI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNC4xNTMzMiA3LjA0ODgzSDUuMDI3NDZINy45NzM1MUg4Ljk0NDc3VjQuODk1NzJDOC45NDQ3NyAzLjU3MjYgNy44NzIxNyAyLjUgNi41NDkwNCAyLjVDNS4yMjU5MiAyLjUgNC4xNTMzMiAzLjU3MjYgNC4xNTMzMiA0Ljg5NTcyVjcuMDQ4ODNaTTIuMTUzMzIgNy4wNTQyNUMxLjExODA3IDcuMTMwMiAwLjMwMTc1OCA3Ljk5NDE5IDAuMzAxNzU4IDkuMDQ4ODNWMTEuNzc0NUMwLjMwMTc1OCAxNC4zODQ1IDIuNDE3NTIgMTYuNTAwMiA1LjAyNzQ2IDE2LjUwMDJINy45NzM1MUMxMC41ODM0IDE2LjUwMDIgMTIuNjk5MiAxNC4zNjEyIDEyLjY5OTIgMTEuNzUxM1Y5LjA0ODgzQzEyLjY5OTIgOC4wMjczOSAxMS45MzM1IDcuMTg0OCAxMC45NDQ4IDcuMDYzNzVWNC44OTU3MkMxMC45NDQ4IDIuNDY4MDMgOC45NzY3NCAwLjUgNi41NDkwNCAwLjVDNC4xMjEzNSAwLjUgMi4xNTMzMiAyLjQ2ODAzIDIuMTUzMzIgNC44OTU3MlY3LjA1NDI1Wk02Ljg2MDEgMTEuNzE0MUM3LjE4MjU0IDExLjU3MTkgNy40MDgxNSAxMS4yNDQ2IDcuNDA4MTUgMTAuODYzN0M3LjQwODE1IDEwLjM1MjIgNy4wMDEzMiA5LjkzNzUgNi40OTk0OCA5LjkzNzVDNS45OTc2NCA5LjkzNzUgNS41OTA4MiAxMC4zNTIyIDUuNTkwODIgMTAuODYzN0M1LjU5MDgyIDExLjI1NjQgNS44MzA1NCAxMS41OTIgNi4xNjg5NSAxMS43MjY3VjEzLjE4ODFDNi4xNjg5NSAxMy4zNzg5IDYuMzIzNjYgMTMuNTMzNyA2LjUxNDUyIDEzLjUzMzdDNi43MDUzOCAxMy41MzM3IDYuODYwMSAxMy4zNzg5IDYuODYwMSAxMy4xODgxVjExLjcxNDFaIiBmaWxsPSIjODU4NTg1Ii8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDAiPgo8cmVjdCB5PSIwLjUiIHdpZHRoPSIxMyIgaGVpZ2h0PSIxNiIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo=)
+}
+
+.eventDetail .lockedEvent {
+  min-width: 22px
+}
+
+.eventDetail .rangeOuterWrap {
+  display: flex;
+  width: 50%;
+  direction: ltr
+}
+
+.eventDetail .rangeOuterWrap .rangeWrap {
+  width: 49%;
+  position: relative
+}
+
+.eventDetail .rangeOuterWrap .rangeWrap .ellipsis {
+  text-align: center
+}
+
+.eventDetail .rangeOuterWrap .rangeWrap input {
+  width: 96%;
+  cursor: pointer
+}
+
+.eventDetail .rangeOuterWrap .rangeWrap .stepWrap {
+  display: flex;
+  justify-content: space-between;
+  width: 98%;
+  padding: 0 2%
+}
+
+.eventDetail .rangeOuterWrap .rangeWrap .stepWrap span {
+  cursor: pointer
+}
+
+.eventDetail .rangeOuterWrap .rangeWrap .step {
+  text-align: center;
+  width: 10px
+}
+
+.eventDetail .rangeOuterWrap .rangeWrap .overlay {
+  position: absolute;
+  height: 6px;
+  left: 0;
+  top: 28px;
+  pointer-events: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px
+}
+
+.eventItemHead .switchWrap {
+  margin-inline-start: auto
+}
+
+.eventItemHead .switchWrap span:first-child {
+  margin-inline-end: 10px
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  border-radius: 10px
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  height: 6px
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  position: relative;
+  bottom: 4px;
+  background-color: #d8d8d8;
+  border-radius: 50%;
+  border: 1px solid #ccc
+}
+
+input[type=range]::-moz-range-progress {
+  background-color: #51b600
+}
+
+input[type=range]::-moz-range-track {
+  background-color: #d8d8d8
+}
+
+input[type=range]::-ms-fill-lower {
+  background-color: #51b600
+}
+
+input[type=range]::-ms-fill-upper {
+  background-color: #d8d8d8
+}
+
+.numbersWrap .less, .currOdd .less {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  bottom: -7px;
+  right: -7px;
+  border: 7px solid transparent;
+  border-bottom-color: #eb4846;
+  transform: rotate(135deg)
+}
+
+.numbersWrap .less + .oddDigits, .currOdd .less + .oddDigits {
+  color: #eb4846
+}
+
+.numbersWrap .more, .currOdd .more {
+  width: 10px;
+  height: 10px;
+  border: 7px solid transparent;
+  border-bottom-color: #00ca01;
+  position: absolute;
+  transform: rotate(45deg);
+  top: -7px;
+  right: -7px
+}
+
+.numbersWrap .more + .oddDigits, .currOdd .more + .oddDigits {
+  color: #00ca01
+}
+
+.odd_params {
+  display: block;
+  height: 20px
+}
+
+.favoriteSection .sliderWrap {
+  width: 100%
+}
+
+.favoriteSection .slick-slide:first-child svg {
+  display: none
+}
+
+.preMatchPage .slick-slide:first-child svg {
+  display: inline-block
+}
+
+.catAbout .aboutContent {
+  max-height: 300px;
+  overflow: hidden
+}
+
+.catAbout .aboutContent.showContent {
+  max-height: 2000px
+}
+
+.catAbout h1 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center
+}
+
+.catAbout .buttonAllWrapper {
+  margin-bottom: 0;
+  margin-top: -140px;
+  padding: 55px 0 10px 0
+}
+
+.catAbout .buttonAllWrapper .allBtn {
+  padding: 0;
+  padding-top: 2px;
+  margin: auto;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%
+}
+
+.flexBetween {
+  position: relative;
+  display: flex;
+  justify-content: space-between
+}
+
+.betSlipShow-enter-active, .betSlipShow-leave-active {
+  transition: opacity .4s
+}
+
+.betSlipShow-enter, .betSlipShow-leave-to {
+  opacity: 0
+}
+
+.betsCount-enter-active {
+  animation: heartbeat 1.5s ease-in-out
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out
+  }
+  10% {
+    transform: scale(1.4);
+    animation-timing-function: ease-in;
+    background-color: #475aef
+  }
+  17% {
+    transform: scale(1.2);
+    animation-timing-function: ease-out
+  }
+  33% {
+    transform: scale(1.4);
+    animation-timing-function: ease-in
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out
+  }
+}
+
+.betSlipItemsShow-enter, .betSlipItemsShow-leave-to {
+  opacity: 0
+}
+
+.itemQuestionEl {
+  max-height: 500px;
+  opacity: 1;
+  transition: .5s;
+  margin-top: 10px
+}
+
+.questionBlock-leave, .questionBlock-leave-to {
+  transition: none;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden
+}
+
+.questionBlock-enter, .questionBlock-enter-active {
+  max-height: 0;
+  opacity: 0
+}
+
+.betSlipWrap .betSlipBody .betsWrap .betItem.betSlipItemsShow-leave-active, .betSlipWrap .betsFooter .totalAmount.betSlipItemsShow-leave-active {
+  max-height: 0;
+  margin-top: 0
+}
+
+.appWrap .betSlipWrap .betSlipShowTotal-leave-active, .appWrap .betSlipWrap .betSlipShowTotal-enter {
+  transition: .3s;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(0.1, 0.1);
+    opacity: 0
+  }
+  50% {
+    opacity: 1
+  }
+  100% {
+    transform: scale(1.2, 1.2);
+    opacity: 0
+  }
+}
+
+.score, .fullScoreBg {
+  display: inline-block;
+  min-width: 75%;
+  padding: 0 1px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 3px;
+  font-weight: 700
+}
+
+.liveMark {
+  position: relative;
+  display: inline-block;
+  padding: 0 10px 0 20px;
+  height: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  border-radius: 10px;
+  font-size: 11px;
+  text-transform: capitalize
+}
+
+.liveMark.bigMark {
+  top: -17px;
+  height: 0
+}
+
+.liveMark.bigMark:before {
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  top: 3px
+}
+
+.liveMark.bigMark:after {
+  height: 8px;
+  width: 8px
+}
+
+.liveMark:before {
+  content: "";
+  display: block;
+  border: 1px solid #eb4846;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  animation: pulsate 1s ease-out;
+  animation-iteration-count: infinite;
+  opacity: 0
+}
+
+.liveMark:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  height: 6px;
+  width: 6px;
+  left: 7px;
+  top: 7px;
+  background-color: #eb4846
+}
+
+.betsCount {
+  display: inline-block;
+  min-width: 18px;
+  min-height: 18px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 11px;
+  line-height: 18px;
+  font-weight: 600;
+  margin-left: 5px
+}
+
+.betSlipWrap {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 320px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  z-index: 1000;
+  border-bottom: none;
+  will-change: auto
+}
+
+.betSlipWrap .hidable {
+  transition: .3s;
+  max-height: 900px;
+  min-height: 100px
+}
+
+.betSlipWrap .noBets {
+  transition: .3s;
+  max-height: 300px
+}
+
+.betSlipWrap .betTypeSwitcher {
+  transition: .3s;
+  max-height: 50px
+}
+
+.betSlipWrap .preloader {
+  position: absolute;
+  flex-direction: column;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 40px);
+  opacity: .95;
+  z-index: 10
+}
+
+.betSlipWrap .preloader .loaderResult {
+  display: flex;
+  align-items: center;
+  flex-direction: column
+}
+
+.betSlipWrap .preloader .loaderResult svg {
+  margin-bottom: 10px
+}
+
+.betSlipWrap .preloader .loaderResult.specialStyle {
+  text-align: center;
+  margin: 40px
+}
+
+.betSlipWrap .betItem .preloader {
+  height: 100%
+}
+
+.betSlipWrap .betPlaceStatus {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 35px;
+  font-weight: bold;
+  z-index: 5;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px
+}
+
+.betSlipWrap .betPlaceStatus svg {
+  margin: 0 10px
+}
+
+.betSlipWrap .noBets {
+  height: 100px
+}
+
+.betSlipWrap .noBets span {
+  margin: 0 5px;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold
+}
+
+.betSlipWrap .totalAmount .customSelectWrap.systemSubmited {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 0;
+  pointer-events: none
+}
+
+.betSlipWrap .totalAmount .customSelectWrap.systemSubmited .vs__dropdown-toggle {
+  border: none;
+  background-color: transparent
+}
+
+.betSlipWrap .totalAmount .customSelectWrap.systemSubmited .vs__search, .betSlipWrap .totalAmount .customSelectWrap.systemSubmited .vs__actions, .betSlipWrap .totalAmount .customSelectWrap.systemSubmited .vs__selected-options:after {
+  display: none
+}
+
+.betSlipWrap .oddsChangeWarn {
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  margin: 0 10px 10px;
+  border-radius: 5px
+}
+
+.betSlipWrap .oddsChangeWarn.error_msg {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  text-align: left
+}
+
+.betSlipWrap .oddsChangeWarn.error_msg svg {
+  flex-basis: 5%
+}
+
+.betSlipWrap .oddsChangeWarn.error_msg .betError {
+  flex-basis: 92%;
+  margin-left: 8px
+}
+
+.betSlipWrap .oddsChangeWarn.error_msg .betError span, .betSlipWrap .oddsChangeWarn.error_msg .betError a {
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold
+}
+
+.betSlipWrap .oddsChangeWarn #accept_all_odds_change {
+  top: 10px
+}
+
+.betSlipWrap .betHeader .betslipSwither {
+  display: flex;
+  justify-content: space-between
+}
+
+.betSlipWrap .betHeader .betslipSwither .betslipSwitch {
+  flex-basis: 45%;
+  text-align: center;
+  padding: 10px 0;
+  cursor: pointer
+}
+
+.betSlipWrap .betHeader .betslipSwither .betslipSwitch:first-child {
+  border-left: none;
+  border-top-left-radius: 6px
+}
+
+.betSlipWrap .betHeader .betslipSwither .betslipSwitch.showBestlip {
+  flex-basis: auto;
+  min-width: 45px;
+  padding: 0;
+  border-top-right-radius: 6px
+}
+
+.betSlipWrap .betHeader .betTypeSwitcher {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px
+}
+
+.betSlipWrap .betHeader .betTypeSwitcher .linkToHistory svg {
+  margin-right: 5px
+}
+
+.betSlipWrap .betHeader .betTypeSwitcher .buttonTypeWrap {
+  text-align: center
+}
+
+.betSlipWrap .betHeader .betTypeSwitcher .buttonTypeWrap.fullWidth {
+  width: 100%
+}
+
+.betSlipWrap .betHeader .betTypeSwitcher .buttonTypeWrap button {
+  margin-top: 0;
+  height: auto;
+  line-height: initial;
+  border-radius: 18px;
+  padding: 6px 10px
+}
+
+.betSlipWrap .betHeader .betTypeSwitcher .buttonTypeWrap button + button {
+  margin-left: 5px
+}
+
+.betSlipWrap .betSlipBody {
+  margin: 10px;
+  margin-bottom: 0;
+  max-height: 485px;
+  overflow-y: scroll;
+  padding-right: 10px
+}
+
+.betSlipWrap .betSlipBody.betFormSubmited {
+  margin-bottom: 20px
+}
+
+.betSlipWrap .betSlipBody .eventName {
+  padding-right: 25px;
+  margin-bottom: 5px
+}
+
+.betSlipWrap .betSlipBody .betsWrap.myBets .sportIcon .icon {
+  position: static
+}
+
+.betSlipWrap .betSlipBody .myBets .eventName {
+  padding-right: 0
+}
+
+.betSlipWrap .betSlipBody .flexBetween {
+  align-items: center
+}
+
+.betSlipWrap .betSlipBody .score {
+  display: inline
+}
+
+.betSlipWrap .betSlipBody .dateAndTime {
+  text-align: right;
+  min-width: 100px;
+  margin-inline-start: 5px
+}
+
+.betSlipWrap .betSlipBody .myBets .betAmountWrap .totalPossibleProfit {
+  margin: 10px 0
+}
+
+.betSlipWrap .betSlipBody.systemWrap {
+  margin-bottom: 10px
+}
+
+.betSlipWrap .betSlipBody.multi .betsWrap .betItem {
+  margin-bottom: 1px;
+  border-radius: 0
+}
+
+.betSlipWrap .betSlipBody.multi .betsWrap .betItem + .betItem {
+  margin-top: 0
+}
+
+.betSlipWrap .betSlipBody.multi .betsWrap .betItem:first-child {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px
+}
+
+.betSlipWrap .betSlipBody.multi ~ .betAmountWrap.multiStake {
+  margin: 0 28px 10px 10px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px
+}
+
+.betSlipWrap .betSlipBody.multi.betFormSubmited .betsWrap .betItem:last-child {
+  box-shadow: none;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px
+}
+
+.betSlipWrap .betSlipBody.systemWrap.betFormSubmited, .betSlipWrap .betSlipBody.multi.betFormSubmited {
+  padding-top: 45px
+}
+
+.betSlipWrap .betSlipBody.systemWrap.betFormSubmited .betsWrap > div, .betSlipWrap .betSlipBody.systemWrap.betFormSubmited .betItem, .betSlipWrap .betSlipBody.multi.betFormSubmited .betsWrap > div, .betSlipWrap .betSlipBody.multi.betFormSubmited .betItem {
+  overflow: visible
+}
+
+.betSlipWrap .betSlipBody.systemWrap.betFormSubmited .betPlaceStatus, .betSlipWrap .betSlipBody.multi.betFormSubmited .betPlaceStatus {
+  position: absolute;
+  width: 100%;
+  top: -45px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  z-index: 5
+}
+
+.betSlipWrap .betSlipBody.multi.betFormSubmited {
+  padding-top: 35px
+}
+
+.betSlipWrap .betSlipBody.multi.betFormSubmited .betPlaceStatus {
+  top: -32px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0
+}
+
+.betSlipWrap .betSlipBody.multi .disabledPlug {
+  border-radius: 0
+}
+
+.betSlipWrap .betSlipBody .disabledPlug {
+  position: absolute;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  opacity: .9;
+  top: 0;
+  z-index: 2;
+  border-radius: 5px
+}
+
+.betSlipWrap .betSlipBody .disabledPlug span {
+  margin-top: 5px
+}
+
+.betSlipWrap .betSlipBody .disabledPlug.oddChangeErr span {
+  width: 65%;
+  margin-top: 25px;
+  text-align: center
+}
+
+.betSlipWrap .betSlipBody.systemWrap .oddChangeErr span, .betSlipWrap .betSlipBody.multi .oddChangeErr span {
+  margin-top: 0
+}
+
+.betSlipWrap .betSlipBody .betsWrap > div {
+  position: relative;
+  overflow: hidden
+}
+
+.betSlipWrap .betSlipBody .betsWrap.myBets {
+  max-height: 743px
+}
+
+.betSlipWrap .betSlipBody .betsWrap .linkToEvent .delim {
+  margin: 0 2px
+}
+
+.betSlipWrap .betSlipBody .betsWrap .linkToEvent div {
+  display: inline-block
+}
+
+.betSlipWrap .betSlipBody .betsWrap .small {
+  font-size: 11px
+}
+
+.betSlipWrap .betSlipBody .betsWrap .expressWrap {
+  overflow: hidden
+}
+
+.betSlipWrap .betSlipBody .betsWrap .expressWrap .totalOdd {
+  height: 35px
+}
+
+.betSlipWrap .betSlipBody .betsWrap .expressWrap.opened .betExpItemWrap {
+  opacity: 1;
+  max-height: 2000px
+}
+
+.betSlipWrap .betSlipBody .betsWrap .expressWrap.opened .rotateBlockArrow {
+  transform: rotate(180deg)
+}
+
+.betSlipWrap .betSlipBody .betsWrap .expressWrap .betExpItemWrap {
+  margin-bottom: 1px;
+  max-height: 0;
+  transition: max-height .4s, opacity .4s;
+  opacity: 0
+}
+
+.betSlipWrap .betSlipBody .betsWrap .sportAndLeague, .betSlipWrap .betSlipBody .betsWrap .expressBets, .betSlipWrap .betSlipBody .betsWrap .betHeader {
+  padding: 10px
+}
+
+.betSlipWrap .betSlipBody .betsWrap .sportAndLeague > span, .betSlipWrap .betSlipBody .betsWrap .expressBets > span, .betSlipWrap .betSlipBody .betsWrap .betHeader > span {
+  pointer-events: none
+}
+
+.betSlipWrap .betSlipBody .betsWrap .sportAndLeague .bonusStat, .betSlipWrap .betSlipBody .betsWrap .expressBets .bonusStat, .betSlipWrap .betSlipBody .betsWrap .betHeader .bonusStat {
+  position: static;
+  padding: 4px 8px
+}
+
+.betSlipWrap .betSlipBody .betsWrap.myBets .betItem svg, .betSlipWrap .betSlipBody .betsWrap .betHeader > span svg {
+  position: relative;
+  top: 3px;
+  margin-right: 5px
+}
+
+.betSlipWrap .betSlipBody .betsWrap .expHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer
+}
+
+.betSlipWrap .betSlipBody .betsWrap .expHeader .rotateBlockArrow {
+  position: absolute;
+  right: -5px;
+  top: 0;
+  height: 40px;
+  width: 40px
+}
+
+.betSlipWrap .betSlipBody .betsWrap .expHeader .rotateBlockArrow svg {
+  position: static;
+  margin-right: 0
+}
+
+.betSlipWrap .betSlipBody .betsWrap .expressBets {
+  border-top: 1px solid #ada9a9
+}
+
+.betSlipWrap .betSlipBody .betsWrap.myBets .betBot, .betSlipWrap .betSlipBody .betsWrap .betTop {
+  padding: 10px
+}
+
+.betSlipWrap .betSlipBody .betsWrap .betMidItems {
+  padding: 5px 10px
+}
+
+.betSlipWrap .betSlipBody .betsWrap .betMidItems .marketName {
+  margin: 0
+}
+
+.betSlipWrap .betSlipBody .betsWrap .betItem {
+  position: relative;
+  width: 100%;
+  transition: all .3s, box-shadow 0s;
+  transition-timing-function: ease-out;
+  overflow: hidden;
+  border-radius: 5px;
+  will-change: auto
+}
+
+.betSlipWrap .betSlipBody .betsWrap .betItem + .betItem {
+  margin-top: 10px
+}
+
+.betSlipWrap .betSlipBody .betsWrap .betItem:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  transition: .2s
+}
+
+.betSlipWrap .betSlipBody .betsWrap .betItem .leagName {
+  margin: 0 5px
+}
+
+.betSlipWrap .betSlipBody .betsWrap .betItem .leftSide {
+  position: relative
+}
+
+.betSlipWrap .betSlipBody .betsWrap .betItem .currOdd {
+  position: relative;
+  font-weight: 700;
+  padding-left: 12px
+}
+
+.betSlipWrap .betSlipBody .betsWrap .betItem .currOdd.lockedEvent {
+  min-height: 20px;
+  min-width: 20px;
+  cursor: default;
+  background-color: transparent;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAxMyAxNyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwKSI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNC4xNTMzMiA3LjA0ODgzSDUuMDI3NDZINy45NzM1MUg4Ljk0NDc3VjQuODk1NzJDOC45NDQ3NyAzLjU3MjYgNy44NzIxNyAyLjUgNi41NDkwNCAyLjVDNS4yMjU5MiAyLjUgNC4xNTMzMiAzLjU3MjYgNC4xNTMzMiA0Ljg5NTcyVjcuMDQ4ODNaTTIuMTUzMzIgNy4wNTQyNUMxLjExODA3IDcuMTMwMiAwLjMwMTc1OCA3Ljk5NDE5IDAuMzAxNzU4IDkuMDQ4ODNWMTEuNzc0NUMwLjMwMTc1OCAxNC4zODQ1IDIuNDE3NTIgMTYuNTAwMiA1LjAyNzQ2IDE2LjUwMDJINy45NzM1MUMxMC41ODM0IDE2LjUwMDIgMTIuNjk5MiAxNC4zNjEyIDEyLjY5OTIgMTEuNzUxM1Y5LjA0ODgzQzEyLjY5OTIgOC4wMjczOSAxMS45MzM1IDcuMTg0OCAxMC45NDQ4IDcuMDYzNzVWNC44OTU3MkMxMC45NDQ4IDIuNDY4MDMgOC45NzY3NCAwLjUgNi41NDkwNCAwLjVDNC4xMjEzNSAwLjUgMi4xNTMzMiAyLjQ2ODAzIDIuMTUzMzIgNC44OTU3MlY3LjA1NDI1Wk02Ljg2MDEgMTEuNzE0MUM3LjE4MjU0IDExLjU3MTkgNy40MDgxNSAxMS4yNDQ2IDcuNDA4MTUgMTAuODYzN0M3LjQwODE1IDEwLjM1MjIgNy4wMDEzMiA5LjkzNzUgNi40OTk0OCA5LjkzNzVDNS45OTc2NCA5LjkzNzUgNS41OTA4MiAxMC4zNTIyIDUuNTkwODIgMTAuODYzN0M1LjU5MDgyIDExLjI1NjQgNS44MzA1NCAxMS41OTIgNi4xNjg5NSAxMS43MjY3VjEzLjE4ODFDNi4xNjg5NSAxMy4zNzg5IDYuMzIzNjYgMTMuNTMzNyA2LjUxNDUyIDEzLjUzMzdDNi43MDUzOCAxMy41MzM3IDYuODYwMSAxMy4zNzg5IDYuODYwMSAxMy4xODgxVjExLjcxNDFaIiBmaWxsPSIjODU4NTg1Ii8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDAiPgo8cmVjdCB5PSIwLjUiIHdpZHRoPSIxMyIgaGVpZ2h0PSIxNiIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo=) center no-repeat;
+  background-size: contain
+}
+
+.betSlipWrap .betSlipBody .betsWrap .betItem .currOdd.lockedEvent span {
+  display: none
+}
+
+.betSlipWrap .betSlipBody .betsWrap .betItem .currOdd span {
+  width: 15px;
+  height: 15px;
+  right: 0;
+  left: -8px;
+  top: -1px;
+  transform: none
+}
+
+.betSlipWrap .betSlipBody .betsWrap .betItem .currOdd span.less {
+  top: 6px;
+  transform: rotate(180deg)
+}
+
+.betSlipWrap .betSlipBody .betsWrap .betItem .currOdd.more {
+  color: #00ca01
+}
+
+.betSlipWrap .betSlipBody .betsWrap .betItem .currOdd.less {
+  color: #eb4846
+}
+
+.betSlipWrap .betSlipBody .betsWrap .marketName {
+  margin: 10px 0 5px
+}
+
+.betSlipWrap .cashoutAmountWrap {
+  margin-top: 20px
+}
+
+.betSlipWrap .cashoutAmountWrap .cashoutAmount {
+  height: 35px;
+  width: 55%;
+  line-height: 35px;
+  padding-left: 10px;
+  margin-right: 5px
+}
+
+.betSlipWrap .vs--disabled .vs__clear, .betSlipWrap .vs--disabled .vs__dropdown-toggle, .betSlipWrap .vs--disabled .vs__open-indicator, .betSlipWrap .vs--disabled .vs__search, .betSlipWrap .vs--disabled .vs__selected {
+  background-color: transparent
+}
+
+.betSlipWrap .totalAmount .vs__search {
+  padding-left: 5px
+}
+
+.betSlipWrap .totalAmount .vs--disabled {
+  pointer-events: none
+}
+
+.betSlipWrap .totalAmount .vs--disabled svg {
+  opacity: .5
+}
+
+.betSlipWrap .totalAmount.system .vs__dropdown-menu {
+  top: auto;
+  bottom: 100%
+}
+
+.betSlipWrap .totalAmount.system .vs__search {
+  position: absolute;
+  bottom: 100vh
+}
+
+.betSlipWrap .vs__selected-options:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 33px;
+  width: 1px
+}
+
+.betSlipWrap .mainBtn {
+  margin-top: 0
+}
+
+.betSlipWrap .betAmountWrap {
+  padding: 10px;
+  min-height: 50px;
+  align-items: center
+}
+
+.betSlipWrap .betAmountWrap .stakeValidation:empty {
+  display: none
+}
+
+.betSlipWrap .betAmountWrap.posWinEdit {
+  margin-top: -6px;
+  padding-top: 0;
+  padding-bottom: 5px
+}
+
+.betSlipWrap .betAmountWrap.posWinEdit.multiStake.flexBetween {
+  margin-top: -16px
+}
+
+.betSlipWrap .betAmountWrap.posWinEdit .betInput::-webkit-outer-spin-button, .betSlipWrap .betAmountWrap.posWinEdit .betInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0
+}
+
+.betSlipWrap .betPlaceStatusPw {
+  flex-basis: 50%;
+  position: relative;
+  padding-left: 10px
+}
+
+.betSlipWrap .betPlaceStatusPw:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -10px;
+  height: 80px;
+  width: 0
+}
+
+.betSlipWrap .qiuckBetSpan {
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 5px
+}
+
+.betSlipWrap .betInputWrap {
+  display: flex;
+  align-items: center;
+  position: relative
+}
+
+.betSlipWrap .betInputWrap.qiuckBet {
+  margin-bottom: 10px
+}
+
+.betSlipWrap .betInputWrap.qiuckBet .betAmountQiuck {
+  width: 100%;
+  height: 35px;
+  margin-right: 5px;
+  margin-top: 0
+}
+
+.betSlipWrap .betInputWrap .betAmount {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-right: 5px;
+  width: 85px
+}
+
+.betSlipWrap .betInputWrap .customToolTip {
+  position: absolute;
+  z-index: 2;
+  top: -20px;
+  right: 60%;
+  transform: translateX(50%);
+  white-space: nowrap;
+  padding: 0 5px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000
+}
+
+.betSlipWrap .betInputWrap .customToolTip:after {
+  content: "";
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  position: absolute;
+  border: 7px solid transparent;
+  border-top-color: #fff
+}
+
+.betSlipWrap .betInputWrap .betInput {
+  position: relative;
+  margin-top: 0;
+  height: 35px
+}
+
+.betSlipWrap .betInputWrap .maxBtn {
+  padding: 0 11px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px
+}
+
+.betSlipWrap .betsFooter {
+  padding-bottom: 20px
+}
+
+.betSlipWrap .betsFooter .totalAmount {
+  margin-top: 10px;
+  overflow: hidden;
+  transition: .3s
+}
+
+.betSlipWrap .betsFooter .totalAmount.smallMargin {
+  margin-top: 1px
+}
+
+.betSlipWrap .betsFooter .marginTop {
+  margin-top: 10px
+}
+
+.betSlipWrap .betsFooter .totalAmount, .betSlipWrap .betsFooter .totalPossibleProfit {
+  max-height: 40px;
+  line-height: 40px;
+  padding: 0 10px
+}
+
+.betSlipWrap .betsFooter .totalPossibleProfit {
+  background-color: inherit
+}
+
+.betSlipWrap .betsFooter .betButtons {
+  flex-wrap: wrap;
+  padding: 0 10px
+}
+
+.betSlipWrap .betsFooter .betButtons #makeBet, .betSlipWrap .betsFooter .betButtons #acceptChange {
+  order: -1
+}
+
+.betSlipWrap .betsFooter .betButtons #makeBet.showQuickBet, .betSlipWrap .betsFooter .betButtons #acceptChange.showQuickBet {
+  margin-top: 10px;
+  flex-basis: 100%;
+  order: 0
+}
+
+.betSlipWrap .betsFooter .betButtons #acceptChange {
+  padding-right: 0
+}
+
+.betSlipWrap .betsFooter .betButtons .mainBtn, .betSlipWrap .betsFooter .betButtons button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: normal;
+  width: 48%;
+  height: 40px;
+  font-weight: bold;
+  padding: 0;
+  padding-right: 8px;
+  font-size: 12px;
+  border-radius: 5px;
+  transition: color .2s, background-color .2s
+}
+
+.betSlipWrap .betsFooter .betButtons .mainBtn svg, .betSlipWrap .betsFooter .betButtons button svg {
+  margin-right: 10px
+}
+
+.betSlipWrap .system {
+  margin: 0 28px 10px 10px
+}
+
+.betSlipWrap .system .customSelectWrap {
+  min-width: 140px
+}
+
+.betSlipWrap .system .v-select .vs__dropdown-toggle {
+  height: 35px
+}
+
+.betSlipWrap .system .v-select .vs__selected {
+  position: relative;
+  line-height: 24px;
+  white-space: nowrap
+}
+
+.betSlipWrap .system .v-select .vs__actions {
+  height: 33px;
+  padding: 0px 10px
+}
+
+.betSlipWrap .system .stake {
+  margin-left: 5px
+}
+
+.betSlipWrap .system .secondColor {
+  margin: 0px 5px
+}
+
+.authForm.fullForm {
+  max-width: 820px;
+  width: 640px
+}
+
+.authForm.fullForm .formHeader {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px
+}
+
+.authForm.fullForm .formFooter {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px
+}
+
+.authFormPopup.welocomeBonus .modal-wrapper .modal-container {
+  max-width: 620px;
+  width: 90%
+}
+
+.authFormPopup.welocomeBonus .modal-wrapper .modal-container .formWrap {
+  width: 100%
+}
+
+.formWrap .fieldWrap.membershipSelect .vs__dropdown-menu {
+  max-height: 250px
+}
+
+.formWrap .decoration-link {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-inline-start: 25px
+}
+
+.formWrap.fullForm {
+  overflow: inherit
+}
+
+.formWrap.fullForm .formFullWrap {
+  max-height: 825px
+}
+
+.formWrap.fullForm.scrollForm {
+  overflow: auto
+}
+
+.formWrap.fullForm.scrollForm .formFullWrap {
+  max-height: 945px
+}
+
+.authFormPopup .modal-wrapper .modal-container {
+  width: auto
+}
+
+.formFullWrap {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-height: 825px
+}
+
+.formFullWrap .socialAuthBtnsWrapper {
+  padding-top: 10px
+}
+
+.formFullWrap .proFilePage .v-select {
+  margin-top: 0
+}
+
+.formFullWrap .codeSelect {
+  display: flex
+}
+
+.formFullWrap .codeSelect .customSelect {
+  width: 100px
+}
+
+.formFullWrap .fieldWrap .customSelectWrap > input {
+  margin-left: 10px
+}
+
+.formFullWrap .fieldWrap .customSelectWrap .vs__selected-options input {
+  position: absolute
+}
+
+.formFullWrap .fieldWrap .customSelectWrap input {
+  margin-top: 0;
+  margin-bottom: 0
+}
+
+.formFullWrap .fieldWrap .customSelectWrap .vs__clear {
+  margin-bottom: 5px
+}
+
+.formFullWrap .customSelectWrap {
+  margin: 5px 0 15px
+}
+
+.formFullWrap .customSelectWrap .v-select .vs__dropdown-toggle {
+  height: 35px
+}
+
+.formFullWrap .fieldWrap {
+  position: relative;
+  width: 300px
+}
+
+.formFullWrap .mx-datepicker {
+  width: 100%
+}
+
+.formFullWrap .mx-datepicker .mx-icon-calendar, .formFullWrap .mx-datepicker .mx-icon-clear {
+  top: 42%
+}
+
+.authPage {
+  min-height: 65vh
+}
+
+.authPage section {
+  overflow: visible
+}
+
+.appWrap .sectionContent .boLink {
+  display: flex;
+  align-items: center;
+  margin-top: 25px
+}
+
+.appWrap .sectionContent .boLink svg {
+  margin-top: 0;
+  margin: 0 5px
+}
+
+.authForm {
+  right: 0;
+  z-index: 1020
+}
+
+.formWrap {
+  width: 320px;
+  margin: auto;
+  border-radius: 5px;
+  z-index: 10000;
+  overflow: hidden
+}
+
+.formWrap.affWrap {
+  margin: initial
+}
+
+.formWrap.affWrap .formFullWrap {
+  align-items: flex-start
+}
+
+.formWrap.affWrap .btnLinkWrap {
+  max-height: 60px
+}
+
+.formWrap.affWrap form {
+  padding: 0
+}
+
+.formWrap .inpWrap .btn.mainBtn {
+  margin: 5px 0 15px 10px
+}
+
+.formWrap .canBe {
+  margin: 10px 0
+}
+
+.formWrap .closeBtn {
+  width: 36px;
+  height: 36px
+}
+
+.formWrap .secondBalance {
+  display: grid;
+  grid-template-columns:repeat(3, 1fr);
+  grid-gap: 10px;
+  padding: 10px
+}
+
+.formWrap .secondBalance > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start
+}
+
+.formWrap .alignCenter {
+  padding: 10px 15px
+}
+
+.formWrap form {
+  padding: 20px 10px
+}
+
+.formWrap.userNav {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 70px;
+  width: auto;
+  min-width: 266px;
+  padding: 0;
+  z-index: 1000;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  transition: .2s
+}
+
+.formWrap.userNav.showMobMenu {
+  opacity: 1;
+  visibility: visible
+}
+
+.formWrap.userNav a {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  transition: .2s
+}
+
+.formWrap.userNav a:hover {
+  opacity: .7
+}
+
+.formWrap.userNav svg {
+  margin-right: 15px
+}
+
+.formWrap.userBalanceShow {
+  min-width: 215px
+}
+
+.formWrap input:not([type=checkbox]), .formWrap textarea.formArea {
+  height: 35px;
+  width: 100%;
+  margin: 5px 0 15px
+}
+
+.formWrap textarea.formArea {
+  display: block;
+  padding: 10px;
+  height: 110px;
+  line-height: 15px;
+  resize: none
+}
+
+.formWrap textarea.formArea.formAreaMembershipNotes {
+  height: 72px
+}
+
+.formWrap .btnWrap {
+  text-align: center
+}
+
+.formWrap .regBtn {
+  margin-top: 15px
+}
+
+.formWrap .errors {
+  display: flex;
+  align-items: center;
+  min-height: 45px;
+  font-size: 12px;
+  padding-left: 10px
+}
+
+.formWrap .formHeader {
+  min-height: 45px
+}
+
+.formWrap .formHeader h2 {
+  font-size: 14px;
+  margin-top: 0
+}
+
+.formWrap .formFooter {
+  min-height: 60px
+}
+
+.formWrap .formFooter .secondColor {
+  margin-right: 5px
+}
+
+.formWrap .vs--disabled .vs__search {
+  background-color: transparent
+}
+
+.passWrap {
+  position: relative
+}
+
+.passWrap .showPass {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  height: 35px;
+  padding: 0 10px;
+  top: 4px;
+  right: 0;
+  opacity: .5;
+  transition: .2s
+}
+
+.passWrap .showPass svg {
+  pointer-events: none
+}
+
+.editableInfo .passWrap .showPass {
+  top: 10px
+}
+
+.socialAuthBtnsWrapper a {
+  margin: 0px 6px;
+  display: inline-block
+}
+
+.socialAuthBtnsWrapper img {
+  max-width: 35px;
+  display: block
+}
+
+.blockHead .smallBtn.allBtn {
+  margin-right: 5px;
+  box-shadow: none
+}
+
+.blockHead .smallSelectDate {
+  margin-left: 5px;
+  padding: 0 5px
+}
+
+.card {
+  display: inline-block;
+  width: 14px;
+  height: 20px;
+  border-radius: 3px
+}
+
+.card.yelCard {
+  background-color: #f7b500
+}
+
+.card.redCard {
+  background-color: #eb4846
+}
+
+.eventPage .eventHeader {
+  margin-bottom: 0
+}
+
+.eventPage .eventWrap {
+  position: relative;
+  margin-top: 0
+}
+
+.eventPage .eventWrap.liveEvent .liveMarkWrap .liveLeague {
+  display: inline
+}
+
+.eventPage .eventWrap.liveEvent .liveMarkWrap .placeInfo {
+  display: inline;
+  text-align: right
+}
+
+.eventPage .eventScoreWrap {
+  width: 94.5%;
+  max-width: 425px;
+  margin: 20px auto 10px
+}
+
+.eventPage .eventScoreWrap.eventHistory {
+  margin-top: 0;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden
+}
+
+.eventPage .eventScoreWrap.eventHistory.show .historyWrap {
+  max-height: 100px
+}
+
+.eventPage .eventScoreWrap.eventHistory.show .blockHead {
+  border-radius: 5px 5px 0 0
+}
+
+.eventPage .eventScoreWrap.eventHistory .eventHistoryCount {
+  padding: 0 5px;
+  border-radius: 3px;
+  margin-top: 0;
+  margin-left: 10px;
+  font-size: 12px;
+  font-weight: 400
+}
+
+.eventPage .eventScoreWrap.eventHistory .shadow {
+  position: absolute;
+  bottom: 0;
+  height: 26px;
+  width: 100%;
+  z-index: 1;
+  border-radius: 0 0 5px 5px;
+  opacity: 0;
+  transition: opacity .4s
+}
+
+.eventPage .eventScoreWrap.eventHistory .shadow.showShadow {
+  opacity: 1
+}
+
+.eventPage .eventScoreWrap.eventHistory .blockHead {
+  position: relative;
+  font-weight: 700;
+  z-index: 2;
+  border-radius: 5px
+}
+
+.eventPage .eventScoreWrap.eventHistory .historyWrap {
+  max-height: 0;
+  transition: max-height .2s;
+  padding-left: 15px;
+  overflow: auto;
+  text-align: left
+}
+
+.eventPage .eventScoreWrap.eventHistory .historyWrap > div {
+  display: flex;
+  align-items: center;
+  font-weight: 700
+}
+
+.eventPage .eventScoreWrap.eventHistory .historyWrap > div .card {
+  width: 10px;
+  height: 13px;
+  margin-left: 10px
+}
+
+.eventPage .liveInfoWrap {
+  display: flex;
+  margin-top: 10px;
+  padding-left: 10px
+}
+
+.eventPage .liveInfoWrap .liveInfo {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  line-height: 10px
+}
+
+.eventPage .liveInfoWrap .liveInfo svg {
+  margin-right: 5px
+}
+
+.eventPage .liveEvent.stat .eventScoreWrap {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 0
+}
+
+.eventPage .liveEvent, .eventPage .finishedEvent {
+  display: flex;
+  justify-content: space-between
+}
+
+.eventPage .liveEvent .secondColor, .eventPage .finishedEvent .secondColor {
+  text-align: center
+}
+
+.eventPage .liveEvent > div, .eventPage .finishedEvent > div {
+  width: 49%;
+  border-radius: 5px;
+  text-align: center
+}
+
+.eventPage .liveEvent .eventScore, .eventPage .finishedEvent .eventScore {
+  display: flex;
+  padding: 0;
+  padding-left: 15px;
+  justify-content: space-between;
+  width: 100%
+}
+
+.eventPage .liveEvent .eventScore > div, .eventPage .finishedEvent .eventScore > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 35px;
+  flex-shrink: 0;
+  line-height: 35px;
+  text-align: center
+}
+
+.eventPage .liveEvent .eventScore > div:first-child, .eventPage .finishedEvent .eventScore > div:first-child {
+  display: block
+}
+
+.eventPage .liveEvent .eventScore.blockHead, .eventPage .finishedEvent .eventScore.blockHead {
+  justify-content: flex-start
+}
+
+.eventPage .liveEvent .eventScore.blockHead > div, .eventPage .finishedEvent .eventScore.blockHead > div {
+  height: 40px;
+  line-height: 40px
+}
+
+.eventPage .liveEvent .eventScore .teamName, .eventPage .finishedEvent .eventScore .teamName {
+  flex-basis: 100%;
+  flex-shrink: 1;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: 700
+}
+
+.eventPage .liveEvent .eventScore:last-child, .eventPage .finishedEvent .eventScore:last-child {
+  border-radius: 0 0 5px 5px
+}
+
+.eventPage .liveEvent .eventScore:last-child > div:last-child, .eventPage .finishedEvent .eventScore:last-child > div:last-child {
+  border-bottom-right-radius: 5px
+}
+
+.eventPage .liveEvent .bold, .eventPage .finishedEvent .bold {
+  font-size: 20px
+}
+
+.eventPage .liveEvent > div, .eventPage .finishedEvent > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
+}
+
+.eventPage .bannerWrap {
+  position: relative;
+  height: 320px;
+  direction: ltr !important
+}
+
+.eventPage .bannerWrap .additionalInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  bottom: 10px
+}
+
+.eventPage .bannerWrap .additionalInfo .additionalInfoItem {
+  display: flex;
+  align-items: center;
+  font-size: 12px
+}
+
+.eventPage .bannerWrap .additionalInfo .additionalInfoItem + .additionalInfoItem {
+  margin-left: 10px
+}
+
+.eventPage .bannerWrap .additionalInfo .additionalInfoItem img {
+  width: 15px;
+  margin-right: 5px
+}
+
+.eventPage .bannerWrap .additionalInfo .additionalInfoItem svg {
+  margin-right: 5px;
+  width: 15px
+}
+
+.eventPage .bannerWrap.notAvail {
+  box-shadow: none;
+  background: rgba(0, 0, 0, .85)
+}
+
+.eventPage .banner {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  height: 100%
+}
+
+.eventPage .banner img {
+  height: 100%;
+  border-radius: 7px;
+  object-fit: cover
+}
+
+.eventPage .notAvail .details {
+  display: flex
+}
+
+.eventPage .notAvail .details h2 {
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: 600
+}
+
+.eventPage .secondColor {
+  margin-top: 10px
+}
+
+.eventPage .details {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns:1fr 280px 1fr;
+  height: 100%
+}
+
+.eventPage .details .teamName {
+  font-size: 14px;
+  font-weight: 700
+}
+
+.eventPage .details .counter {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0 15px
+}
+
+.eventPage .details .counter.finished {
+  justify-content: center
+}
+
+.eventPage .details .counter.finished .dateElem {
+  margin: 0 10px
+}
+
+.eventPage .details .counter .dateElem {
+  display: inline-block;
+  width: 30px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 5px
+}
+
+.eventPage .details .counter .delimeter {
+  line-height: 32px
+}
+
+.eventPage .details .counter span {
+  font-size: 20px;
+  font-weight: 700
+}
+
+.eventPage .details .counter i {
+  display: block;
+  margin-top: 5px;
+  font-size: 11px
+}
+
+.eventPage .details .homeTeam {
+  text-align: right
+}
+
+.eventPage .details .awayTeam {
+  text-align: left
+}
+
+.eventPage .details .timeLeft {
+  margin: 0 20px;
+  margin-top: 30px;
+  text-align: center
+}
+
+.eventPage .details .leagueName {
+  position: absolute;
+  left: 0;
+  width: 100%
+}
+
+.basketScore {
+  display: flex;
+  margin-top: 10px;
+  color: #d8d8d8
+}
+
+.basketScore > div {
+  margin: 0px 10px
+}
+
+.basketScore > div:empty {
+  display: none
+}
+
+.statusEventWrap {
+  position: absolute;
+  top: 10px;
+  left: 10px
+}
+
+.statusEventWrap .status {
+  position: static;
+  padding: 5px 10px;
+  margin-right: 10px
+}
+
+.status {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 0 10px;
+  font-weight: 700;
+  border-radius: 10px;
+  font-size: 11px
+}
+
+.status.soon {
+  color: #f7b500;
+  background-color: #413311
+}
+
+.status.finished {
+  background-color: #565865
+}
+
+.eventSection .eventDetail {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  overflow: hidden
+}
+
+.eventSection .eventDetail.oneRow {
+  flex-wrap: nowrap
+}
+
+.eventSection .eventDetail.teams {
+  border-radius: 0
+}
+
+.eventSection .eventDetail.center {
+  border-radius: 0
+}
+
+.eventSection .eventDetail.center:last-child {
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px
+}
+
+.eventSection .eventDetail.center .detailInfo {
+  justify-content: center
+}
+
+.eventSection .eventDetail.totalHeader {
+  min-height: auto;
+  height: 25px;
+  overflow: hidden
+}
+
+.eventSection .eventDetail.totalHeader.center {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px
+}
+
+.eventSection .eventDetail.totalHeader .detailInfo {
+  min-height: 25px
+}
+
+.eventSection .layoutTriple .detailInfo, .eventSection .totalHeader .detailInfo {
+  flex-basis: 33.3%
+}
+
+.eventSection .layoutTriple .detailInfo:last-child, .eventSection .totalHeader .detailInfo:last-child {
+  border-top: none
+}
+
+.eventSection .layoutDouble .detailInfo {
+  flex-basis: 50%
+}
+
+.eventSection .yesNoArr {
+  align-self: stretch;
+  width: 50%
+}
+
+.eventSection .yesNoArr .detailInfo {
+  flex-basis: 100%
+}
+
+.eventSection .detailInfo {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  min-height: 40px;
+  align-items: center;
+  cursor: pointer;
+  line-height: 14px
+}
+
+.eventSection .detailInfo span:first-child {
+  padding-right: 5px
+}
+
+.eventSection .detailInfo:first-child, .eventSection .detailInfo:nth-child(2) {
+  border-top: none
+}
+
+.eventSection .detailInfo .odd {
+  font-weight: bold
+}
+
+.eventSection .eventDetailWrap {
+  max-height: 32px;
+  overflow: hidden
+}
+
+.eventSection .eventDetailWrap .rotateBlockArrow {
+  margin-left: 5px;
+  margin-right: 5px;
+  pointer-events: none
+}
+
+.eventSection .eventDetailWrap.opened {
+  max-height: 10000px
+}
+
+.eventSection .eventDetailWrap.opened .rotateBlockArrow {
+  transform: rotate(180deg)
+}
+
+.eventSection .eventDetailWrap .eventItemHead {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 15px 0;
+  font-weight: bold
+}
+
+.favSection .favBlockWrap {
+  display: grid;
+  grid-template-columns:repeat(3, 1fr);
+  grid-gap: 10px
+}
+
+.favSection .favBlockWrap .favItem {
+  border-radius: 5px
+}
+
+.favSection .favBlockWrap .favItem .status {
+  position: static
+}
+
+.favSection .favBlockWrap .favBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px
+}
+
+.favSection .favBlockWrap .favBlock .leftCol div:first-child {
+  margin-bottom: 5px
+}
+
+.addToFav {
+  cursor: pointer
+}
+
+.addToFav:before {
+  content: "☆"
+}
+
+.removeFromFav {
+  cursor: pointer
+}
+
+.removeFromFav:before {
+  content: "★"
+}
+
+.topLeagues h2 {
+  font-size: 14px;
+  text-align: center
+}
+
+.topLeagues .sliderWrap {
+  padding: 15px 0
+}
+
+.topLeagues .sliderCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 5
+}
+
+.topLeagues .slideItemWrap.topLeaguesSlider {
+  display: block;
+  position: relative;
+  height: 100px;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer
+}
+
+.topLeagues .slideItemWrap.topLeaguesSlider img {
+  pointer-events: none;
+  max-height: 100px;
+  min-height: 100%
+}
+
+.modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .8);
+  transition: all .3s
+}
+
+.bet_info_modal .modal-wrapper .modal-container {
+  width: 90vw;
+  max-width: 630px
+}
+
+.bet_info_modal .modal-wrapper .modal-body {
+  margin-bottom: 0;
+  border-radius: 5px;
+  padding: 5px 5px 0 5px
+}
+
+.bet_info_modal .modal-wrapper .betInfoRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0
+}
+
+.bet_info_modal .modal-wrapper .betInfoRow > div {
+  margin: 0 8px
+}
+
+.bet_info_modal .modal-wrapper .betInfoRow > div:first-child {
+  font-weight: 400
+}
+
+.bet_info_modal .modal-wrapper .betInfoRow .smallBtn {
+  margin-top: 0
+}
+
+.sectionContent .modalWithIcon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px
+}
+
+.sectionContent .modalWithIcon svg {
+  margin-left: 10px;
+  margin-right: 15px
+}
+
+.sectionContent .modalWithIcon p {
+  margin-bottom: 0
+}
+
+.sectionContent .modalWithIcon p a {
+  text-decoration: underline
+}
+
+.modal-wrapper {
+  display: flex;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 50px 0
+}
+
+.modal-wrapper #codeValue:focus {
+  border: none;
+  outline: none
+}
+
+.modal-wrapper .blockHead {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px
+}
+
+.modal-wrapper .codeWrap {
+  padding: 10px 0;
+  border-radius: 5px;
+  text-align: center
+}
+
+.modal-wrapper .modalTxt {
+  margin-top: 10px
+}
+
+.modal-wrapper #codeValue {
+  width: 100%;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  background-color: transparent;
+  border: none
+}
+
+.modal-wrapper .btnCancel {
+  margin-left: 5px
+}
+
+.modal-wrapper .modalHeader {
+  padding: 15px 0 10px;
+  font-size: 15px;
+  text-align: center;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px
+}
+
+.modal-wrapper .modalHeader h2 {
+  margin-top: 0
+}
+
+.modal-wrapper .modal-container {
+  position: relative;
+  width: 320px;
+  margin: auto;
+  transition: all .3s ease
+}
+
+.modal-wrapper .modal-container .checkSpam .status {
+  padding: 0;
+  margin-bottom: 20px
+}
+
+.modal-wrapper .modal-container .status {
+  position: static;
+  background-color: unset;
+  font-size: 12px
+}
+
+.modal-wrapper .modal-container .close-modal {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  right: 0;
+  top: 2px;
+  cursor: pointer
+}
+
+.modal-wrapper .modal-container .mainBtn {
+  margin-top: 15px;
+  margin-bottom: 5px
+}
+
+.modal-wrapper .modal-container .sectionContent {
+  padding: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px
+}
+
+.modal-wrapper .modal-container .blockHead {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between
+}
+
+.modal-wrapper .modal-container .blockHead .bold {
+  font-size: 14px
+}
+
+.modal-wrapper .modal-container .iconWrap {
+  margin: 20px 0
+}
+
+.modal-wrapper .modalSuccess {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column
+}
+
+.modal-wrapper .modalSuccess .textWrap {
+  padding: 10px
+}
+
+.modal-wrapper .modalSuccess .textWrap .boLink {
+  justify-content: center
+}
+
+.modal-wrapper .modalSuccess h2 {
+  margin-top: 18px;
+  font-weight: bold
+}
+
+.modal-wrapper .modalSuccess .secondColor {
+  font-weight: 400;
+  margin-bottom: 20px
+}
+
+.modal-wrapper .modalSuccess .secondColor.bold {
+  font-weight: 700
+}
+
+.modal-wrapper .modalSuccess svg {
+  margin-top: 20px
+}
+
+.modal-wrapper .modalSuccess button.mainBtn {
+  margin-top: 0;
+  margin-bottom: 10px
+}
+
+.authFormPopup .modalHeader {
+  padding: 0
+}
+
+.authFormPopup .modal-wrapper .sectionContent {
+  padding: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: none
+}
+
+.authFormPopup.offlinePopup .blockHead {
+  border-radius: 5px
+}
+
+.authFormPopup.offlinePopup .offlinePopupInner {
+  display: flex
+}
+
+.authFormPopup.offlinePopup .offlinePopupInner .iconWrap {
+  margin: 0;
+  margin-right: 10px
+}
+
+.authFormPopup.offlinePopup .close-modal {
+  display: none
+}
+
+.modal-enter-active, .modal-leave-active {
+  transition: .2s
+}
+
+.modal-enter, .modal-leave-to {
+  opacity: 0;
+  transform: scale(1.05)
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  min-height: 40px;
+  line-height: 39px;
+  text-transform: capitalize
+}
+
+h1 svg {
+  position: relative;
+  top: 2px;
+  height: 20px;
+  width: 20px
+}
+
+.proFilePage {
+  font-weight: bold
+}
+
+.proFilePage .formWrap {
+  width: 100%;
+  max-width: 320px;
+  padding: 10px 0
+}
+
+.proFilePage .customSelect.vs--searchable .vs__dropdown-menu li {
+  white-space: normal;
+  padding-right: 10px
+}
+
+.proFilePage .codeSelect {
+  display: flex
+}
+
+.proFilePage .codeSelect .customSelect {
+  width: 100px
+}
+
+.proFilePage .codeSelect > input {
+  margin-top: 0;
+  margin-left: 10px
+}
+
+.proFilePage .v-select {
+  font-weight: 400
+}
+
+.proFilePage .vti__flag {
+  margin-right: 5px
+}
+
+.proFilePage .fileNameWrap {
+  display: inline-block;
+  max-width: 146px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 15px
+}
+
+.proFilePage.respGamePage .proFileItem {
+  margin-bottom: 12px
+}
+
+.proFilePage.respGamePage .proFileItem input[type=password] {
+  margin-bottom: 10px;
+  margin-top: 8px
+}
+
+.proFilePage.mainProfile .membershipStatus {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  align-items: center
+}
+
+.proFilePage.mainProfile .membershipStatus svg {
+  margin-left: 10px
+}
+
+.proFilePage.mainProfile .error {
+  margin-top: 10px
+}
+
+.proFilePage.mainProfile .mx-datepicker, .proFilePage.respGamePage .mx-datepicker, .proFilePage.settingsPage .mx-datepicker {
+  width: 100%
+}
+
+.proFilePage.mainProfile .mx-datepicker i, .proFilePage.respGamePage .mx-datepicker i, .proFilePage.settingsPage .mx-datepicker i {
+  top: 59%
+}
+
+.proFilePage.mainProfile .customSelectWrap, .proFilePage.respGamePage .customSelectWrap, .proFilePage.settingsPage .customSelectWrap {
+  margin-top: 8px
+}
+
+.proFilePage.mainProfile .customSelectWrap .v-select, .proFilePage.respGamePage .customSelectWrap .v-select, .proFilePage.settingsPage .customSelectWrap .v-select {
+  margin: 0
+}
+
+.proFilePage.mainProfile .vs__selected-options, .proFilePage.respGamePage .vs__selected-options, .proFilePage.settingsPage .vs__selected-options {
+  align-items: center;
+  overflow: hidden
+}
+
+.proFilePage.mainProfile .vs__selected, .proFilePage.respGamePage .vs__selected, .proFilePage.settingsPage .vs__selected {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: none;
+  font-weight: bold
+}
+
+.proFilePage.mainProfile .secondColor .vs__selected, .proFilePage.mainProfile .proFileItem .secondColor, .proFilePage.respGamePage .secondColor .vs__selected, .proFilePage.respGamePage .proFileItem .secondColor, .proFilePage.settingsPage .secondColor .vs__selected, .proFilePage.settingsPage .proFileItem .secondColor {
+  font-weight: 400
+}
+
+.proFilePage.respGamePage p:last-of-type {
+  margin-bottom: 0
+}
+
+.proFilePage .status {
+  position: static
+}
+
+.proFilePage .smallTxt svg, .proFilePage .modal-container .error_msg svg {
+  position: relative;
+  top: 3px;
+  margin-right: 5px
+}
+
+.proFilePage .smallTxt svg {
+  margin-right: 0;
+  margin-inline-end: 5px
+}
+
+.proFilePage .modal-container .secondColor {
+  font-weight: 400
+}
+
+.proFilePage .emailWrap {
+  margin-top: 5px;
+  font-weight: 400
+}
+
+.proFilePage .historyFilters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+.proFilePage .historyFilters .v-select {
+  margin-top: 0
+}
+
+.proFilePage .historyFilters > div {
+  width: 24%
+}
+
+.proFilePage .historyFilters input {
+  margin-top: 0;
+  height: 34px
+}
+
+.proFilePage .historyFilters .v-select .vs__actions {
+  height: 34px
+}
+
+.proFilePage .historyFilters .v-select .vs__dropdown-toggle {
+  height: 34px
+}
+
+.proFilePage .historyFilters .v-select .vs__search {
+  position: absolute;
+  width: 100%
+}
+
+.proFilePage .withdraw, .proFilePage .lost {
+  color: #eb4846
+}
+
+.proFilePage .deposit, .proFilePage .won {
+  color: #51b600
+}
+
+.proFilePage .open {
+  color: #f7b500
+}
+
+.proFilePage .bonus {
+  color: #ac46eb
+}
+
+.proFilePage.respGamePage .v-select.customSelect {
+  padding: 0
+}
+
+.proFilePage p {
+  margin-bottom: 12px
+}
+
+.proFilePage .error_msg {
+  padding: 10px
+}
+
+.proFilePage .subHeader {
+  margin-bottom: 20px
+}
+
+.proFilePage h2 {
+  margin-top: 25px
+}
+
+.proFilePage .vs--single.vs--open .vs__selected {
+  position: relative
+}
+
+.proFilePage .v-select {
+  margin-top: 8px;
+  padding-left: 0;
+  padding-right: 0
+}
+
+.proFilePage .v-select .vs__actions {
+  height: 40px;
+  margin: 0 5px
+}
+
+.proFilePage .v-select .vs__dropdown-toggle {
+  height: 40px;
+  transition: .2s
+}
+
+.proFilePage .vue-tel-input {
+  border: none
+}
+
+.proFilePage .vue-tel-input:focus-within {
+  box-shadow: none
+}
+
+.proFilePage .vue-tel-input .vti__dropdown-item.highlighted {
+  opacity: .5;
+  background-color: inherit
+}
+
+.proFilePage .vue-tel-input .vti__dropdown {
+  margin-top: 12px;
+  outline: none;
+  box-shadow: none
+}
+
+.proFilePage .vue-tel-input .vti__dropdown.open, .proFilePage .vue-tel-input .vti__dropdown:hover {
+  background-color: inherit
+}
+
+.proFilePage .mainBtn {
+  margin-top: 0
+}
+
+.proFilePage .medBtn {
+  margin-left: 10px
+}
+
+.proFilePage .sectionContent .noMargin {
+  margin-bottom: 0
+}
+
+.proFilePage .btnCancel {
+  margin-left: 5px
+}
+
+.proFilePage .persInfoWrap .proFileItem {
+  flex-direction: column;
+  margin-bottom: 20px
+}
+
+.proFilePage .editableInfo .proFileItem {
+  margin-bottom: 12px
+}
+
+.proFilePage .proFileItem {
+  display: flex
+}
+
+.proFilePage .proFileItem .leftItem {
+  width: 48%;
+  max-width: 320px;
+  margin-right: 15px
+}
+
+.proFilePage .proFileItem .rightItem {
+  width: 48%;
+  max-width: 320px
+}
+
+.proFilePage .proFileItem .labelWrap svg {
+  position: relative;
+  top: 3px;
+  margin: 0 5px
+}
+
+.proFilePage .proFileItem .nameSurname svg {
+  margin: 0;
+  margin-inline-end: 5px
+}
+
+.proFilePage .proFileItem .verifyWrap {
+  display: flex;
+  align-items: center;
+  margin-top: 10px
+}
+
+.proFilePage .proFileItem .verifyWrap .btn {
+  margin: 0 15px
+}
+
+.proFilePage .withIcon {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 76px
+}
+
+.proFilePage .withIcon .iconWrap {
+  height: 50px;
+  width: 50px;
+  margin-right: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.proFilePage .noteWrap {
+  margin-left: 24px;
+  padding-top: 10px
+}
+
+.proFilePage .contacts p {
+  margin-top: 15px;
+  margin-bottom: 5px
+}
+
+.proFilePage .confStatus {
+  font-size: 11px
+}
+
+.proFilePage .verification .proFileItem + .proFileItem {
+  margin-top: 25px
+}
+
+.proFilePage .verification .withIcon {
+  margin-top: 15px
+}
+
+.proFilePage.settingsPage .vs__selected, .proFilePage.settingsPage .vs__dropdown-option {
+  text-transform: capitalize
+}
+
+.proFilePage.settingsPage .customCheckWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 215px;
+  margin: 10px 0
+}
+
+.proFilePage.settingsPage .customCheckWrap label {
+  margin-top: 0
+}
+
+.proFilePage .vdpComponent {
+  width: 100%
+}
+
+.proFilePage .verifTxt {
+  margin-bottom: 30px
+}
+
+.proFilePage .botTxt {
+  position: relative;
+  top: -10px;
+  margin-bottom: 0;
+  flex-basis: 100%;
+  margin-inline-start: 65px
+}
+
+.proFilePage #twoFact {
+  pointer-events: none
+}
+
+.proFilePage.respGamePage .baseCheckStyle + label {
+  margin-right: 20px
+}
+
+.proFilePage .msngr {
+  opacity: .3;
+  transition: .4s
+}
+
+.proFilePage .msngr.active {
+  opacity: 1
+}
+
+.proFilePage .balanceWidgets {
+  display: grid;
+  grid-template-columns:repeat(2, 1fr);
+  grid-gap: 10px
+}
+
+.proFilePage .balanceWidgets .widgetItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 80px;
+  padding: 15px;
+  border-radius: 5px
+}
+
+.proFilePage .balanceWidgets .widgetItem .widgetContent {
+  flex-grow: 1;
+  margin-right: 10px
+}
+
+.proFilePage .balanceWidgets .widgetItem p {
+  margin-bottom: 5px
+}
+
+.proFilePage .balanceWidgets .widgetItem .balance {
+  font-size: 20px
+}
+
+.proFilePage .balanceWidgets .widgetIcon {
+  margin-right: 15px
+}
+
+.proFilePage.loyaltyPage .balanceWidgets {
+  grid-template-columns:repeat(auto-fit, minmax(180px, 1fr))
+}
+
+.proFilePage.loyaltyPage .balanceWidgets .widgetItem {
+  padding: 10px
+}
+
+.proFilePage.loyaltyPage .balanceWidgets .widgetIcon {
+  margin-right: 10px
+}
+
+.proFilePage.loyaltyPage .balanceWidgets .widgetContent {
+  margin-right: 0
+}
+
+.proFilePage.loyaltyPage .infoWrap svg {
+  width: 15px;
+  height: 15px
+}
+
+.proFilePage.loyaltyPage #refCode {
+  position: absolute;
+  top: -5000px
+}
+
+.proFilePage.loyaltyPage .breadData {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px
+}
+
+.proFilePage.loyaltyPage .breadData .bread {
+  display: flex
+}
+
+.proFilePage.loyaltyPage .breadData .bread a {
+  text-decoration: underline
+}
+
+.proFilePage.loyaltyPage .breadData .bread .delim {
+  margin: 0 5px
+}
+
+.proFilePage.loyaltyPage .searchInputWrap {
+  width: 48%;
+  margin: 0 10px
+}
+
+.proFilePage.loyaltyPage .searchInputWrap input {
+  max-width: 100%
+}
+
+.proFilePage.loyaltyPage .linkWrap {
+  width: 50%;
+  justify-content: flex-end;
+  text-align: right
+}
+
+.proFilePage.loyaltyPage .linkWrap .iconWrap {
+  width: 36px;
+  height: 36px;
+  margin-inline-start: 5px;
+  cursor: pointer
+}
+
+.proFilePage .filterBtnsWrap {
+  display: flex;
+  align-items: center;
+  margin: 20px 0
+}
+
+.proFilePage .filterBtnsWrap .dateSelectWrap {
+  min-width: 100px
+}
+
+.proFilePage .filterBtnsWrap .datePickerWrap {
+  min-width: 200px
+}
+
+.proFilePage .filterBtnsWrap.historyFilters .dateSelect {
+  margin: 0;
+  height: auto
+}
+
+.proFilePage .filterBtnsWrap .mainBtn {
+  margin-right: 5px
+}
+
+.proFilePage .transactionsWrap .transDates {
+  margin-bottom: 15px;
+  text-align: center
+}
+
+.proFilePage .transactionsWrap .transactionDetails.blockHead {
+  padding: 0 15px;
+  text-transform: capitalize;
+  font-size: 11px;
+  margin: 0
+}
+
+.proFilePage .transactionsWrap .transactionDetails.blockHead div:not(.digitsWrap) {
+  padding: 4px 10px
+}
+
+.proFilePage .transactionsWrap .transactionDetails.blockHead .digitsWrap div {
+  font-weight: 400
+}
+
+.proFilePage .transactionsWrap .childBet {
+  max-height: 0;
+  opacity: 0;
+  transition: .4s;
+  overflow: hidden
+}
+
+.proFilePage .transactionsWrap .arrowWrap {
+  cursor: pointer
+}
+
+.proFilePage .transactionsWrap .arrowWrap .arrow {
+  transition: .4s
+}
+
+.proFilePage .transactionsWrap .opened .arrow {
+  transform: rotate(180deg)
+}
+
+.proFilePage .transactionsWrap .opened .childBet {
+  opacity: 1;
+  max-height: 200px
+}
+
+.proFilePage .transactionsWrap .multiWrap {
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 15px
+}
+
+.proFilePage .transactionsWrap .transactionDetails {
+  display: grid;
+  grid-template-columns:50px 75px 50px minmax(100px, 130px) 125px 60px minmax(170px, 1fr) minmax(75px, 80px);
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 5px
+}
+
+.proFilePage .transactionsWrap .transactionDetails.blockHead {
+  border-radius: 5px 5px 0px 0px
+}
+
+.proFilePage .transactionsWrap .transactionDetails.withChild, .proFilePage .transactionsWrap .transactionDetails.childBet {
+  border-radius: 0
+}
+
+.proFilePage .transactionsWrap .transactionDetails.balanceInfo {
+  min-height: 40px;
+  grid-template-columns:repeat(3, minmax(100px, 1fr)) repeat(2, minmax(50px, 1fr)) minmax(100px, 1fr) repeat(2, minmax(100px, 1fr))
+}
+
+.proFilePage .transactionsWrap .transactionDetails.balanceInfo.heightAuto {
+  height: auto
+}
+
+.proFilePage .transactionsWrap .transactionDetails.balanceInfo div {
+  padding: 5px;
+  text-align: center
+}
+
+.proFilePage .transactionsWrap .transactionDetails.balanceInfo div span {
+  word-wrap: break-word
+}
+
+.proFilePage .transactionsWrap .transactionDetails.balanceInfo .initiator {
+  word-break: break-word
+}
+
+.proFilePage .transactionsWrap .transactionDetails.balanceInfo.blockHead {
+  padding: 0 0;
+  text-align: center
+}
+
+.proFilePage .transactionsWrap .transactionDetails.casInfo {
+  grid-template-columns:75px 75px 65px 110px 110px 110px 130px minmax(170px, 1fr)
+}
+
+.proFilePage .transactionsWrap .transactionDetails.casInfo div {
+  padding: 5px 10px
+}
+
+.proFilePage .transactionsWrap .transactionDetails.casInfo span {
+  display: none
+}
+
+.proFilePage .transactionsWrap .transactionDetails.loyaltyInfo {
+  grid-template-columns:75px minmax(120px, 1fr) minmax(170px, 1fr) minmax(130px, 1fr) minmax(130px, 1fr) 75px;
+  text-align: center
+}
+
+.proFilePage .transactionsWrap .transactionDetails.loyaltyInfo.blockHead {
+  padding: 0
+}
+
+.proFilePage .transactionsWrap .transactionDetails.loyaltyInfo a.flexCenter svg {
+  background-color: #fff
+}
+
+.proFilePage .transactionsWrap .transactionDetails .digitsWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0
+}
+
+.proFilePage .transactionsWrap .transactionDetails .digitsWrap > div {
+  flex-basis: 32%;
+  height: 100%
+}
+
+.proFilePage .transactionsWrap .transactionDetails .teamWrap, .proFilePage .transactionsWrap .transactionDetails .oddsWrap, .proFilePage .transactionsWrap .transactionDetails .digitsWrap div:not(.secondColor) {
+  font-weight: bold
+}
+
+.proFilePage .transactionsWrap .transactionDetails .sportIcon {
+  align-items: center
+}
+
+.proFilePage .transactionsWrap .transactionDetails.withChild {
+  margin-bottom: 0
+}
+
+.proFilePage .transactionsWrap .transactionDetails.withChild svg {
+  pointer-events: none
+}
+
+.proFilePage .transactionsWrap .transactionDetails.childBet {
+  margin: 0
+}
+
+.proFilePage .transactionsWrap .transactionDetails .multiple {
+  text-align: center;
+  grid-area: span 2/span 2;
+  flex-direction: row;
+  align-items: center;
+  font-weight: bold
+}
+
+.proFilePage .transactionsWrap .transactionDetails .multiple .betsCount {
+  margin-left: 5px
+}
+
+.proFilePage .transactionsWrap .transactionDetails .transType {
+  text-align: center;
+  align-items: center;
+  flex-direction: inherit
+}
+
+.proFilePage .transactionsWrap .transactionDetails .transType span {
+  padding: 0 10px;
+  border-radius: 3px
+}
+
+.proFilePage .transactionsWrap .transactionDetails .balanceStatuses span {
+  display: flex;
+  align-items: center
+}
+
+.proFilePage .transactionsWrap .transactionDetails .balanceStatuses span svg {
+  margin-right: 10px
+}
+
+.proFilePage .transactionsWrap .transactionDetails div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 14px 6px;
+  font-weight: 400;
+  height: 100%
+}
+
+.proFilePage .transactionsWrap .transactionDetails .teamWrap span:first-child {
+  margin-bottom: 5px
+}
+
+.proFilePage .recoveryWrap h1, .proFilePage .recoveryWrap .recoveryConfirm {
+  text-align: center
+}
+
+.proFilePage .recoveryWrap h1 h2, .proFilePage .recoveryWrap .recoveryConfirm h2 {
+  margin-top: 15px;
+  margin-bottom: 15px
+}
+
+.bonusStat {
+  font-size: 10px;
+  font-weight: bold
+}
+
+.leagueNameWithFilter .customSelect .vs__dropdown-menu {
+  width: initial !important
+}
+
+.ticketPage .sizeError {
+  margin-left: 10px;
+  font-weight: 400
+}
+
+.ticketPage .sizeError svg {
+  position: relative;
+  top: 3px;
+  margin-right: 5px
+}
+
+.ticketPage .msgWrap, .ticketPage .sectionContent {
+  border-radius: 5px
+}
+
+.ticketPage .proFileItem .ticketBtn {
+  padding: 7px 15px
+}
+
+.ticketPage .filterBtnsWrap {
+  margin: 0
+}
+
+.ticketPage .ticketBtn, .ticketPage .filterBtnsWrap .mainBtn {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 15px;
+  margin-right: 10px
+}
+
+.ticketPage .ticketBtn svg, .ticketPage .filterBtnsWrap .mainBtn svg {
+  transform: rotate(90deg) scale(0.8);
+  margin-right: 5px
+}
+
+.ticketPage .msgWrap {
+  font-weight: 400;
+  padding: 10px
+}
+
+.ticketPage .msgWrap + .msgWrap {
+  margin-top: 20px
+}
+
+.ticketPage .msgWrap .ticketFiles a {
+  display: inline-block;
+  margin: 10px 10px 0 0
+}
+
+.ticketPage .msgWrap span {
+  margin-right: 5px
+}
+
+.ticketPage .buttonAllWrapper {
+  background: none;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+  margin-top: 20px
+}
+
+.ticketPage .buttonAllWrapper.showMore {
+  height: 75px;
+  margin-top: 0;
+  margin-bottom: -75px;
+  padding-top: 15px
+}
+
+.ticketPage .buttonAllWrapper.showMore svg {
+  transform: rotate(180deg) scale(0.6)
+}
+
+.ticketPage .ticketSingleInfo {
+  display: flex;
+  font-weight: 400
+}
+
+.ticketPage .ticketSingleInfo .secondColor {
+  margin: 0 20px 0 10px
+}
+
+.ticketPage .tiketStatuses > span {
+  display: flex;
+  align-items: center
+}
+
+.ticketPage .tiketStatuses > span svg {
+  margin-right: 10px
+}
+
+.ticketPage .proFileItem {
+  position: relative
+}
+
+.ticketPage .proFileItem:last-child {
+  margin-bottom: 0
+}
+
+.ticketPage .proFileItem .searchInput {
+  margin-top: 0;
+  max-width: 100%
+}
+
+.ticketPage .proFileItem .searchIcon {
+  position: absolute;
+  top: 10px;
+  right: 15px
+}
+
+.ticketPage .proFileItem .tooltip {
+  position: absolute;
+  right: 0
+}
+
+.ticketPage .transactionsWrap .transactionDetails {
+  grid-template-columns:50px 110px 1fr 130px
+}
+
+.ticketPage .transactionsWrap .transactionDetails .ticketTitle {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 10px
+}
+
+.ticketPage .transactionsWrap .transactionDetails .ticketTitle .hasNewData {
+  margin-left: auto;
+  flex-shrink: 0
+}
+
+.ticketPage .sectionContent input, .ticketPage .sectionContent textarea {
+  max-width: 100%
+}
+
+.ticketPage .sectionContent textarea {
+  padding: 10px;
+  resize: vertical;
+  min-height: 100px;
+  max-height: 600px
+}
+
+.ticketPage .sectionContent .proFileItem {
+  display: block;
+  min-height: 42px
+}
+
+.ticketPage .sectionContent .canChoose {
+  font-weight: 400;
+  margin-top: 10px
+}
+
+.ticketPage .sectionContent .addedFiles {
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 400
+}
+
+.ticketPage .sectionContent .addedFiles a.customFileInput {
+  height: 130px;
+  margin-top: 10px;
+  padding: 10px 0;
+  cursor: pointer
+}
+
+.ticketPage .sectionContent .addedFiles a.customFileInput .fileEllipsis {
+  margin-right: 0
+}
+
+.ticketPage .sectionContent .addedFiles .customFileInput {
+  position: relative;
+  height: 180px;
+  width: 200px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  cursor: default;
+  color: inherit
+}
+
+.ticketPage .sectionContent .addedFiles .fileName {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 30px
+}
+
+.ticketPage .sectionContent .addedFiles .fileName .fileEllipsis {
+  max-width: 130px;
+  margin-right: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+
+.ticketPage .sectionContent .addedFiles .fileIconWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%
+}
+
+.ticketPage .sectionContent .addedFiles .fileIconWrap .medBtn {
+  margin-left: auto;
+  margin-top: 10px;
+  margin-bottom: 10px
+}
+
+.ticketPage .sectionContent .addedFiles img {
+  display: block;
+  max-width: 180px;
+  margin-top: auto;
+  margin-bottom: auto;
+  max-height: 88px
+}
+
+.ticketPage .sectionContent .addedFiles .docIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.ticketPage .sectionContent .addedFiles .docIcon svg {
+  height: 88px
+}
+
+.ticketPage .sectionContent .customFileInput {
+  display: inline-block;
+  padding-right: 10px;
+  margin-top: 0;
+  height: 35px;
+  width: auto;
+  line-height: 35px;
+  font-weight: 400;
+  cursor: pointer
+}
+
+.ticketPage .sectionContent .customFileInput > svg {
+  position: relative;
+  top: 3px;
+  margin-right: 5px
+}
+
+.ticketPage .sectionContent .btnWrap {
+  text-align: center
+}
+
+.ticketPage .sectionContent .transactionDetails {
+  cursor: pointer
+}
+
+.ticketPage .sectionContent .transactionDetails div:first-child {
+  text-align: center
+}
+
+.ticketPage .sectionContent.commonMsgBlock {
+  flex-direction: column;
+  min-height: 300px;
+  border-radius: 5px
+}
+
+.ticketPage .sectionContent.commonMsgBlock.smallMsg {
+  position: relative;
+  min-height: auto;
+  background: none
+}
+
+.ticketPage .sectionContent.commonMsgBlock.smallMsg h2 {
+  margin-top: 0;
+  max-width: 80%
+}
+
+.ticketPage .sectionContent.commonMsgBlock.smallMsg .closeBtn {
+  right: 20px
+}
+
+.ticketPage .sectionContent.commonMsgBlock a {
+  text-decoration: underline
+}
+
+.ticketPage .sectionContent.commonMsgBlock .mainBtn {
+  margin-top: 15px
+}
+
+.ticketPage .sectionContent.commonMsgBlock p {
+  text-align: center;
+  margin-bottom: 0;
+  max-width: 80%
+}
+
+.ticketPage .sectionContent.commonMsgBlock h2 {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: bold
+}
+
+div.searchInputWrap {
+  position: relative
+}
+
+div.searchInputWrap.bigInputWrap {
+  width: 48%
+}
+
+div.searchInputWrap.bigInputWrap .searchInput {
+  max-width: 100%;
+  width: 100%
+}
+
+div.searchInputWrap .searchIcon {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 30px
+}
+
+.casinoPage {
+  display: flex;
+  flex-direction: column
+}
+
+.casinoPage .preloader {
+  flex: 1;
+  background: none
+}
+
+.casinoPage .customSelect .secondColor {
+  margin-right: 5px;
+  text-transform: initial
+}
+
+.gameBlockContainer {
+  display: grid;
+  grid-template-columns:repeat(auto-fill, 228px);
+  grid-gap: 15px;
+  justify-content: center;
+  border-radius: 0
+}
+
+.gameBlockContainer .gameBlock {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 196px;
+  cursor: pointer;
+  border-radius: 5px;
+  overflow: hidden
+}
+
+.gameBlockContainer .gameBlock .gameName {
+  margin-top: 10px;
+  font-size: 13px;
+  text-align: center;
+  pointer-events: none
+}
+
+.gameBlockContainer .gameBlock .gameCategory {
+  align-self: center;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: 400;
+  pointer-events: none
+}
+
+.gameBlockContainer .gameBlock .gameInfoLive {
+  position: absolute;
+  top: 81px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, .6);
+  color: #fff
+}
+
+.gameBlockContainer .gameBlock .gameInfoLive .seats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin: 8px 6px;
+  border-radius: 50%;
+  background-color: #676767;
+  transition: background-color .4s
+}
+
+.gameBlockContainer .gameBlock .gameInfoLive .seats.free {
+  background-color: #027302
+}
+
+.gameBlockContainer .gameBlock .gameInfoLive .lastRes {
+  flex-shrink: 0;
+  margin: 8px 4px;
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  border-radius: 3px;
+  position: relative
+}
+
+.gameBlockContainer .gameBlock .gameInfoLive .lastRes.multiplier {
+  border: 1px solid #ae9e0f
+}
+
+.gameBlockContainer .gameBlock .gameInfoLive .lastRes .multiplier {
+  position: absolute;
+  top: -14px;
+  color: #dfca0c;
+  font-size: 10px
+}
+
+.gameBlockContainer .gameBlock .gameInfoLive .lastRes .gold {
+  color: #c1ca11
+}
+
+.gameBlockContainer .gameBlock .gameInfoLive .lastRes.red {
+  color: red
+}
+
+.gameBlockContainer .gameBlock .gameInfoLive .lastRes.green {
+  color: green
+}
+
+.gameBlockContainer .gameBlock .tableClosed {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .7);
+  z-index: 1
+}
+
+.gameBlockContainer .gameBlock .casLiveItem {
+  position: absolute;
+  top: 3px;
+  left: 5;
+  padding: 0 5px;
+  border-radius: 3px
+}
+
+.gameBlockContainer .gameBlock .casLiveItem.places {
+  left: auto;
+  right: 3px
+}
+
+.gameBlockContainer .gameBlock img {
+  width: 100%;
+  height: 100%;
+  max-height: 145px;
+  min-height: 145px;
+  pointer-events: none
+}
+
+.casGame .filterBtnsWrap {
+  position: relative
+}
+
+.casGame .filterBtnsWrap .mainBtn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  right: 0;
+  top: -39px;
+  margin: 0;
+  padding: 8px
+}
+
+.gamePageWrap .ticketBtn {
+  padding: 7px 15px
+}
+
+.gamePageWrap h1 {
+  margin-bottom: 0
+}
+
+.gamePageWrap.fullWidth {
+  margin-bottom: 0;
+  min-height: calc(100vh - 125px)
+}
+
+.gamePageWrap.fullWidth .sectionContent {
+  display: flex;
+  flex-basis: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  min-height: 0;
+  height: calc(100% - 125px);
+  z-index: 5
+}
+
+.gamePageWrap.fullWidth .gameSection {
+  width: 100%;
+  position: relative
+}
+
+.gamePageWrap.fullWidth iframe {
+  position: relative;
+  min-height: 0
+}
+
+.gamePageWrap.fullWidth.sportbook {
+  margin-bottom: 15px
+}
+
+.gamePageWrap .sectionContent, .gamePageWrap .gameSection, .gamePageWrap iframe {
+  min-height: 70vh
+}
+
+.gamePageWrap .sectionContent.fullScreen, .gamePageWrap iframe.fullScreen {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100000
+}
+
+.gamePageWrap .sectionContent {
+  padding: 0
+}
+
+body.directionRTL {
+  direction: rtl
+}
+
+body.directionRTL .eventDetail .rangeOuterWrap {
+  direction: inherit
+}
+
+body.directionRTL .eventDetail .rangeOuterWrap .rangeWrap {
+  margin-left: 5px;
+  direction: rtl
+}
+
+body.directionRTL .eventDetail .rangeOuterWrap .rangeWrap .overlay {
+  left: auto;
+  right: 0;
+  border-radius: 0 10px 10px 0
+}
+
+body.directionRTL .progressBar {
+  transform: scale(-1, 1)
+}
+
+body.directionRTL .userName.ellipsis {
+  direction: ltr
+}
+
+body.directionRTL .betSlipWrap .betSlipBody .betsWrap .expHeader .rotateBlockArrow {
+  right: initial;
+  left: -5px
+}
+
+body.directionRTL .headerWrap .small {
+  padding-left: 0px;
+  padding-right: 5px
+}
+
+body.directionRTL .betsCount {
+  margin-left: 0px;
+  margin-right: 5px
+}
+
+body.directionRTL .betItem .closeBtn {
+  right: initial;
+  left: -5px
+}
+
+body.directionRTL .betSlipWrap .betSlipBody .eventName {
+  padding-right: initial;
+  padding-left: 25px
+}
+
+body.directionRTL .betSlipWrap .betSlipBody .betsWrap .betItem .currOdd {
+  padding-left: 0;
+  padding-right: 12px;
+  direction: ltr
+}
+
+body.directionRTL .betSlipWrap .betSlipBody .betsWrap .betItem .currOdd span {
+  right: -8px;
+  left: initial
+}
+
+body.directionRTL .betSlipWrap .betSlipBody .dateAndTime {
+  text-align: left
+}
+
+body.directionRTL .betSlipWrap .ellipsisMulty {
+  direction: initial;
+  text-align: right
+}
+
+body.directionRTL .betSlipWrap .ellipsisMulty > span:first-child {
+  float: right
+}
+
+body.directionRTL .betSlipWrap .system {
+  margin: 0px 10px 10px 28px
+}
+
+body.directionRTL .betSlipWrap .customSelectWrap p {
+  text-align: right
+}
+
+body.directionRTL .betSlipWrap .betSlipBody {
+  padding-right: 0px;
+  padding-left: 10px
+}
+
+body.directionRTL .betSlipWrap .betSlipBody.multi ~ .betAmountWrap.multiStake {
+  margin: 0 10px 10px 28px
+}
+
+body.directionRTL .betSlipWrap .betSlipBody .betsWrap.myBets .betItem svg, body.directionRTL .betSlipWrap .betSlipBody .betsWrap .betHeader > span svg {
+  margin-right: 0px;
+  margin-left: 5px
+}
+
+body.directionRTL .betSlipWrap .betSlipBody .betsWrap .expHeader .rotateBlockArrow svg {
+  margin-left: 0px
+}
+
+body.directionRTL .depWrap.withdrawWrap .available {
+  margin-left: 0px;
+  margin-right: 10px
+}
+
+body.directionRTL .depWrap.withdrawWrap .currSymbol {
+  margin-left: 10px;
+  margin-right: auto
+}
+
+body.directionRTL .depWrap.withdrawWrap .amountWrap .currSymbol {
+  right: initial;
+  left: 0px
+}
+
+body.directionRTL .questionBlock .vs__selected-options {
+  padding-left: 0px;
+  padding-right: 33px
+}
+
+body.directionRTL .itemQuestionEl .selectWrap > svg, body.directionRTL .itemQuestionEl .answerBlock label > svg {
+  left: initial;
+  right: 10px
+}
+
+body.directionRTL .itemQuestionEl.proFilePage .answerBlock input {
+  padding-left: 0px;
+  padding-right: 33px
+}
+
+body.directionRTL .proFilePage .balanceWidgets .widgetItem .widgetContent {
+  margin-right: 0px;
+  margin-left: 10px
+}
+
+body.directionRTL .customFileInput, body.directionRTL textarea, body.directionRTL input[type=text]:not(.mx-input), body.directionRTL input[type=email], body.directionRTL input[type=tel], body.directionRTL input[type=password], body.directionRTL input[type=number] {
+  padding-left: 0px;
+  padding-right: 10px
+}
+
+body.directionRTL .headerWrap .headerItem .loginWrap.logined .mainBtn {
+  margin-left: 0px;
+  margin-right: 5px
+}
+
+body.directionRTL .eventPage .details .awayTeam {
+  text-align: right
+}
+
+body.directionRTL .eventPage .details .homeTeam {
+  text-align: left
+}
+
+body.directionRTL .formWrap .closeBtn {
+  right: initial;
+  left: 2px
+}
+
+body.directionRTL .ticketPage .sectionContent .customFileInput {
+  padding-left: 10px;
+  padding-right: 0px
+}
+
+body.directionRTL .ticketPage .proFileItem .searchIcon {
+  right: initial;
+  left: 15px
+}
+
+body.directionRTL .ticketPage .ticketBtn svg, body.directionRTL .ticketPage .filterBtnsWrap .mainBtn svg {
+  margin-right: 0px;
+  margin-left: 5px
+}
+
+body.directionRTL .ticketPage .tiketStatuses > span svg {
+  margin-right: 0px;
+  margin-left: 10px
+}
+
+body.directionRTL .pageContainer .blockHeadName {
+  padding-left: 15px;
+  padding-right: 0px
+}
+
+body.directionRTL .depWrap .depMethodItem .selected {
+  margin-right: auto;
+  margin-left: initial
+}
+
+body.directionRTL .proFilePage .transactionsWrap .transactionDetails .balanceStatuses span svg {
+  margin-right: 0px;
+  margin-left: 10px
+}
+
+body.directionRTL .modal-wrapper .modal-container .close-modal {
+  right: initial;
+  left: 0px
+}
+
+body.directionRTL .sidebarMain {
+  padding-right: 0px;
+  padding-left: 15px
+}
+
+body.directionRTL .headerWrap .userBtns .loginBtn {
+  margin-left: 8px
+}
+
+body.directionRTL .newMark {
+  left: initial;
+  right: 10px
+}
+
+body.directionRTL .gameBlock .markWrap {
+  right: 0
+}
+
+body.directionRTL .gameBlock .infoBtn {
+  left: 0;
+  right: auto
+}
+
+body.directionRTL .pageContainer .sideBarBlock:last-child a.blockHead {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end
+}
+
+body.directionRTL .pageContainer .sideBarBlock:last-child a.blockHead svg {
+  margin-right: 15px
+}
+
+body.directionRTL .proFilePage .balanceWidgets .widgetIcon {
+  margin-right: 0px;
+  margin-left: 15px
+}
+
+body.directionRTL .proFilePage .filterBtnsWrap .mainBtn {
+  margin-right: 0px;
+  margin-left: 5px
+}
+
+body.directionRTL .proFilePage .withIcon .iconWrap {
+  margin-right: 0px;
+  margin-left: 15px
+}
+
+body.directionRTL .proFilePage form .verifTxt {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px
+}
+
+body.directionRTL .proFilePage form .verifTxt input {
+  left: 0px
+}
+
+body.directionRTL .proFilePage form .verifTxt label {
+  padding-left: 0px;
+  padding-right: 25px;
+  position: absolute;
+  left: 0px;
+  top: 3px
+}
+
+body.directionRTL .proFilePage .proFileItem .leftItem {
+  margin-right: 0px;
+  margin-left: 15px
+}
+
+body.directionRTL .headerWrap .headerItem .loginWrap {
+  margin-left: 0px
+}
+
+body.directionRTL .pageContainer .blockHead .rotateBlockArrow {
+  right: initial;
+  left: 3px
+}
+
+body.directionRTL .betSlipWrap {
+  right: initial;
+  left: 0px
+}
+
+body.directionRTL .breadcrumbs.pageContainer .allBtn {
+  margin-right: 0px;
+  margin-left: 10px;
+  transform: rotate(270deg)
+}
+
+body.directionRTL div.searchInputWrap .searchIcon {
+  right: initial;
+  left: 0px
+}
+
+body.directionRTL .proFilePage .historyFilters input {
+  padding-right: 10px;
+  padding-left: 0px
+}
+
+body.directionRTL .pageWrap .historyFilters .v-select.customSelect {
+  direction: rtl
+}
+
+body.directionRTL .casinoPage .customSelect .secondColor {
+  margin-right: 0px;
+  margin-left: 5px
+}
+
+body.directionRTL .tableEventsLive .tableBody .liveTime .timingWrap .liveMark {
+  margin-right: 0;
+  margin-left: 5px
+}
+
+body.directionRTL .tableEventsLive .tableBody .liveTime .betMore {
+  margin-right: auto;
+  margin-left: 0
+}
+
+body.directionRTL .tableEventsLive .tableBody .liveTime .betMore svg {
+  transform: scale(0.7) rotate(90deg)
+}
+
+body.directionRTL .tableEventsLive .tableBody .iconField {
+  margin-right: 5px
+}
+
+body.directionRTL .customSelect {
+  direction: rtl
+}
+
+body.directionRTL .mx-icon-calendar, body.directionRTL .mx-icon-clear {
+  right: initial;
+  left: 8px
+}
+
+body.directionRTL .mx-btn-icon-left {
+  transform: rotate(270deg)
+}
+
+body.directionRTL .mx-btn-icon-right {
+  transform: rotate(90deg)
+}
+
+body.directionRTL .tableEvents .rotateBlockArrow {
+  margin-left: 0px;
+  margin-right: 5px
+}
+
+body.directionRTL .sportNameInTable div:first-child {
+  margin-right: 10px;
+  margin-left: 0px
+}
+
+body.directionRTL .pageContainer .sidebarMain .sportItemWrap .icon {
+  margin-right: 0px;
+  margin-left: 15px
+}
+
+body.directionRTL .betSlipWrap .betHeader .betTypeSwitcher .linkToHistory svg {
+  margin-right: 0px;
+  margin-left: 5px
+}
+
+body.directionRTL .headerWrap .langFlagsWrap .langFlag {
+  margin-right: 0px;
+  margin-left: 15px
+}
+
+body.directionRTL .betSlipWrap .betsFooter .betButtons .mainBtn svg, body.directionRTL .betSlipWrap .betsFooter .betButtons button svg {
+  margin-right: 0px;
+  margin-left: 10px
+}
+
+body.directionRTL .formWrap.userNav svg {
+  margin-right: 0px;
+  margin-left: 15px
+}
+
+body.directionRTL .pageContainer a.blockHead svg {
+  margin-right: 5px;
+  margin-left: 0px
+}
+
+body.directionRTL .pageContainer .sidebarMain .resetSideBar svg {
+  margin-right: 0px;
+  margin-left: 10px
+}
+
+body.directionRTL .v-select.customSelect.langSelect {
+  padding-right: 0px
+}
+
+body.directionRTL .pageContainer .mobHeader {
+  left: initial;
+  right: -400px
+}
+
+body.directionRTL .pageContainer .mobHeader.showMobMenu {
+  transform: translateX(-400px)
+}
+
+body.directionRTL .depWrap .depMethodItem .imgWrap {
+  margin-right: 0px;
+  margin-left: 10px
+}
+
+body.directionRTL .footerMain .footerTop .footerBlock.about p {
+  text-align: right
+}
+
+body.directionRTL .mx-btn.mx-btn-text.mx-btn-icon-right {
+  transform: rotate(270deg)
+}
+
+body.directionRTL .mx-btn.mx-btn-text.mx-btn-icon-left {
+  transform: rotate(90deg)
+}
+
+body.directionRTL .blockHead .liveMark {
+  margin-left: 10px;
+  margin-right: -10px
+}
+
+body.directionRTL .authForm .baseCheckStyle + label:before {
+  left: initial;
+  right: 18px
+}
+
+body.directionRTL .formWrap .formFooter .secondColor {
+  margin-right: 0px;
+  margin-left: 5px
+}
+
+body.directionRTL .formWrap .errors {
+  padding-left: 0px;
+  padding-right: 10px
+}
+
+body.directionRTL .eventPage .liveEvent .eventScore > div:first-child, body.directionRTL .eventPage .finishedEvent .eventScore > div:first-child {
+  text-align: right;
+  margin-right: 10px
+}
+
+body.directionRTL .footerMain .footerTop .footerBlock {
+  padding-right: 0px;
+  padding-left: 10px
+}
+
+body.directionRTL .betType > .filterNameWrapper {
+  text-align: right;
+  padding-left: 0px;
+  padding-right: 15px
+}
+
+body.directionRTL .baseCheckStyle + label:before {
+  left: initial;
+  right: 0px
+}
+
+body.directionRTL .baseCheckStyle + label {
+  padding-left: 0px;
+  padding-right: 25px
+}
+
+body.directionRTL .sidebarMain .sportsWrap .baseCheckStyle + label {
+  padding-left: 0px;
+  padding-right: 33px
+}
+
+body.directionRTL .sidebarMain .sportsWrap .countryName.showList ul {
+  padding-left: 0;
+  padding-right: 10px
+}
+
+body.directionRTL .betSlipWrap .betInputWrap .betAmount {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  width: 100%
+}
+
+body.directionRTL .betSlipWrap .betInputWrap .maxBtn {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px
+}
+
+body.directionRTL .pageContainer .sidebarMain .sportsWrap .leagueName label + span {
+  direction: ltr
+}
+
+body.directionRTL .formWrap .passWrap .showPass {
+  right: initial;
+  left: 0px
+}
+
+body.directionRTL .questionBlock .vs__selected {
+  direction: ltr
+}
+
+body.directionRTL .betSlipWrap .cashoutAmountWrap .cashoutAmount {
+  padding-left: 0px;
+  padding-right: 10px;
+  margin-right: 0px;
+  margin-left: 10px
+}
+
+body.directionRTL .tableEvents .tableBody .numbersWrap {
+  direction: ltr
+}
+
+body.directionRTL .eventSection .detailInfo .odd {
+  direction: ltr
+}
+
+body.directionRTL .eventWrappInfo {
+  flex-direction: row-reverse
+}
+
+body.directionRTL .eventWrappInfo .eventWrappInfoItem:nth-child(1) {
+  grid-area: 1/3/1/3
+}
+
+body.directionRTL .eventWrappInfo .eventWrappInfoItem:nth-child(3) {
+  grid-area: 1/1/1/1
+}
+
+body.directionRTL .eventWrapperInfoCenter .eventProgressBar {
+  transform: scale(-1, 1)
+}
+
+body.directionRTL .eventWrapperInfoCenter .eventProgressBar .eventProgressBarCount {
+  transform: scale(-1, 1)
+}
+
+body.directionRTL .liveMarkWrap {
+  display: flex;
+  flex-direction: row-reverse
+}
+
+body.directionRTL .pageContainer .sidebarMain .sideBarBlock.liveblock {
+  direction: ltr;
+  text-align: right
+}
+
+body.directionRTL .pageContainer .sidebarMain .sideBarBlock .blockHead {
+  flex-direction: row-reverse;
+  justify-content: flex-end
+}
+
+body.directionRTL .eventPage .details {
+  direction: ltr;
+  display: flex;
+  flex-direction: row-reverse
+}
+
+body.directionRTL .eventPage .details .teamName {
+  flex-basis: 33.3333333333%
+}
+
+body.directionRTL .tableEvents .betMore {
+  direction: ltr
+}
+
+body.directionRTL .eventSection .detailInfo span:first-child {
+  direction: ltr;
+  text-align: right
+}
+
+body.directionRTL .eventWrappInfo .eventWrappInfoScore .scoreWrapp {
+  direction: rtl
+}
+
+body.directionRTL .proFilePage.mainProfile .membershipStatus {
+  right: auto;
+  left: 10px
+}
+
+body.directionRTL .proFilePage.mainProfile .membershipStatus svg {
+  margin-left: 0;
+  margin-right: 10px
+}
+
+body.directionRTL .inputCodeNumbers {
+  flex-direction: row-reverse
+}
+
+.formWrap .questionList.formWrap {
+  width: auto
+}
+
+.questionWarning {
+  padding: 10px;
+  display: flex
+}
+
+.questionWarning .questionWarningTitle {
+  display: inline-flex;
+  align-items: center
+}
+
+.questionWarning .questionWarningTitle svg {
+  margin-right: 10px
+}
+
+.questionWarning span {
+  color: #eb4846;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px
+}
+
+.questionWarning p {
+  font-size: 11px;
+  line-height: 15px;
+  width: 265px
+}
+
+.questionWarning div svg {
+  fill: #eb4846 !important;
+  margin: 0 auto;
+  display: block
+}
+
+.btnWrapSmall {
+  margin-top: 20px;
+  margin-bottom: 5px
+}
+
+.btnWrapSmall .smallBtn {
+  margin: 0 15px;
+  pointer-events: none
+}
+
+.btnWrapSmall .smallBtn.middleBtn {
+  position: relative
+}
+
+.btnWrapSmall .smallBtn.middleBtn:before, .btnWrapSmall .smallBtn.middleBtn:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 20px;
+  left: -28px
+}
+
+.btnWrapSmall .smallBtn.middleBtn:after {
+  left: auto;
+  right: -28px
+}
+
+.questionWarningIcon {
+  display: flex;
+  align-items: center
+}
+
+.questionModal {
+  overflow: inherit
+}
+
+.questionModal .formHeader {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px
+}
+
+.questionModal .btnCancel {
+  margin-left: 0;
+  opacity: .4;
+  pointer-events: none
+}
+
+.questionModal .btnCancel:hover {
+  opacity: .4
+}
+
+.questionBlock {
+  margin-bottom: 15px
+}
+
+.questionBlock .userAsk {
+  min-height: 20px
+}
+
+.questionBlock.onlyRead {
+  margin-bottom: 0
+}
+
+.questionBlock.onlyRead > div:first-child {
+  margin-bottom: 5px
+}
+
+.questionBlock.onlyRead .secondColor {
+  font-weight: 300
+}
+
+.questionBlock .vs__dropdown-menu {
+  max-height: 230px
+}
+
+.questionBlock .v-select {
+  margin-top: 5px
+}
+
+.questionBlock .vs__selected-options .vs__search {
+  height: 38px;
+  width: 0
+}
+
+.questionBlock .vs__selected-options {
+  padding-left: 33px
+}
+
+.questionBlock .vs__selected {
+  max-width: 235px;
+  line-height: 28px;
+  padding-left: 0;
+  margin-left: 0;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-transform: none
+}
+
+.questionBlock .vs__dropdown-option {
+  white-space: normal;
+  margin: 8px 0;
+  text-transform: none
+}
+
+.answerBlock.disabledAnswer {
+  opacity: .2
+}
+
+.forgotForm .questionWarning {
+  min-height: 0
+}
+
+.forgotForm .questionWarningIcon {
+  margin-right: 10px
+}
+
+.questionList .errors {
+  border-radius: 5px
+}
+
+.questionList .error svg {
+  margin-right: 10px
+}
+
+.itemQuestionEl .answerBlock input {
+  padding-left: 33px
+}
+
+.itemQuestionEl .answerBlock input.accepted {
+  color: #fff
+}
+
+.itemQuestionEl .selectWrap, .itemQuestionEl .answerBlock label {
+  position: relative;
+  display: block
+}
+
+.itemQuestionEl .selectWrap > svg, .itemQuestionEl .answerBlock label > svg {
+  position: absolute;
+  top: 13px;
+  left: 10px;
+  width: 14px;
+  height: 14px;
+  z-index: 1
+}
+
+.itemQuestionEl .answerBlock label svg {
+  top: 35px
+}
+
+.itemQuestionEl .questionBlock.onlyRead + .answerBlock label svg {
+  top: 15px
+}
+
+.htmlPageWrap {
+  width: 100%
+}
+
+.htmlPageWrap .htmlContainer {
+  margin-bottom: 20px
+}
+
+.htmlPageWrap .htmlContainer a {
+  text-decoration: underline;
+  font-size: 14px
+}
+
+.htmlPageWrap .htmlContainer a strong, .htmlPageWrap .htmlContainer a i {
+  font-size: 14px;
+  text-decoration: underline
+}
+
+.htmlPageWrap .sectionContent {
+  min-height: 125px
+}
+
+.htmlPageWrap > .sectionContent {
+  border-radius: 10px
+}
+
+.htmlPageWrap > .sectionContent .sectionContent {
+  padding: 0;
+  box-shadow: none
+}
+
+.htmlPageWrap form .error.danger-color {
+  bottom: -4px
+}
+
+.htmlContainer h1 {
+  font-size: 40px
+}
+
+.htmlContainer h1 strong, .htmlContainer h1 i {
+  font-size: 40px;
+  margin: 0 0
+}
+
+.htmlContainer h2, .htmlContainer h3, .htmlContainer h4, .htmlContainer h5, .htmlContainer h6, .htmlContainer strong {
+  font-weight: 700;
+  margin: 15px 0;
+  font-size: 18px
+}
+
+.htmlContainer p {
+  font-size: 14px;
+  line-height: 20px
+}
+
+.htmlContainer i {
+  font-style: italic;
+  margin: 15px 0
+}
+
+.htmlContainer strong, .htmlContainer i {
+  display: inline-block;
+  font-size: 14px
+}
+
+.htmlContainer ol, .htmlContainer ul {
+  padding-left: 15px;
+  margin: 15px 0;
+  font-size: 14px
+}
+
+.htmlContainer ul {
+  list-style: disc
+}
+
+.htmlContainer ol {
+  list-style: decimal
+}
+
+.bonusesWrap {
+  display: grid;
+  grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 15px
+}
+
+.bonusesWrap .bonusItem {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative
+}
+
+.bonusesWrap .bonusItem .mainBtn {
+  padding: 10px 15px
+}
+
+.bonusesWrap .bonusItem .status {
+  z-index: 2;
+  text-transform: capitalize
+}
+
+.bonusesWrap .bonusItem > .btnWrap {
+  display: flex;
+  padding: 0 15px 15px;
+  margin-top: auto
+}
+
+.bonusesWrap .bonusItem > .btnWrap .btn {
+  margin-top: 0;
+  margin-right: 5px
+}
+
+.bonusesWrap .bonusItem > .btnWrap .dashed {
+  margin-left: auto;
+  background-color: transparent
+}
+
+.bonusesWrap .bonusBot {
+  display: flex;
+  flex-direction: column;
+  padding: 15px
+}
+
+.bonusesWrap .bonusBot .ellipsisMulty {
+  max-height: 60px;
+  -webkit-line-clamp: 3
+}
+
+.bonusesWrap .bonusBot .ellipsisMulty p {
+  margin-bottom: 0
+}
+
+.bonusesWrap .bonusBot .bonusStatus {
+  display: flex;
+  align-items: center
+}
+
+.bonusesWrap .bonusTop {
+  min-height: 160px;
+  position: relative;
+  background-image: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 100%)
+}
+
+.bonusesWrap .bonusTop .bonusImg {
+  display: block;
+  width: 100%;
+  height: 200px
+}
+
+.bonusesWrap .bonusTop .titleWrap {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  padding: 15px;
+  left: 0;
+  bottom: 0;
+  height: 60%;
+  width: 100%;
+  background-image: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  z-index: 1
+}
+
+.bonusesWrap .bonusTop .titleWrap .title {
+  margin-top: auto;
+  color: #fff
+}
+
+.bonusPopup .modal-wrapper .modal-container {
+  max-width: 850px
+}
+
+.bonusPopup .bonusHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  margin-inline-start: 10px;
+  margin-inline-end: 40px
+}
+
+.bonusPopup .bonusHeader .heading {
+  margin-right: 5px
+}
+
+.bonusPopup .bonusHeader .mainBtn {
+  margin: 5px;
+  padding: 10px 14px
+}
+
+.bonusPopup .imgWrap {
+  position: relative
+}
+
+.bonusPopup .imgWrap .bonusImg {
+  max-height: 500px;
+  width: 100%
+}
+
+.bonusPopup .bonusText p, .bonusPopup .bonusText h3 {
+  margin-bottom: 10px
+}
+
+.bonusPopup .chips {
+  position: absolute;
+  bottom: 10px;
+  right: 4px;
+  border-radius: 10px;
+  padding: 0 10px
+}
+
+html[lang=ar] .footerMain .footerTop .footerBlock.about p {
+  direction: ltr;
+  text-align: left
+}
+
+html[lang=ar] .footerMain .footerTop .footerBlock.about h4 {
+  direction: ltr;
+  text-align: left;
+  margin-right: 208px
+}
+
+html[lang=ar] .footerMain .footerTop .footerBlock p.powered {
+  width: 100%
+}
+
+html[lang=ar] .footerMain .footerTop .logoWrap {
+  margin-right: 120px
+}
+
+.eventWrapperInfoCenter {
+  display: grid;
+  grid-template-columns:1fr .5fr 1fr;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 610px;
+  margin-top: 10px;
+  justify-items: center
+}
+
+.eventWrapperInfoCenter .homeTeamInfo, .eventWrapperInfoCenter .awayTeamInfo {
+  width: 100%
+}
+
+.eventWrapperInfoCenter .eventProgressBarWrap .eventProgressBar {
+  width: 100%
+}
+
+.eventWrapperInfoCenter.scale {
+  max-width: 394px
+}
+
+.eventWrapperInfoCenter.scale .eventProgressBarWrap .eventProgressBar .progressBar {
+  max-width: 100px;
+  width: 100%
+}
+
+.eventWrapperInfoCenter .eventProgressBarWrap .eventProgressBar .progressBar {
+  max-width: 170px;
+  width: 100%
+}
+
+.eventWrapperInfoCenter .teamsScoreWrp {
+  margin: 0px 5px
+}
+
+.eventWrappInfo {
+  display: grid;
+  grid-template-columns:1fr .5fr 1fr;
+  max-height: 226px;
+  max-width: 610px;
+  width: 100%;
+  justify-content: center;
+  justify-items: center
+}
+
+.eventWrappInfo .eventWrappInfoItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 170px
+}
+
+.eventWrappInfo .eventWrappInfoItem .ballServe svg {
+  position: relative;
+  top: -5px;
+  left: 2px
+}
+
+.eventWrappInfo .eventWrappInfoItem .eventWrappInfoItemName {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px
+}
+
+.eventWrappInfo .fakeIcon {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0;
+  font-weight: 700;
+  border-radius: 50%;
+  border-width: 7px;
+  border-style: solid;
+  text-transform: uppercase
+}
+
+.eventWrappInfo .fakeIcon span {
+  font-size: 0;
+  white-space: nowrap
+}
+
+.eventWrappInfo .fakeIcon span:first-letter {
+  line-height: 43px;
+  font-size: 15px
+}
+
+.eventWrappInfo .fakeIcon.homeTeam {
+  z-index: 1
+}
+
+.eventWrappInfo .eventWrappInfoScore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px
+}
+
+.eventWrappInfo .eventWrappInfoScore .scoreWrapp {
+  padding: 5px 8px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px 10px 0px;
+  font-size: 23px;
+  font-weight: 700;
+  color: #fff
+}
+
+.eventWrappInfo .eventWrappInfoScore .scoreWrapp .separator {
+  margin: 0px 5px
+}
+
+.eventWrappInfo .eventWrappInfoScore .newTimer {
+  margin-top: 7px;
+  display: inline-block
+}
+
+.eventWrappInfo .eventWrappInfoScore .scoreTime {
+  display: flex
+}
+
+.eventWrappInfo .eventWrappInfoScore .scoreTime .time {
+  font-size: 12px;
+  margin: 0 2px
+}
+
+.liveMarkWrap {
+  position: absolute;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  top: 10px;
+  display: flex
+}
+
+.liveMarkWrap .newTimer {
+  margin: 0px 10px
+}
+
+.liveMarkWrap .placeInfo {
+  display: inline-flex;
+  text-align: right;
+  margin-left: auto
+}
+
+.liveMarkWrap .placeInfo img {
+  width: 20px;
+  margin-right: 5px
+}
+
+.regular.slider {
+  display: flex;
+  overflow-x: auto
+}
+
+.regular.slider > div {
+  flex-basis: auto;
+  flex-shrink: 0;
+  margin-right: 7px
+}
+
+.regular.slider::-webkit-scrollbar {
+  display: none
+}
+
+.regular.slider::-webkit-scrollbar-track {
+  display: none
+}
+
+.regular.slider::-webkit-scrollbar-thumb {
+  display: none
+}
+
+.ballServe > div {
+  height: 20px;
+  line-height: 31px
+}
+
+@media (min-width: 1200px) {
+  .pageContainer .sliderWrapBig .slick-list img {
+    height: 100%
+  }
+
+  .pageContainer .sliderWrapBig, .pageContainer .sliderWrapBig .slick-list, .pageContainer .sliderWrapBig .slick-list img {
+    min-height: 460px
+  }
+}
+
+@media (min-width: 1025px) {
+  .mobMenuBtn {
+    display: none
+  }
+
+  body .appWrap .pageContainer .blockHead {
+    border-top: none
+  }
+}
+
+@media (min-width: 768px) {
+  a, .mainBtn, .smallBtn, .betMore, .addToFav, .numbersWrap, .eventItemHead, .eventDetail .detailInfo, .vs__dropdown-toggle, .sportsWrap .sportItemWrap, .slideItemWrap.sportIcon, .userWrap .mobSecondBtnWrap {
+    transition: opacity .4s
+  }
+
+  a:hover, .mainBtn:hover, .smallBtn:hover, .betMore:hover, .addToFav:hover, .numbersWrap:hover, .eventItemHead:hover, .eventDetail .detailInfo:hover, .vs__dropdown-toggle:hover, .sportsWrap .sportItemWrap:hover, .slideItemWrap.sportIcon:hover, .userWrap .mobSecondBtnWrap:hover {
+    opacity: .8
+  }
+
+  body.overflowHidden {
+    padding-right: 8px
+  }
+
+  body.overflowHidden .headerWrap {
+    padding-right: 8px
+  }
+
+  body.overflowHidden .betSlipWrap {
+    margin-right: 8px
+  }
+
+  .proFilePage.casinoTransactions .transactionsWrap .provider {
+    display: none
+  }
+
+  .proFilePage .balanceInfo .provider, .proFilePage .balanceInfo .paymentSum {
+    border-top: none
+  }
+
+  .proFilePage .balanceWidgets .widgetItem + .widgetItem {
+    border-left: none
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails div.showOnMob {
+    display: none
+  }
+
+  .proFilePage .transactionsWrap .blockHeaderBgColor, .proFilePage .transactionsWrap .mobHasBg {
+    background-color: transparent
+  }
+
+  .proFilePage .payHistory {
+    justify-content: flex-start
+  }
+
+  .eventSection .sectionContent .eventDetail:not(.totalHeader).layoutDouble .detailInfo:nth-child(2), .eventSection .sectionContent .eventDetail:not(.center):not(.layoutTripleEH).layoutTriple .detailInfo + .detailInfo {
+    border-top: none
+  }
+
+  .sectionContent .transactionDetails.casInfo .idWrap {
+    border-bottom: none
+  }
+}
+
+@media (min-width: 481px) {
+  .transactionDetails.ticketsListItem .ticketTitle {
+    border-top: none
+  }
+}
+
+@media (max-height: 928px) {
+  .betSlipWrap {
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden
+  }
+
+  .betSlipWrap .betSlipBody {
+    max-height: calc(100vh - 390px)
+  }
+
+  .betSlipWrap .betSlipBody.multi {
+    max-height: calc(100vh - 430px)
+  }
+
+  .betSlipWrap .betSlipBody.systemWrap {
+    max-height: calc(100vh - 450px)
+  }
+}
+
+@media (max-height: 528px) {
+  .betSlipWrap .hidable .betSlipBody {
+    max-height: 5000px
+  }
+}
+
+@media (max-width: 1024px)and (orientation: landscape) {
+  .betSlipWrap {
+    z-index: 9999
+  }
+
+  .betSlipWrap .betTypeSwitcher {
+    transition: none
+  }
+
+  .betSlipWrap.show {
+    bottom: auto;
+    top: 0
+  }
+
+  .betSlipWrap.show .betSlipInnerWrap {
+    overflow-y: scroll;
+    height: 100vh
+  }
+
+  .betSlipWrap.show .betSlipInnerWrap .betSlipBody {
+    max-height: initial;
+    overflow-y: initial
+  }
+}
+
+@media (max-width: 1200px) {
+  .footerMain .footerBotom {
+    padding-bottom: 50px
+  }
+
+  .scaleWrapper.scale {
+    transform: scale(0.8)
+  }
+}
+
+@media (max-width: 1100px) {
+  .scaleWrapper.scale {
+    transform: scale(0.7)
+  }
+}
+
+@media (max-width: 1024px) {
+  .scaleWrapper.scale {
+    transform: scale(1)
+  }
+
+  .sidebarItemsDevider {
+    margin: 0px;
+    height: 5px
+  }
+
+  .headerWrap .logoWrap {
+    padding-right: 0;
+    padding: 0 10px
+  }
+
+  .sportsBlock.sideBarBlock {
+    min-height: 51px
+  }
+
+  .pageContainer {
+    justify-content: center
+  }
+
+  .pageContainer .pageWrap, .pageContainer .homeWrap {
+    width: 100%
+  }
+
+  .pageContainer .sidebarMain .blockHead .rotateBlockArrow {
+    position: relative;
+    height: auto
+  }
+
+  .pageContainer .headerItem.mobBtnWrap {
+    border-left: none
+  }
+
+  .mobMenuBtn {
+    padding: 0;
+    position: relative;
+    width: 35px;
+    height: 50px;
+    top: -5px;
+    left: 0;
+    background-color: transparent
+  }
+
+  .mobMenuBtn span {
+    display: block;
+    pointer-events: none;
+    position: relative;
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    border-radius: 2px;
+    opacity: 1;
+    left: 0;
+    transition: .2s ease-out
+  }
+
+  .mobMenuBtn span:nth-child(1) {
+    top: 0px
+  }
+
+  .mobMenuBtn span:nth-child(2) {
+    top: 5px
+  }
+
+  .mobMenuBtn span:nth-child(3) {
+    top: 10px
+  }
+
+  .mobMenuBtn.open span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 8px
+  }
+
+  .mobMenuBtn.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0
+  }
+
+  .mobMenuBtn.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 2px
+  }
+
+  .pageContainer .mobHeader {
+    position: fixed;
+    flex-direction: column;
+    top: 60px;
+    left: -400px;
+    transition: transform .2s;
+    z-index: 1000;
+    max-height: calc(100% - 48px);
+    overflow-y: auto
+  }
+
+  .pageContainer .mobHeader .settingsWrap .vs__dropdown-menu {
+    top: auto;
+    bottom: 28px;
+    border-radius: 5px
+  }
+
+  .pageContainer .mobHeader.showMobMenu {
+    transform: translateX(400px)
+  }
+
+  .pageContainer .mobHeader .headerItem {
+    min-height: 50px
+  }
+
+  .pageContainer .mobHeader .blockHead, .pageContainer .mobHeader .seacrhWrap {
+    width: 100%;
+    padding: 15px;
+    height: auto;
+    opacity: 1
+  }
+
+  .pageContainer .mobHeader .logoWrap {
+    order: 1
+  }
+
+  .pageContainer .mobHeader .seacrhWrap {
+    order: 2;
+    height: 50px;
+    padding: 0 15px
+  }
+
+  .pageContainer .mobHeader .sidebarMain {
+    min-width: 320px;
+    padding: 0;
+    order: 3
+  }
+
+  .pageContainer .mobHeader .sidebarMain .sideBarBlock {
+    margin-bottom: 0;
+    border-radius: 0
+  }
+
+  .pageContainer .mobHeader .sidebarMain .sideBarBlock .blockHead {
+    border-radius: 0
+  }
+
+  .pageContainer .mobHeader .timeWrap {
+    margin-left: 10px
+  }
+
+  .pageContainer .mobHeader .settingsWrap {
+    order: 4;
+    height: 50px;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0
+  }
+
+  .pageContainer .mobHeader .userBtns {
+    order: 5;
+    display: flex
+  }
+}
+
+@media (max-width: 991px) {
+  .scaleWrapper.scale {
+    transform: scale(0.8)
+  }
+}
+
+@media (max-width: 767px) {
+  .proFilePage .transactionsWrap .transactionDetails.casInfo {
+    position: relative
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails.casInfo span {
+    display: block
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails.casInfo div {
+    flex-direction: row;
+    justify-content: space-between
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails.casInfo .idWrap {
+    justify-content: flex-start
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails.casInfo .idWrap span {
+    padding-right: 10px
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails.casInfo .transType {
+    position: absolute;
+    right: -10px;
+    top: -5px;
+    height: auto
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails.casInfo .transType span {
+    padding-right: 0
+  }
+
+  .depSelected .amountWrap input {
+    max-width: 100%
+  }
+
+  .scaleWrapper.scale {
+    transform: scale(1)
+  }
+
+  .appWrap .fullForm.scrollForm .formFullWrap {
+    max-height: initial
+  }
+
+  .appWrap .fullForm .formFullWrap {
+    max-height: initial
+  }
+
+  .authForm.fullForm {
+    width: 320px;
+    margin: auto
+  }
+
+  .authForm.affWrap .formFullWrap {
+    align-items: center
+  }
+
+  .favoriteSection .tableWrap .buttonAllWrapper {
+    margin-top: -24px
+  }
+
+  .bet_info_modal .modal-wrapper .modal-container {
+    max-width: 430px
+  }
+
+  .depWrap .depMethodWrap, .depWrap .depSelectedWrap {
+    flex-basis: 100%
+  }
+
+  .depWrap .depMethodWrap .depMethodItem, .depWrap .depSelectedWrap .depMethodItem {
+    margin-bottom: 10px
+  }
+
+  .authFormPopup .modal-wrapper {
+    padding: 10vh 0 30vh
+  }
+
+  body.directionRTL .pageContainer .mobMenuBtn {
+    padding-left: 0px;
+    padding-right: 10px
+  }
+
+  body.directionRTL .pageContainer > .userBtns .userWrap.logined {
+    padding-right: 0px;
+    padding-left: 0
+  }
+
+  body.directionRTL .moreEvensWrap a .secondColor {
+    margin-right: 0px;
+    margin-left: 5px
+  }
+
+  body.directionRTL .pageContainer .userNav {
+    right: initial;
+    left: -350px
+  }
+
+  body.directionRTL .pageContainer .userNav.showMobMenu {
+    transform: translateX(350px)
+  }
+
+  body.directionRTL .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem) .teamWrap {
+    padding-left: 0px;
+    padding-right: 40px
+  }
+
+  body.directionRTL .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem) .betInfo a {
+    margin-right: 0px;
+    margin-left: 5px
+  }
+
+  .gamePageWrap {
+    margin-bottom: 0
+  }
+
+  .gamePageWrap.virtual-sport-game {
+    min-height: calc(100vh - 50px);
+    margin-top: 0
+  }
+
+  .gamePageWrap.virtual-sport-game .gameSection {
+    min-height: 0
+  }
+
+  .gamePageWrap.virtual-sport-game .sectionContent {
+    padding: 0;
+    height: calc(100% - 50px)
+  }
+
+  .moreEvensWrap {
+    order: 5;
+    grid-area: span 1/span 3
+  }
+
+  .moreEvensWrap a {
+    display: block;
+    margin: 8px auto 5px;
+    font-size: 12px;
+    text-align: center
+  }
+
+  .moreEvensWrap a .secondColor {
+    display: inline-block;
+    margin-right: 2px;
+    font-size: 11px;
+    line-height: 11px
+  }
+
+  .appWrap {
+    padding-top: 50px
+  }
+
+  .headerWrap .userBtns .userWrap {
+    height: auto
+  }
+
+  .loginWrap {
+    display: flex;
+    align-items: center
+  }
+
+  .bet_info_modal .modal-container {
+    padding-bottom: 10vh
+  }
+
+  .pageContainer.headerItemWrap {
+    padding: 0
+  }
+
+  .pageContainer .mobMenuBtn {
+    width: 45px;
+    padding-left: 10px
+  }
+
+  .pageContainer .userBtns.headerItem {
+    padding-left: 0
+  }
+
+  .pageContainer > .userBtns {
+    padding-right: 0px
+  }
+
+  .pageContainer > .userBtns .mobSecondBtnWrap {
+    width: 40px;
+    height: 50px;
+    position: relative
+  }
+
+  .pageContainer > .userBtns .mobSecondBtnWrap svg, .pageContainer > .userBtns .mobSecondBtnWrap .mobMenuBtn {
+    right: 0;
+    height: 50px;
+    position: absolute;
+    transition: opacity .2s
+  }
+
+  .pageContainer > .userBtns .userWrap.logined {
+    padding: 0;
+    padding-right: 5px;
+    margin: 0
+  }
+
+  .pageContainer > .userBtns .userWrap svg {
+    opacity: 1
+  }
+
+  .pageContainer > .userBtns .userWrap svg.hide {
+    opacity: 0
+  }
+
+  .pageContainer > .userBtns .userWrap .mobMenuBtn {
+    right: 0;
+    padding-right: 5px;
+    opacity: 0
+  }
+
+  .pageContainer > .userBtns .userWrap .mobMenuBtn.open {
+    opacity: 1
+  }
+
+  .pageContainer .seacrhWrap .vs__dropdown-menu {
+    width: 320px;
+    left: -36px;
+    top: 38px;
+    max-height: 410px
+  }
+
+  .pageContainer .seacrhWrap .customSelect_search.vs--single.vs--open .vs__dropdown-menu .optionWrapper {
+    padding-right: 25px
+  }
+
+  .pageContainer .seacrhWrap .customSelect_search.vs--single.vs--open .vs__dropdown-menu .optionWrapper .searchRow .searchArrow {
+    right: -10px
+  }
+
+  .pageContainer .seacrhWrap .customSelect_search.vs--single.vs--open .vs__dropdown-menu .optionWrapper .searchItem p {
+    white-space: normal
+  }
+
+  .pageContainer .mobBtnWrap {
+    padding: 0
+  }
+
+  .pageContainer .secondMobBtn {
+    display: block;
+    opacity: 0;
+    transition: opacity .2s
+  }
+
+  .pageContainer .secondMobBtn.open {
+    opacity: 1
+  }
+
+  .pageContainer .mobHeader {
+    top: 50px
+  }
+
+  .pageContainer .mobHeader .mobSideBar {
+    width: 100%
+  }
+
+  .pageContainer .mobBalance .secondBalance {
+    padding: 15px;
+    grid-template-columns:repeat(3, 1fr)
+  }
+
+  .pageContainer .mobBalance .secondBalance > div {
+    flex-basis: auto;
+    padding: 0;
+    padding-right: 5px
+  }
+
+  .pageContainer .mobBalance .secondBalance > div .mainBtn {
+    margin-top: 10px;
+    padding: 5px 10px
+  }
+
+  .pageContainer .userNav {
+    min-width: 320px;
+    max-width: 320px;
+    top: 50px;
+    border-radius: 0;
+    opacity: 1;
+    visibility: visible;
+    right: -350px
+  }
+
+  .pageContainer .userNav.showMobMenu {
+    transform: translateX(-350px)
+  }
+
+  .pageContainer .userNav a:not(.mainBtn) {
+    height: 50px;
+    font-size: 14px;
+    font-weight: bold
+  }
+
+  .pageContainer .favBlockWrap {
+    display: flex;
+    flex-direction: column
+  }
+
+  .pageContainer .favBlockWrap .favItem {
+    width: 100%;
+    margin-bottom: 20px
+  }
+
+  .headerWrap .userBtns .regBtn {
+    padding: 6px 8px;
+    margin-right: 10px;
+    margin-left: 10px;
+    white-space: nowrap
+  }
+
+  .headerWrap .userBtns .loginBtn {
+    display: flex;
+    margin-right: 5px;
+    margin-left: 5px
+  }
+
+  .headerWrap .headerItem, .headerWrap {
+    min-height: 50px
+  }
+
+  .leagueNameWithFilter {
+    grid-template-columns:7.3fr 3fr
+  }
+
+  .leagueNameWithFilter .betOptions {
+    grid-area: 1/2/1/2
+  }
+
+  .tableEventsLive .tableHead, .tableEventsLive .tableBody {
+    grid-template-columns:.5fr 6fr 3fr
+  }
+
+  .customSelect:not(.customSelect_search) .vs__dropdown-menu {
+    left: auto !important;
+    right: 0 !important
+  }
+
+  .mobHeader .customSelect.langSelect .vs__dropdown-menu {
+    left: 0 !important
+  }
+
+  .dateSelect {
+    height: 25px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold
+  }
+
+  .dateSelect .vs__dropdown-menu {
+    min-width: 100px
+  }
+
+  .blockHead .dateSelectWrap {
+    margin-right: 5px
+  }
+
+  .appWrap .proFilePage .balanceWidgets {
+    grid-template-columns:repeat(1, 1fr)
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails.balanceInfo div {
+    padding: 10px
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails div + div {
+    border-left: none
+  }
+
+  .proFilePage .transactionsWrap .transHeader {
+    display: none
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem) {
+    grid-template-columns:auto
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem) .digitsWrap {
+    grid-area: 4/1/4/11
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem) .sportIcon {
+    grid-area: 2/1;
+    align-items: flex-start
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem) .teamWrap {
+    grid-area: 2/1/2/11;
+    padding-left: 40px
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem) .marketWrap {
+    grid-area: 3/1/3/10
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem) .oddsWrap {
+    grid-area: 3/10/3/11;
+    text-align: right
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem) .statusWrap {
+    grid-area: 1/3/1/11;
+    text-align: right;
+    border-top-right-radius: 5px
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem) .betInfo {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    border-top-left-radius: 5px
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem) .betInfo a {
+    display: inline-block;
+    height: 16px;
+    margin-right: 5px
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem) .multiple {
+    grid-area: span 2/span 8;
+    justify-content: flex-start;
+    text-align: left
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem) .multiple.system {
+    grid-area: span 2/span 9
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem) .arrowWrap {
+    grid-area: span 2/span 1
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem) .dashWrap {
+    display: none
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem) .showOnMob {
+    display: block;
+    padding: 0
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem).childBet .betId, .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem).childBet .betDate, .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem).childBet .digitsWrap {
+    display: none
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem).childBet .sportIcon {
+    grid-area: 1/1
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem).childBet .teamWrap {
+    grid-area: 1/1/1/11
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem).childBet .marketWrap {
+    grid-area: 2/1/2/11;
+    padding-left: 40px;
+    padding-right: 60px
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem).childBet .betInfo {
+    grid-area: 2/1/2/2
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem).childBet .betInfo .betInfo {
+    padding-left: 2px
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem).childBet .oddsWrap {
+    grid-area: 2/8/2/11
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem).balanceInfo {
+    height: auto;
+    margin: auto;
+    margin-bottom: 20px
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem).balanceInfo div.transType {
+    grid-area: 1/3/1/5;
+    justify-content: flex-end
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem).balanceInfo div.transType span {
+    padding: 0
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem).balanceInfo .provider {
+    grid-area: 2/1/2/span 2;
+    padding: 5px 10px 0
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem).balanceInfo .paymentSum {
+    grid-area: 2/3/4/5;
+    padding: 5px 10px;
+    text-align: right
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem).balanceInfo .paymentStatus {
+    grid-area: 3/1/3/span 2;
+    padding: 5px 10px
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails:not(.ticketsListItem).balanceInfo .paymentReason {
+    grid-area: 4/1/4/5
+  }
+
+  .proFilePage .historyFilters {
+    flex-wrap: wrap
+  }
+
+  .proFilePage .historyFilters > div {
+    width: 49%
+  }
+
+  .proFilePage .historyFilters input {
+    max-width: 100%
+  }
+
+  .eventSection .eventDetail .yesNoArr {
+    padding: 0 5px;
+    min-height: 55px;
+    border-left: none
+  }
+
+  .proFilePage .historyFilters > div {
+    margin-bottom: 10px
+  }
+
+  .proFilePage .proFileItem {
+    flex-wrap: wrap
+  }
+
+  .proFilePage .verification .proFileItem .leftItem, .proFilePage .verification .proFileItem .rightItem {
+    width: 100%;
+    max-width: inherit;
+    margin-right: 0
+  }
+
+  .liveAnimation {
+    margin-top: 20px
+  }
+
+  .eventPage .details {
+    display: flex
+  }
+
+  .loyaltyPage .filterBtnsWrap .searchInputWrap {
+    margin: 0 0 10px 0
+  }
+
+  .loyaltyPage .filterBtnsWrap .linkWrap {
+    margin-left: 5px;
+    justify-content: flex-start;
+    text-align: left
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails.loyaltyInfo .secondColor, .proFilePage .transactionsWrap .transactionDetails.loyaltyInfo .provider {
+    text-align: left
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails.loyaltyInfo .flexCenter {
+    justify-content: flex-start
+  }
+
+  .proFilePage .transactionsWrap .transactionDetails.loyaltyInfo .flexCenter svg {
+    margin-inline-start: 5px
+  }
+
+  .htmlContainer h1 {
+    font-size: 20px;
+    line-height: 28px
+  }
+
+  .htmlContainer h1 strong, .htmlContainer h1 i {
+    font-size: 20px
+  }
+}
+
+@media (max-width: 642px) {
+  .bonusesWrap .bonusTop .bonusImg {
+    height: auto;
+    max-height: 400px
+  }
+}
+
+@media (max-width: 580px) {
+  .slotsTouchSlider .regular.slider > div {
+    flex-basis: 500px
+  }
+
+  .eventWrappInfo .eventWrappInfoItem {
+    max-width: 100%;
+    width: 100%
+  }
+
+  .eventWrapperInfoCenter {
+    max-width: 394px;
+    margin-top: 10px
+  }
+
+  .eventWrapperInfoCenter .eventProgressBarWrap .eventProgressBar .progressBar {
+    width: 100px
+  }
+
+  .blockHead.countrySliderWrap .slick-slider .slick-arrow.slick-next {
+    right: -10px
+  }
+
+  .blockHead.countrySliderWrap .slick-slider .slick-arrow.slick-prev {
+    left: -10px
+  }
+
+  .countrySliderWrap .slick-slider .slick-arrow.slick-next {
+    right: -5px
+  }
+
+  .countrySliderWrap .slick-slider .slick-arrow.slick-prev {
+    left: -5px
+  }
+
+  .mx-datepicker-main.mx-datepicker-popup, .mx-range-wrapper {
+    flex-direction: column
+  }
+
+  .mx-datepicker-main.mx-datepicker-popup.customDataPopup {
+    transform: translateY(132px)
+  }
+
+  .pageContainer {
+    padding-left: 5px;
+    padding-right: 5px
+  }
+
+  .appWrap .sectionContent {
+    padding: 15px 5px
+  }
+
+  .leagueNameWithFilter {
+    grid-template-columns:1fr 1fr
+  }
+
+  .leagueEventsTable + .leagueEventsTable .leagueNameWithFilter {
+    grid-template-columns:1fr
+  }
+
+  .tableEventsLive .tableHead, .tableEventsLive .tableBody {
+    grid-template-columns:minmax(100px, 4fr) minmax(100px, 2fr)
+  }
+
+  .tableEventsLive .tableHead.gridTemplateColumn3, .tableEventsLive .tableBody.gridTemplateColumn3 {
+    grid-template-columns:minmax(100px, 3fr) minmax(100px, 3fr)
+  }
+
+  .tableEventsLive .tableHead .filterOptions, .tableEventsLive .tableBody .filterOptions {
+    padding-right: 0px
+  }
+
+  .hideOnMobile {
+    display: none
+  }
+
+  .tableEventsLive .tableBody .eventWrap {
+    padding: 4px 0 0
+  }
+
+  .tableEventsLive .tableBody .eventWrap .homeTeam {
+    margin-bottom: 0
+  }
+
+  .tableEventsLive .tableBody .eventWrap .homeTeam a, .tableEventsLive .tableBody .eventWrap .awayTeam a {
+    font-weight: 400
+  }
+
+  .tableEventsLive .tableBody .liveTime {
+    display: flex;
+    align-items: center;
+    padding-bottom: 4px
+  }
+
+  .tableEventsLive .tableBody .liveTime .mb-5 {
+    margin-bottom: 0
+  }
+
+  .tableEventsLive .tableBody .liveTime .secondColor {
+    display: none
+  }
+
+  .tableEvents .eventWrap {
+    margin-top: 5px
+  }
+
+  .tableEvents .eventWrap .homeTeam, .tableEvents .eventWrap .awayTeam {
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative
+  }
+
+  .tableEvents .eventWrap .homeTeam a, .tableEvents .eventWrap .awayTeam a {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: calc(100% - 15px)
+  }
+
+  .tableEvents .eventWrap .homeTeam .card, .tableEvents .eventWrap .awayTeam .card {
+    position: static
+  }
+
+  .tableEventsLive .offsetForScore {
+    max-width: 50%
+  }
+
+  .tableWrap .tableHead > div:nth-child(2) {
+    border-left: none
+  }
+
+  .tableWrap .addToFav, .tableWrap .removeFromFav {
+    margin-right: 5px
+  }
+
+  .pageWrap .blockHead .mx-datepicker {
+    width: 80px
+  }
+
+  .pageWrap .blockHead .mx-datepicker .mx-icon-clear, .pageWrap .blockHead .mx-datepicker .mx-icon-calendar {
+    display: none
+  }
+
+  .pageContainer .blockHeadName {
+    padding-right: 5px
+  }
+
+  .pageContainer .blockHead {
+    padding: 0 10px
+  }
+
+  .pageContainer .blockHead .smallSelectDate {
+    padding: 0 2px
+  }
+
+  .pageContainer .blockHead .rotateBlockArrow {
+    right: 0
+  }
+
+  .pageContainer .favoriteSection .blockHead {
+    padding: 7px 15px
+  }
+
+  .pageContainer .dateSelectWrap .dateSelect, .pageContainer .smallSelectDate .mx-input {
+    font-size: 11px
+  }
+
+  .historyFilters.bettingHistory {
+    flex-direction: column
+  }
+
+  .proFilePage .historyFilters > div {
+    width: 100%
+  }
+
+  .proFilePage .historyFilters input {
+    max-width: 100%
+  }
+
+  .proFilePage .historyFilters .v-select {
+    margin: 0
+  }
+
+  .transactionDetails.ticketsListItem {
+    padding: 0 10px
+  }
+
+  body.directionRTL .tableWrap .addToFav {
+    margin-right: 0px;
+    margin-left: 5px
+  }
+
+  .gameBlockContainer {
+    grid-template-columns:1fr 1fr
+  }
+
+  .gameBlockContainer .gameBlock {
+    min-height: 160px
+  }
+
+  .gameBlockContainer .gameBlock img {
+    min-height: 110px
+  }
+
+  .loyaltyPage .filterBtnsWrap .searchInputWrap {
+    width: 100%
+  }
+}
+
+@media (max-width: 480px) {
+  .eventDetailWrap .rangeOuterWrap, .eventDetailWrap .rangeOuterWrap + .detailInfo {
+    width: 100%;
+    flex-basis: 100%
+  }
+
+  .eventDetailWrap .rangeWrap {
+    margin-bottom: 10px
+  }
+
+  .customCalendarPopup {
+    left: 0 !important
+  }
+
+  html[lang=ar] .footerMain .footerTop .logoWrap {
+    margin-right: auto
+  }
+
+  html[lang=ar] .footerMain .footerTop .footerBlock.about h4 {
+    margin-left: auto
+  }
+
+  .pageContainer .sliderWrapBig img {
+    height: auto
+  }
+
+  .pageContainer .sliderWrapBig .slick-dots {
+    display: none !important
+  }
+
+  .pageContainer .sliderWrapBig .slick-arrow.slick-prev svg {
+    left: 0
+  }
+
+  .eventPage .liveEvent .eventScore, .eventPage .finishedEvent .eventScore {
+    padding-left: 5px
+  }
+
+  .eventPage .liveEvent .eventScore > div, .eventPage .finishedEvent .eventScore > div {
+    width: 30px
+  }
+
+  .gameBlockContainer .gameBlock {
+    margin-bottom: 15px;
+    text-align: center
+  }
+
+  .footerMain {
+    padding: 0;
+    padding-bottom: 10px
+  }
+
+  .footerMain .footerTop {
+    display: flex;
+    flex-wrap: wrap
+  }
+
+  .footerMain .footerTop .footerBlock.about p {
+    max-width: 100%
+  }
+
+  .footerMain .footerTop .about, .footerMain .footerTop .support {
+    position: relative;
+    flex-basis: 100%
+  }
+
+  .footerMain .footerTop .siteMap, .footerMain .footerTop .playNow {
+    flex-basis: 50%
+  }
+
+  .footerMain .footerBotom .footerLinks {
+    display: block
+  }
+
+  .footerMain .footerBotom .footerLinks .hidable {
+    display: none
+  }
+
+  .depWrap {
+    flex-wrap: wrap
+  }
+
+  .footerMain .licWrap {
+    position: absolute;
+    width: 90px;
+    right: 45%;
+    top: -2px;
+    transform: translateX(70%)
+  }
+
+  .betSlipWrap {
+    width: 100%;
+    min-height: 0;
+    transition: .2s;
+    box-shadow: none;
+    z-index: 999
+  }
+
+  .betSlipWrap.show.fullHeight {
+    min-height: 100%;
+    max-height: 100vh;
+    z-index: 2000
+  }
+
+  .betSlipWrap.myBetsWrap .betSlipBody {
+    max-height: calc(100% - 110px);
+    position: absolute;
+    width: 94%
+  }
+
+  .betSlipWrap .betSlipBody .betsWrap.myBets {
+    max-height: initial
+  }
+
+  .betSlipWrap .betHeader .betslipSwither .betslipSwitch {
+    padding: 13px 0
+  }
+
+  .betSlipWrap .preloader {
+    height: calc(100% - 46px)
+  }
+
+  .betSlipWrap .betsFooter {
+    padding-bottom: 10px
+  }
+
+  .betSlipWrap .v-select.customSelect {
+    padding: 0
+  }
+
+  .betSlipWrap .betPlaceStatusPw:after {
+    top: -5px
+  }
+
+  .betSlipWrap .maxBtn {
+    margin: 0
+  }
+
+  .betSlipWrap .oddsChangeWarn {
+    margin-bottom: 10px;
+    padding: 5px 10px
+  }
+
+  .betSlipWrap .betBot .betAmountWrap {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px
+  }
+
+  .betSlipWrap .closeBtn {
+    width: 36px;
+    height: 36px;
+    top: -7px;
+    right: -12px
+  }
+
+  .betSlipWrap .cashoutAmountWrap {
+    margin-top: 10px
+  }
+
+  .betSlipWrap .cashoutAmountWrap .mainBtn {
+    padding: 8px 12px;
+    min-width: 90px;
+    flex-basis: 40%
+  }
+
+  .betSlipWrap .cashoutAmountWrap .cashoutAmount {
+    width: 80%;
+    margin-right: 10px;
+    height: 30px;
+    line-height: 30px
+  }
+
+  .betSlipWrap .betAmountWrap {
+    min-height: auto;
+    padding: 5px 10px
+  }
+
+  .betSlipWrap .betAmountWrap .betInput {
+    -webkit-appearance: none
+  }
+
+  .betSlipWrap .betAmountWrap.posWinEdit {
+    margin-top: -3px
+  }
+
+  .betSlipWrap .betAmountWrap.posWinEdit.multiStake.flexBetween {
+    margin: 0 10px;
+    margin-top: -3px
+  }
+
+  .betSlipWrap .system .v-select .vs__dropdown-toggle, .betSlipWrap .betInputWrap .betInput, .betSlipWrap .betInputWrap.qiuckBet .betAmountQiuck {
+    height: 30px
+  }
+
+  .betSlipWrap .system .v-select .vs__dropdown-toggle.mainBtn, .betSlipWrap .betInputWrap .betInput.mainBtn, .betSlipWrap .betInputWrap.qiuckBet .betAmountQiuck.mainBtn {
+    padding: 0 24px
+  }
+
+  .betSlipWrap .betInputWrap.qiuckBet .betAmountQiuck {
+    height: 30px;
+    max-width: inherit
+  }
+
+  .betSlipWrap .system .v-select .vs__actions, .betSlipWrap .vs__selected-options:after {
+    height: 28px
+  }
+
+  .betSlipWrap .totalAmount .vs__search {
+    height: 26px
+  }
+
+  .betSlipWrap .betSlipInnerWrap .hidable .betSlipBody {
+    padding-right: 0;
+    padding-left: 0
+  }
+
+  .betSlipWrap .betSlipInnerWrap .hidable .betSlipBody::-webkit-scrollbar {
+    display: none
+  }
+
+  .betSlipWrap .betSlipInnerWrap .hidable .betSlipBody .betsWrap .marketName {
+    margin: 2px 0
+  }
+
+  .betSlipWrap .betSlipInnerWrap .hidable .betSlipBody .betsWrap .betTop {
+    padding: 5px 10px
+  }
+
+  .betSlipWrap .betSlipInnerWrap .hidable .betSlipBody.multi + .betAmountWrap.multiStake, .betSlipWrap .betSlipInnerWrap .hidable .system {
+    margin: 0;
+    margin-right: 10px;
+    margin-left: 10px
+  }
+
+  .betSlipWrap .betSlipInnerWrap .hidable .betSlipBody.multi + .betAmountWrap.multiStake .totalAmount, .betSlipWrap .betSlipInnerWrap .hidable .system .totalAmount {
+    width: 48%
+  }
+
+  .betSlipWrap .betSlipInnerWrap .hidable .betSlipBody.multi + .betAmountWrap.multiStake .totalAmount .betInputWrap .betAmount, .betSlipWrap .betSlipInnerWrap .hidable .system .totalAmount .betInputWrap .betAmount {
+    width: 100%
+  }
+
+  .betSlipWrap .betsFooter .totalAmount, .betSlipWrap .betsFooter .totalPossibleProfit {
+    height: auto;
+    line-height: 30px
+  }
+
+  .eventPage .eventHeader h1 {
+    line-height: 26px
+  }
+
+  .eventPage .bannerWrap {
+    height: 240px
+  }
+
+  .eventPage .finishedEvent .bannerWrap {
+    height: 320px
+  }
+
+  .eventPage .eventScoreWrap.eventHistory .historyWrap {
+    padding-left: 5px
+  }
+
+  .eventPage .eventScoreWrap {
+    margin: 40px 10px 10px
+  }
+
+  .mainProfile .leftItem {
+    margin-bottom: 12px
+  }
+
+  .mainProfile .editableInfo .rightItem {
+    margin-bottom: 0
+  }
+
+  .mainProfile .contacts p {
+    margin-top: 5px
+  }
+
+  .mainProfile .verification .withIcon {
+    margin-top: 0
+  }
+
+  .mainProfile .verification .proFileItem + .proFileItem {
+    margin-top: 12px
+  }
+
+  .mainProfile .v-select.customSelect {
+    padding-left: 0
+  }
+
+  .proFilePage .sectionContent .proFileItem {
+    flex-direction: column
+  }
+
+  .proFilePage .sectionContent .proFileItem .leftItem, .proFilePage .sectionContent .proFileItem .rightItem {
+    width: 100%;
+    max-width: inherit;
+    margin-right: 0
+  }
+
+  .proFilePage .sectionContent .proFileItem .leftItem input, .proFilePage .sectionContent .proFileItem .rightItem input {
+    max-width: 100%
+  }
+
+  .ticketsHeader {
+    display: none
+  }
+
+  .ticketPage .proFileItem {
+    flex-direction: row
+  }
+
+  .ticketPage .sectionContent .ticketsListItem {
+    padding: 0
+  }
+
+  .ticketPage .sectionContent .ticketsListItem .ticketTitle {
+    grid-area: 2/1/2/5
+  }
+
+  .ticketPage .sectionContent .ticketsListItem .ticketStatusWrap {
+    grid-area: 1/4/1/5;
+    align-items: flex-end
+  }
+
+  .ticketPage .sectionContent .ticketsListItem .ticketDate {
+    grid-area: 1/2/1/4
+  }
+
+  .ticketPage .sectionContent .ticketsListItem div.ticketId {
+    text-align: left
+  }
+
+  .pageContainer .homeWrap .sliderWrapBig, .pageContainer .homeWrap .sliderWrapBig .slick-list {
+    position: relative;
+    padding-bottom: 48%;
+    height: 0
+  }
+
+  .pageContainer .homeWrap .sliderWrapBig .preloader, .pageContainer .homeWrap .sliderWrapBig .slick-list .preloader {
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+  }
+
+  .appWrap .sectionContent.smallLiveSection.showContent.firstLoad {
+    min-height: 610px
+  }
+}
+
+@media (max-width: 400px) {
+  .eventSection .detailInfo {
+    padding: 0 5px
+  }
+
+  .eventDetail.layoutTriple.layoutTripleEH .detailInfo, .eventDetail.layoutTriple.oneRow .detailInfo {
+    padding: 0 5px;
+    min-height: 72px
+  }
+}
+
+@media (max-width: 350px) {
+  .appWrap .eventSection .eventDetail.layoutDouble:not(.layoutHandicap) .detailInfo:nth-child(2n), .appWrap .eventSection .eventDetail.layoutTriple.oneRow .detailInfo:nth-child(2n) {
+    border-left: none
+  }
+
+  .eventSection .layoutTriple.oneRow, .eventSection .layoutDouble, .eventSection .eventDetail .yesNoArr {
+    flex-basis: 100%;
+    min-height: auto;
+    flex-wrap: wrap;
+    padding: 0 0
+  }
+
+  .eventSection .layoutTriple.oneRow .detailInfo, .eventSection .layoutDouble .detailInfo, .eventSection .eventDetail .yesNoArr .detailInfo {
+    flex-basis: 100%;
+    min-height: 40px;
+    border-left: 0
+  }
+
+  .eventWrapperInfoCenter, .eventWrapperInfoCenter.scale {
+    justify-content: center
+  }
+
+  .eventWrapperInfoCenter .eventProgressBarWrap .eventProgressBar .progressBar, .eventWrapperInfoCenter.scale .eventProgressBarWrap .eventProgressBar .progressBar {
+    width: 80px
+  }
+
+  .scaleWrapper.scale {
+    transform: scale(0.9)
+  }
+
+  .gameBlock .markWrap {
+    flex-direction: column-reverse
+  }
+
+  .d-none-350 {
+    display: none
+  }
+}
+
+@media (max-width: 320px) {
+  .d-none-320 {
+    display: none !important
+  }
+}
+
+.mx-icon-left:before, .mx-icon-right:before, .mx-icon-double-left:before, .mx-icon-double-right:before, .mx-icon-double-left:after, .mx-icon-double-right:after {
+  content: "";
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  vertical-align: middle;
+  border-style: solid;
+  border-color: currentColor;
+  border-width: 2px 0 0 2px;
+  border-radius: 1px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transform: rotate(-45deg) scale(0.7);
+  transform: rotate(-45deg) scale(0.7)
+}
+
+.mx-icon-double-left:after {
+  left: -4px
+}
+
+.mx-icon-double-right:before {
+  left: 4px
+}
+
+.mx-icon-right:before, .mx-icon-double-right:before, .mx-icon-double-right:after {
+  -webkit-transform: rotate(135deg) scale(0.7);
+  transform: rotate(135deg) scale(0.7)
+}
+
+.mx-btn {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 7px 15px;
+  margin: 0;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: 4px;
+  color: #73879c;
+  white-space: nowrap
+}
+
+.mx-btn:hover {
+  border-color: #1284e7;
+  color: #1284e7
+}
+
+.mx-btn-text {
+  border: 0;
+  padding: 0 4px;
+  text-align: left;
+  line-height: inherit
+}
+
+.mx-scrollbar {
+  height: 100%
+}
+
+.mx-scrollbar:hover .mx-scrollbar-track {
+  opacity: 1
+}
+
+.mx-scrollbar-wrap {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto
+}
+
+.mx-scrollbar-track {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  width: 6px;
+  z-index: 1;
+  border-radius: 4px;
+  opacity: 0;
+  -webkit-transition: opacity .24s ease-out;
+  transition: opacity .24s ease-out
+}
+
+.mx-scrollbar-track .mx-scrollbar-thumb {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  cursor: pointer;
+  border-radius: inherit;
+  background-color: rgba(144, 147, 153, .3);
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s
+}
+
+.mx-zoom-in-down-enter-active, .mx-zoom-in-down-leave-active {
+  opacity: 1;
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition: opacity .3s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform .3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: opacity .3s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform .3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform .3s cubic-bezier(0.23, 1, 0.32, 1), opacity .3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform .3s cubic-bezier(0.23, 1, 0.32, 1), opacity .3s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform .3s cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-transform-origin: center top;
+  transform-origin: center top
+}
+
+.mx-zoom-in-down-enter, .mx-zoom-in-down-leave-to {
+  opacity: 0;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0)
+}
+
+.mx-datepicker {
+  position: relative;
+  display: inline-block;
+  width: 210px
+}
+
+.mx-datepicker svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden
+}
+
+.mx-datepicker-range {
+  width: 320px
+}
+
+.mx-datepicker-inline {
+  width: auto
+}
+
+.mx-input-wrapper {
+  position: relative
+}
+
+.mx-input-wrapper .mx-icon-clear {
+  display: none
+}
+
+.mx-input-wrapper:hover .mx-icon-clear {
+  display: block
+}
+
+.mx-input-wrapper:hover .mx-icon-clear + .mx-icon-calendar {
+  display: none
+}
+
+.mx-input {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 34px;
+  padding: 6px 30px;
+  padding-left: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075)
+}
+
+.mx-input:hover, .mx-input:focus {
+  border-color: #409aff
+}
+
+.mx-input:disabled, .mx-input.disabled {
+  color: #ccc;
+  background-color: #f3f3f3;
+  border-color: #ccc;
+  cursor: not-allowed
+}
+
+.mx-input:focus {
+  outline: none
+}
+
+.mx-input::-ms-clear {
+  display: none
+}
+
+.mx-icon-calendar, .mx-icon-clear {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 16px;
+  line-height: 1;
+  color: rgba(0, 0, 0, .5);
+  vertical-align: middle
+}
+
+.mx-icon-clear {
+  cursor: pointer
+}
+
+.mx-icon-clear:hover {
+  color: rgba(0, 0, 0, .8)
+}
+
+.mx-datepicker-main {
+  font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", sans-serif;
+  color: #73879c;
+  background-color: #fff;
+  border: 1px solid #e8e8e8
+}
+
+.mx-datepicker-popup {
+  position: absolute;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  z-index: 2001
+}
+
+.mx-datepicker-sidebar {
+  float: left;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100px;
+  padding: 6px;
+  overflow: auto
+}
+
+.mx-datepicker-sidebar + .mx-datepicker-content {
+  margin-left: 100px;
+  border-left: 1px solid #e8e8e8
+}
+
+.mx-datepicker-body {
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+.mx-btn-shortcut {
+  display: block;
+  padding: 0 6px;
+  line-height: 24px
+}
+
+.mx-range-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+
+@media (max-width: 750px) {
+  .mx-range-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+}
+
+.mx-datepicker-header {
+  padding: 6px 8px;
+  border-bottom: 1px solid #e8e8e8
+}
+
+.mx-datepicker-footer {
+  padding: 6px 8px;
+  text-align: right;
+  border-top: 1px solid #e8e8e8
+}
+
+.mx-calendar {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 248px;
+  padding: 6px 12px
+}
+
+.mx-calendar + .mx-calendar {
+  border-left: 1px solid #e8e8e8
+}
+
+.mx-calendar-header, .mx-time-header {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  overflow: hidden
+}
+
+.mx-btn-icon-left, .mx-btn-icon-double-left {
+  float: left
+}
+
+.mx-btn-icon-right, .mx-btn-icon-double-right {
+  float: right
+}
+
+.mx-calendar-header-label {
+  font-size: 14px
+}
+
+.mx-calendar-decade-separator {
+  margin: 0 2px
+}
+
+.mx-calendar-decade-separator:after {
+  content: "~"
+}
+
+.mx-calendar-content {
+  position: relative;
+  height: 224px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+.mx-calendar-content .cell {
+  cursor: pointer
+}
+
+.mx-calendar-content .cell:hover {
+  color: #73879c;
+  background-color: #f3f9fe
+}
+
+.mx-calendar-content .cell.active {
+  color: #fff;
+  background-color: #1284e7
+}
+
+.mx-calendar-content .cell.in-range {
+  color: #73879c;
+  background-color: #dbedfb
+}
+
+.mx-calendar-content .cell.disabled {
+  cursor: not-allowed;
+  color: #ccc;
+  background-color: #f3f3f3
+}
+
+.mx-calendar-week-mode .mx-date-row {
+  cursor: pointer
+}
+
+.mx-calendar-week-mode .mx-date-row:hover {
+  background-color: #f3f9fe
+}
+
+.mx-calendar-week-mode .mx-date-row.mx-active-week {
+  background-color: #dbedfb
+}
+
+.mx-calendar-week-mode .mx-date-row .cell:hover {
+  color: inherit;
+  background-color: transparent
+}
+
+.mx-calendar-week-mode .mx-date-row .cell.active {
+  color: inherit;
+  background-color: transparent
+}
+
+.mx-week-number {
+  opacity: .5
+}
+
+.mx-table {
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle
+}
+
+.mx-table th {
+  padding: 0;
+  font-weight: 500
+}
+
+.mx-table td {
+  padding: 0
+}
+
+.mx-table-date td, .mx-table-date th {
+  height: 32px;
+  font-size: 12px
+}
+
+.mx-table-date .today {
+  color: #2a90e9
+}
+
+.mx-table-date .cell.not-current-month {
+  color: #ccc
+}
+
+.mx-time {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: 224px;
+  background: #fff
+}
+
+.mx-time + .mx-time {
+  border-left: 1px solid #e8e8e8
+}
+
+.mx-calendar-time {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%
+}
+
+.mx-time-header {
+  border-bottom: 1px solid #e8e8e8
+}
+
+.mx-time-content {
+  height: 224px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden
+}
+
+.mx-time-columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden
+}
+
+.mx-time-column {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  border-left: 1px solid #e8e8e8;
+  text-align: center
+}
+
+.mx-time-column:first-child {
+  border-left: 0
+}
+
+.mx-time-column .mx-time-list {
+  margin: 0;
+  padding: 0;
+  list-style: none
+}
+
+.mx-time-column .mx-time-list::after {
+  content: "";
+  display: block;
+  height: 192px
+}
+
+.mx-time-column .mx-time-item {
+  cursor: pointer;
+  font-size: 12px;
+  height: 32px;
+  line-height: 32px
+}
+
+.mx-time-column .mx-time-item:hover {
+  color: #73879c;
+  background-color: #f3f9fe
+}
+
+.mx-time-column .mx-time-item.active {
+  color: #1284e7;
+  background-color: transparent;
+  font-weight: 700
+}
+
+.mx-time-column .mx-time-item.disabled {
+  cursor: not-allowed;
+  color: #ccc;
+  background-color: #f3f3f3
+}
+
+.mx-time-option {
+  cursor: pointer;
+  padding: 8px 10px;
+  font-size: 14px;
+  line-height: 20px
+}
+
+.mx-time-option:hover {
+  color: #73879c;
+  background-color: #f3f9fe
+}
+
+.mx-time-option.active {
+  color: #1284e7;
+  background-color: transparent;
+  font-weight: 700
+}
+
+.mx-time-option.disabled {
+  cursor: not-allowed;
+  color: #ccc;
+  background-color: #f3f3f3
+}
+
+.notyWrap[data-v-28bdbae4] {
+  position: fixed;
+  top: 70px;
+  width: 300px;
+  right: -300px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: .4s;
+  z-index: 5555
+}
+
+.notyBlock[data-v-28bdbae4] {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px
+}
+
+.textWrap[data-v-28bdbae4] {
+  margin-inline-end: 10px
+}
+
+.show[data-v-28bdbae4] {
+  transform: translateX(-315px);
+  opacity: 1
+}
+
+.closeBtn[data-v-28bdbae4] {
+  position: static
+}
+
+.directionRTL .notyWrap[data-v-28bdbae4] {
+  left: -300px;
+  right: auto
+}
+
+.directionRTL .notyWrap.show[data-v-28bdbae4] {
+  transform: translateX(315px)
+}
+
+:root {
+  --vs-colors--lightest: rgba(60, 60, 60, 0.26);
+  --vs-colors--light: rgba(60, 60, 60, 0.5);
+  --vs-colors--dark: #333;
+  --vs-colors--darkest: rgba(0, 0, 0, 0.15);
+  --vs-search-input-color: inherit;
+  --vs-search-input-placeholder-color: inherit;
+  --vs-font-size: 1rem;
+  --vs-line-height: 1.4;
+  --vs-state-disabled-bg: #f8f8f8;
+  --vs-state-disabled-color: var(--vs-colors--light);
+  --vs-state-disabled-controls-color: var(--vs-colors--light);
+  --vs-state-disabled-cursor: not-allowed;
+  --vs-border-color: var(--vs-colors--lightest);
+  --vs-border-width: 1px;
+  --vs-border-style: solid;
+  --vs-border-radius: 4px;
+  --vs-actions-padding: 4px 6px 0 3px;
+  --vs-controls-color: var(--vs-colors--light);
+  --vs-controls-size: 1;
+  --vs-controls--deselect-text-shadow: 0 1px 0 #fff;
+  --vs-selected-bg: #f0f0f0;
+  --vs-selected-color: var(--vs-colors--dark);
+  --vs-selected-border-color: var(--vs-border-color);
+  --vs-selected-border-style: var(--vs-border-style);
+  --vs-selected-border-width: var(--vs-border-width);
+  --vs-dropdown-bg: #fff;
+  --vs-dropdown-color: inherit;
+  --vs-dropdown-z-index: 1000;
+  --vs-dropdown-min-width: 160px;
+  --vs-dropdown-max-height: 350px;
+  --vs-dropdown-box-shadow: 0px 3px 6px 0px var(--vs-colors--darkest);
+  --vs-dropdown-option-bg: #000;
+  --vs-dropdown-option-color: var(--vs-dropdown-color);
+  --vs-dropdown-option-padding: 3px 20px;
+  --vs-dropdown-option--active-bg: #5897fb;
+  --vs-dropdown-option--active-color: #fff;
+  --vs-dropdown-option--deselect-bg: #fb5858;
+  --vs-dropdown-option--deselect-color: #fff;
+  --vs-transition-timing-function: cubic-bezier(1, -0.115, 0.975, 0.855);
+  --vs-transition-duration: 150ms
+}
+
+.v-select {
+  font-family: inherit;
+  position: relative
+}
+
+.v-select, .v-select * {
+  box-sizing: border-box
+}
+
+:root {
+  --vs-transition-timing-function: cubic-bezier(1, 0.5, 0.8, 1);
+  --vs-transition-duration: 0.15s
+}
+
+@-webkit-keyframes vSelectSpinner {
+  0% {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(1turn)
+  }
+}
+
+@keyframes vSelectSpinner {
+  0% {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(1turn)
+  }
+}
+
+.vs__fade-enter-active, .vs__fade-leave-active {
+  pointer-events: none;
+  transition: opacity var(--vs-transition-duration) var(--vs-transition-timing-function)
+}
+
+.vs__fade-enter, .vs__fade-leave-to {
+  opacity: 0
+}
+
+:root {
+  --vs-disabled-bg: var(--vs-state-disabled-bg);
+  --vs-disabled-color: var(--vs-state-disabled-color);
+  --vs-disabled-cursor: var(--vs-state-disabled-cursor)
+}
+
+.vs--disabled .vs__clear, .vs--disabled .vs__dropdown-toggle, .vs--disabled .vs__open-indicator, .vs--disabled .vs__search, .vs--disabled .vs__selected {
+  background-color: var(--vs-disabled-bg);
+  cursor: var(--vs-disabled-cursor)
+}
+
+.v-select[dir=rtl] .vs__actions {
+  padding: 0 3px 0 6px
+}
+
+.v-select[dir=rtl] .vs__clear {
+  margin-left: 6px;
+  margin-right: 0
+}
+
+.v-select[dir=rtl] .vs__deselect {
+  margin-left: 0;
+  margin-right: 2px
+}
+
+.v-select[dir=rtl] .vs__dropdown-menu {
+  text-align: right
+}
+
+.vs__dropdown-toggle {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  border: var(--vs-border-width) var(--vs-border-style) var(--vs-border-color);
+  border-radius: var(--vs-border-radius);
+  display: flex;
+  padding: 0 0 4px;
+  white-space: normal
+}
+
+.vs__selected-options {
+  display: flex;
+  flex-basis: 100%;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  padding: 0 2px;
+  position: relative
+}
+
+.vs__actions {
+  align-items: center;
+  display: flex;
+  padding: var(--vs-actions-padding)
+}
+
+.vs--searchable .vs__dropdown-toggle {
+  cursor: text
+}
+
+.vs--unsearchable .vs__dropdown-toggle {
+  cursor: pointer
+}
+
+.vs--open .vs__dropdown-toggle {
+  border-bottom-color: transparent;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0
+}
+
+.vs__open-indicator {
+  fill: var(--vs-controls-color);
+  transform: scale(var(--vs-controls-size));
+  transition: transform var(--vs-transition-duration) var(--vs-transition-timing-function);
+  transition-timing-function: var(--vs-transition-timing-function)
+}
+
+.vs--open .vs__open-indicator {
+  transform: rotate(180deg) scale(var(--vs-controls-size))
+}
+
+.vs--loading .vs__open-indicator {
+  opacity: 0
+}
+
+.vs__clear {
+  fill: var(--vs-controls-color);
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  margin-right: 8px;
+  padding: 0
+}
+
+.vs__dropdown-menu {
+  background: var(--vs-dropdown-bg);
+  border: var(--vs-border-width) var(--vs-border-style) var(--vs-border-color);
+  border-radius: 0 0 var(--vs-border-radius) var(--vs-border-radius);
+  border-top-style: none;
+  box-shadow: var(--vs-dropdown-box-shadow);
+  box-sizing: border-box;
+  color: var(--vs-dropdown-color);
+  display: block;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  max-height: var(--vs-dropdown-max-height);
+  min-width: var(--vs-dropdown-min-width);
+  overflow-y: auto;
+  padding: 5px 0;
+  position: absolute;
+  text-align: left;
+  top: calc(100% - var(--vs-border-width));
+  width: 100%;
+  z-index: var(--vs-dropdown-z-index)
+}
+
+.vs__no-options {
+  text-align: center
+}
+
+.vs__dropdown-option {
+  clear: both;
+  color: var(--vs-dropdown-option-color);
+  cursor: pointer;
+  display: block;
+  line-height: 1.42857143;
+  padding: var(--vs-dropdown-option-padding);
+  white-space: nowrap
+}
+
+.vs__dropdown-option--highlight {
+  background: var(--vs-dropdown-option--active-bg);
+  color: var(--vs-dropdown-option--active-color)
+}
+
+.vs__dropdown-option--deselect {
+  background: var(--vs-dropdown-option--deselect-bg);
+  color: var(--vs-dropdown-option--deselect-color)
+}
+
+.vs__dropdown-option--disabled {
+  background: var(--vs-state-disabled-bg);
+  color: var(--vs-state-disabled-color);
+  cursor: var(--vs-state-disabled-cursor)
+}
+
+.vs__selected {
+  align-items: center;
+  background-color: var(--vs-selected-bg);
+  border: var(--vs-selected-border-width) var(--vs-selected-border-style) var(--vs-selected-border-color);
+  border-radius: var(--vs-border-radius);
+  color: var(--vs-selected-color);
+  display: flex;
+  line-height: var(--vs-line-height);
+  margin: 4px 2px 0;
+  padding: 0 .25em;
+  z-index: 0
+}
+
+.vs__deselect {
+  fill: var(--vs-controls-color);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  margin-left: 4px;
+  padding: 0;
+  text-shadow: var(--vs-controls--deselect-text-shadow)
+}
+
+.vs--single .vs__selected {
+  background-color: transparent;
+  border-color: transparent
+}
+
+.vs--single.vs--loading .vs__selected, .vs--single.vs--open .vs__selected {
+  opacity: .4;
+  position: absolute
+}
+
+.vs--single.vs--searching .vs__selected {
+  display: none
+}
+
+.vs__search::-webkit-search-cancel-button {
+  display: none
+}
+
+.vs__search::-ms-clear, .vs__search::-webkit-search-decoration, .vs__search::-webkit-search-results-button, .vs__search::-webkit-search-results-decoration {
+  display: none
+}
+
+.vs__search, .vs__search:focus {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  border: 1px solid transparent;
+  border-left: none;
+  box-shadow: none;
+  color: var(--vs-search-input-color);
+  flex-grow: 1;
+  font-size: var(--vs-font-size);
+  line-height: var(--vs-line-height);
+  margin: 4px 0 0;
+  max-width: 100%;
+  outline: none;
+  padding: 0 7px;
+  width: 0;
+  z-index: 1
+}
+
+.vs__search::-moz-placeholder {
+  color: var(--vs-search-input-placeholder-color)
+}
+
+.vs__search:-ms-input-placeholder {
+  color: var(--vs-search-input-placeholder-color)
+}
+
+.vs__search::placeholder {
+  color: var(--vs-search-input-placeholder-color)
+}
+
+.vs--unsearchable .vs__search {
+  opacity: 1
+}
+
+.vs--unsearchable:not(.vs--disabled) .vs__search {
+  cursor: pointer
+}
+
+.vs--single.vs--searching:not(.vs--open):not(.vs--loading) .vs__search {
+  opacity: .2
+}
+
+.vs__spinner {
+  align-self: center;
+  -webkit-animation: vSelectSpinner 1.1s linear infinite;
+  animation: vSelectSpinner 1.1s linear infinite;
+  border: .9em solid rgba(99, 99, 99, .1);
+  border-left-color: rgba(60, 60, 60, .45);
+  font-size: 5px;
+  opacity: 0;
+  overflow: hidden;
+  text-indent: -9999em;
+  transform: translateZ(0) scale(var(--vs-controls--spinner-size, var(--vs-controls-size)));
+  transition: opacity .1s
+}
+
+.vs__spinner, .vs__spinner:after {
+  border-radius: 50%;
+  height: 5em;
+  transform: scale(var(--vs-controls--spinner-size, var(--vs-controls-size)));
+  width: 5em
+}
+
+.vs--loading .vs__spinner {
+  opacity: 1
+}

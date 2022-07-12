@@ -1,0 +1,56 @@
+.grid-item {
+  position: relative;
+}
+
+.grid-item .grid-item-overlay .preview {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  transition: all 0.7s;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-item .grid-item-overlay .preview svg {
+  margin-right: 5px;
+}
+
+.grid-item .imgDemo {
+  position: relative;
+}
+
+.grid-item .imgDemo::before {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 101%;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background: linear-gradient(195.01deg, #070119 21.15%, rgba(2, 0, 40, 0) 157.8%);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  transform: rotate(-180deg);
+  transition: all 0.5s;
+}
+
+.grid-item:hover .imgDemo::before,
+.grid-item:hover .grid-item-overlay .preview,
+.grid-item.active .imgDemo::before,
+.grid-item.active .grid-item-overlay .preview {
+  opacity: 1;
+  transition: all 0.5s;
+}
+
